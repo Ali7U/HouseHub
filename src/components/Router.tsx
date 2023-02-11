@@ -3,6 +3,8 @@ import { Route, Routes } from "react-router-dom";
 import Footer from "./Footer";
 import Home from "./Home";
 import Nav from "./Nav";
+import Login from "../Login";
+import { Box } from "@chakra-ui/react";
 
 function Router() {
   return (
@@ -10,8 +12,10 @@ function Router() {
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/LoginPage" element={<Login/>}/>
       </Routes>
       <Footer />
+      
     </div>
   );
 }
