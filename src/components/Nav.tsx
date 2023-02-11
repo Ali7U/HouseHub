@@ -107,7 +107,7 @@ export default function App() {
                   Company
                 </Button>
                 <Button w="full" variant="ghost">
-                  Sign in
+                  Log in
                 </Button>
               </VStack>
             </Box>
