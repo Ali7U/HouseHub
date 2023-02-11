@@ -2,7 +2,7 @@ import React from "react";
 
 import {
   chakra,
-  Box,
+  Box,Image,
   Flex,
   useColorModeValue,
   VisuallyHidden,
@@ -40,10 +40,7 @@ export default function App() {
             >
               <VisuallyHidden>Choc</VisuallyHidden>
             </chakra.a>
-            <chakra.h1 fontSize="xl" fontWeight="medium" ml="2">
-              Choc
-            </chakra.h1>
-          </Flex>
+            <Image  src="src\image-removebg-preview.png" height = "40px"></Image>          </Flex>
           <HStack display="flex" alignItems="center" spacing={1}>
             <HStack
               spacing={1}
