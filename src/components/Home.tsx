@@ -1,7 +1,11 @@
 import React from "react";
 import { Box, Flex, Link, chakra } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
-export default function App() {
+
+
+export default function Home() {
+    const navigate = useNavigate()
   return (
     <Flex
       bg="#edf3f8"
@@ -51,6 +55,9 @@ export default function App() {
               fontWeight="semibold"
               rounded="lg"
               _hover={{ bg: "gray.800" }}
+              onClick={() => {
+                navigate('/login')
+              }}
             >
               Start Now
             </Link>
