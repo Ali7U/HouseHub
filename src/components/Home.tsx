@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Flex, Link, chakra } from "@chakra-ui/react";
 
-export default function App() {
+export default function Home() {
   return (
     <Flex
       bg="#edf3f8"
