@@ -57,14 +57,14 @@ function LandingPage()  {const Nagivate = useNavigate();function Footer1() {
   <Box mb="80%" ><Image  src="src\image-removebg-preview.png"   position="absolute" width={"25vw"} ></Image> </Box>
     <Button mb="10%"  boxShadow="dark-lg" width={"12vw"} fontSize="2xl"  height="60px"bg="#ceae7f" _hover={{  color: "lightgreen", border: "lightgreen solid 2px", backgroundColor: "#85583f"}} color= "black" size={'lg'} > Browse Listings </Button> 
     
-    <Button onClick={()=>Nagivate("./log")} mb="10%"  boxShadow="dark-lg" width={"12vw"} fontSize="2xl"  height="6.5vh"  size={"lg"} ml="30px " _hover={{color: "lightgreen",border: "lightgreen solid 2px", backgroundColor: "#85583f"}} color="black" bg="#ceae7f" > Create a Listing </Button>
+    <Button onClick={()=>Nagivate("./login")} mb="10%"  boxShadow="dark-lg" width={"12vw"} fontSize="2xl"  height="6.5vh"  size={"lg"} ml="30px " _hover={{color: "lightgreen",border: "lightgreen solid 2px", backgroundColor: "#85583f"}} color="black" bg="#ceae7f" > Create a Listing </Button>
 
 
     </Container>
     {Footer1()}
      
       
-        <Button  border="white 1px solid" onClick={()=>Nagivate("./log")} boxShadow="dark-lg" _hover={{color: "lightgreen",border: "lightgreen solid 2px",}}  position={'absolute'} top="25" right="4%" colorScheme={"blackAlpha"} size={"md"}>Log In</Button>
+        <Button  border="white 1px solid" onClick={()=>Nagivate("./login")} boxShadow="dark-lg" _hover={{color: "lightgreen",border: "lightgreen solid 2px",}}  position={'absolute'} top="25" right="4%" colorScheme={"blackAlpha"} size={"md"}>Log In</Button>
 </div>
   
         
