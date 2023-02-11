@@ -1,11 +1,42 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Box, Center, Flex, FormControl, FormLabel, Heading, HStack, Image, Input, Stack, Checkbox, Link, Button } from '@chakra-ui/react'
 
 
 
 
+
 function Login() {
+    
+const home = () => {
+    navigate("/");
+  };
+
+  const [userName, setUserName] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    const storedUserName = localStorage.getItem("userName");
+    if (storedUserName) {
+      setUserName(storedUserName);
+      console.log(`Welcome back, ${storedUserName}`);
+    }
+  }, []);
+
+  const handleLogin = () => {
+    if (!userName || !password) {
+      setError("Please enter both user name and password");
+      return;
+    }
+    localStorage.setItem("userName", userName);
+    console.log(`Welcome, ${userName}`);
+    home();
+  };
+
+
+
+
   return (
     <HStack w={"full"} h={"full"} bgColor={"#fff"} align={"center"}>
         {/* <Flex w={"full"} h={"90vh"} borderRightWidth={1}>
@@ -19,7 +50,7 @@ function Login() {
         <Flex  width={"full"} height={'90vh'} alignItems={"Center"} justifyContent={'center'}>
             <Stack boxShadow='2xl' w={"full"} maxW={"xl"} h={"80vh"} spacing={6} p={6} bgColor={"#fff"} alignItems={"Center"} justifyContent={'center'}>
                 <Heading fontSize={"2xl"} color={"#0d7aee"}>
-                    LOGIN to your account
+                    LOGIN
                 </Heading>
                 <FormControl id='user' >
                     <FormLabel> Username</FormLabel>
