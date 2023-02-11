@@ -14,6 +14,8 @@ import {
   CloseButton,
 } from "@chakra-ui/react";
 import { AiOutlineMenu } from "react-icons/ai";
+import { Link } from "react-router-dom";
+
 
 export default function App() {
   const bg = useColorModeValue("white", "gray.800");
@@ -50,7 +52,9 @@ export default function App() {
               <Button variant="ghost">Pricing</Button>
               <Button variant="ghost">Blog</Button>
               <Button variant="ghost">Company</Button>
+              <Link to="/LoginPage">
               <Button variant="ghost">Sign in</Button>
+              </Link>
             </HStack>
             <Button colorScheme="brand" size="sm">
               Get Started

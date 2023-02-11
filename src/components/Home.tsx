@@ -1,7 +1,9 @@
 import React from "react";
 import { Box, Flex, Link, chakra } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
+  const navigate = useNavigate();
   return (
     <Flex
       bg="#edf3f8"
@@ -22,7 +24,7 @@ export default function Home() {
         h={650}
         w={"100%"}
       >
-        <Box  py={12} px={16}  maxW={{ base: "xl", lg: "5xl" }} w={{ lg: "40%" }}>
+        <Box py={12} px={16} maxW={{ base: "xl", lg: "5xl" }} w={{ lg: "40%" }}>
           <chakra.h2
             fontSize={{ base: "2xl", md: "3xl" }}
             color="gray "
@@ -51,6 +53,9 @@ export default function Home() {
               fontWeight="semibold"
               rounded="lg"
               _hover={{ bg: "gray.800" }}
+              onClick={() => {
+                navigate("/login");
+              }}
             >
               Start Now
             </Link>
@@ -64,7 +69,6 @@ export default function Home() {
             style={{
               backgroundImage:
                 "url('https://images.unsplash.com/photo-1611048267451-e6ed903d4a38?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bGl2aW5nJTIwcm9vbSUyMGludGVyaW9yJTIwZGVzaWdufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1400&q=60')",
-                
             }}
           ></Box>
         </Box>
