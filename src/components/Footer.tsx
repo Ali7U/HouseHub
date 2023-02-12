@@ -26,7 +26,7 @@ export default function App() {
       >
         <Flex justify="center">
           <Image
-            src="src\image-removebg-preview.png" 
+            src="src\logo.png" 
             alt="Company Logo"
             rounded="lg"
             width={{ base: "150px", lg: "200px" }}

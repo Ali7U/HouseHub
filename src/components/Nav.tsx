@@ -40,7 +40,7 @@ export default function App() {
             >
               <VisuallyHidden>Choc</VisuallyHidden>
             </chakra.a>
-            <Image  src="src\image-removebg-preview.png" height = "40px"></Image>          </Flex>
+            <Image  src="src\logo.png" height = "40px"></Image>          </Flex>
           <HStack display="flex" alignItems="center" spacing={1}>
             <HStack
               spacing={1}

@@ -7,6 +7,7 @@ import Listings from "./Listings";
 import Nav from "./Nav";
 import Login from "./Login";
 import { Box } from "@chakra-ui/react";
+import Main from "./Main";
 
 function Router() {
   return (
@@ -16,6 +17,7 @@ function Router() {
         <Route path="/" element={<Home />} />       
          <Route path="/login" element={<Login />} /> <Route path="/Browse" element={<Listings />} />
         <Route path="/LandingPage" element={<LandingPage />} />
+        <Route path="/main" element={<Main/>} />
 
       </Routes>
       <Footer />
