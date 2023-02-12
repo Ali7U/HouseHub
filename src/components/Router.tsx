@@ -15,7 +15,8 @@ function Router() {
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />       
-         <Route path="/login" element={<Login />} /> <Route path="/Browse" element={<Listings />} />
+         <Route path="/login" element={<Login />} /> 
+         <Route path="/Browse" element={<Listings />} />
         <Route path="/LandingPage" element={<LandingPage />} />
         <Route path="/main" element={<Main/>} />
 
