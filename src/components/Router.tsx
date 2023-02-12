@@ -4,7 +4,7 @@ import Footer from "./Footer";
 import Home from "./Home";
 import Nav from "./Nav";
 import Login from "./Login";
-import Register from "../Register";
+import Register from "./Register";
 import { Box } from "@chakra-ui/react";
 
 function Router() {
@@ -13,11 +13,10 @@ function Router() {
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/LoginPage" element={<Login/>}/>
-        <Route path="/Register" element={<Register/>}/>
+        <Route path="/LoginPage" element={<Login />} />
+        <Route path="/Register" element={<Register />} />
       </Routes>
       <Footer />
-      
     </div>
   );
 }
