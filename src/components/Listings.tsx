@@ -55,7 +55,7 @@ const Listings = () => {
   const [filteredHomes, setFilteredHomes] = React.useState<Home[]>(homes);
 
   const handleFilterRoomsChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setFilterRooms(e.target.value ? parseInt(e.target.value, 10) : null);
+    setFilterRooms(e.target.value ? parseInt(e.target.value) : null);
   };
 
   React.useEffect(() => {
@@ -68,7 +68,7 @@ const Listings = () => {
 
   return (
     <Box p={4}>
-      <Heading as='h1' size='lg'>List of Homes</Heading>
+      <Heading as='h1' size='lg'></Heading>
       <Flex mb={4} align='center'>
         <Text mr={2}>Filter by number of rooms:</Text>
         <Select value={filterRooms || ''} onChange={handleFilterRoomsChange}>
@@ -78,8 +78,34 @@ const Listings = () => {
           <option value='3'>3</option>
           <option value='4'>4</option>
         </Select>
+      </Flex><Flex mb={4} align='center'>
+      <Text mr={2}>Floors</Text>
+      <Select value={filterRooms || ''} onChange={handleFilterRoomsChange}>
+        <option value=''>All</option>
+        <option value='1'>1</option>
+        <option value='2'>2</option>
+        <option value='3'>3</option>
+        <option value='4'>4</option>
+      </Select>
+    </Flex>   <Flex mb={4} align='center'>
+        <Text mr={2}>Area</Text>
+        <Select value={filterRooms || ''} onChange={handleFilterRoomsChange}>
+          <option value=''>All</option>
+          <option value='1'>1</option>
+          <option value='2'>2</option>
+          <option value='3'>3</option>
+          <option value='4'>4</option>
+        </Select>
       </Flex>
-      {filteredHomes.map(home => (
+   
+    </Box>
+  );
+};
+
+export default Listings
+
+
+/*    {filteredHomes.map(home => (
         <Box key={home.id} mb={4} p={4} bg='gray.100'>
           <Heading as='h2' size='md'>{home.title}</Heading>
           <Flex mb={4}>
@@ -91,9 +117,4 @@ const Listings = () => {
             </Box>
           </Flex>
         </Box>
-      ))}
-    </Box>
-  );
-};
-
-export default Listings
+      ))}  */
