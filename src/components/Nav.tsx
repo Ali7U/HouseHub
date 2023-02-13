@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import {
   chakra,
@@ -16,10 +16,24 @@ import {
 import { AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
-
 export default function App() {
+  const [isloggedin, setisloggedin] = React.useState<boolean>();
+
   const bg = useColorModeValue("white", "gray.800");
   const mobileNav = useDisclosure();
+   useEffect(() => {
+    localStorage.getItem('userName') ? setisloggedin(true): setisloggedin(false);
+
+    },[]);
+  function logout() {
+
+
+    localStorage.clear()
+    setisloggedin(false)
+
+
+  }
+
 
   return (
     <React.Fragment>
@@ -40,7 +54,8 @@ export default function App() {
             >
               <VisuallyHidden>Choc</VisuallyHidden>
             </chakra.a>
-            <Image  src="src\logo.png" height = "40px"></Image>          </Flex>
+            <Link to={"/"}>
+            <Image src="src\logo.png" height = "40px"></Image>       </Link>   </Flex>
           <HStack display="flex" alignItems="center" spacing={1}>
             <HStack
               spacing={1}
@@ -52,9 +67,16 @@ export default function App() {
               <Button variant="ghost">Pricing</Button>
               <Button variant="ghost">Blog</Button>
               <Button variant="ghost">Company</Button>
+              {isloggedin ?
+              
+
+              <Button  onClick={logout} variant="ghost">Log out</Button>
+
+              :
+
               <Link to="/login">
               <Button variant="ghost">Sign in</Button>
-              </Link>
+              </Link>}
             </HStack>
             <Button colorScheme="brand" size="sm">
               Get Started
@@ -103,6 +125,7 @@ export default function App() {
                 <Button w="full" variant="ghost">
                   Company
                 </Button>
+                
                 <Button w="full" variant="ghost">
                   Log in
                 </Button>

@@ -38,77 +38,82 @@ function Main() {
   };
     const { isOpen, onToggle } = useDisclosure();
 
-  interface houses {
-    imageUrl: string;
-    imageAlt: string;
-    beds: number;
-    baths: 2;
-    title: string;
-    formattedPrice: string;
-    reviewCount: number;
-    rating: number;
-    Area: number;
-    Floors: any;
-    Rooms: any;
-  }
-  const property: houses[] = [
-    {
-      imageUrl:
-        "https://media.istockphoto.com/id/864458934/photo/architects-engineer-discussing-at-the-table-with-blueprint-closeup-on-hands-and-project-print.jpg?s=612x612&w=0&k=20&c=-ODOOfKY-vxwhyjx7RggEvW3YzWrinoELglqZAbjzIs=",
-      imageAlt: "Rear view of modern home with pool",
-      beds: 3,
+    interface houses {
+      imageUrl: string,
+      imageAlt: string,
+      beds: number,
       baths: 2,
-      title: "Modern home in city center in the heart of historic Los Angeles",
-      formattedPrice: "$1,900.00",
-      reviewCount: 34,
-      rating: 4,
-      Area: 500,
-      Rooms: 1,
-      Floors: 1,
-    },
-    {
-      imageUrl:
-        "https://media.istockphoto.com/id/864458934/photo/architects-engineer-discussing-at-the-table-with-blueprint-closeup-on-hands-and-project-print.jpg?s=612x612&w=0&k=20&c=-ODOOfKY-vxwhyjx7RggEvW3YzWrinoELglqZAbjzIs=",
-      imageAlt: "Rear view of modern home with pool",
-      beds: 3,
-      baths: 2,
-      title: "Modern home in city center in the heart of historic Los Angeles",
-      formattedPrice: "$1,900.00",
-      reviewCount: 34,
-      rating: 4,
-      Area: 400,
-      Rooms: 1,
-      Floors: 2,
-    },
-    {
-      imageUrl:
-        "https://media.istockphoto.com/id/864458934/photo/architects-engineer-discussing-at-the-table-with-blueprint-closeup-on-hands-and-project-print.jpg?s=612x612&w=0&k=20&c=-ODOOfKY-vxwhyjx7RggEvW3YzWrinoELglqZAbjzIs=",
-      imageAlt: "Rear view of modern home with pool",
-      beds: 3,
-      baths: 2,
-      title: "Modern home in city center in the heart of historic Los Angeles",
-      formattedPrice: "$1,900.00",
-      reviewCount: 34,
-      rating: 4,
-      Area: 400,
-      Rooms: 2,
-      Floors: 1,
-    },
-    {
-      imageUrl:
-        "https://media.istockphoto.com/id/864458934/photo/architects-engineer-discussing-at-the-table-with-blueprint-closeup-on-hands-and-project-print.jpg?s=612x612&w=0&k=20&c=-ODOOfKY-vxwhyjx7RggEvW3YzWrinoELglqZAbjzIs=",
-      imageAlt: "Rear view of modern home with pool",
-      beds: 3,
-      baths: 2,
-      title: "Modern home in city center in the heart of historic Los Angeles",
-      formattedPrice: "$1,900.00",
-      reviewCount: 34,
-      rating: 4,
-      Area: 200,
-      Rooms: 1,
-      Floors: 2,
-    },
-  ];
+      title: string,
+      formattedPrice: string,
+      reviewCount: number,
+      rating: number,
+      Area: number,
+      Floors: any,
+      Rooms: any,
+    
+    }
+     const property: houses[] = [
+       {
+         imageUrl:
+           "https://media.istockphoto.com/id/864458934/photo/architects-engineer-discussing-at-the-table-with-blueprint-closeup-on-hands-and-project-print.jpg?s=612x612&w=0&k=20&c=-ODOOfKY-vxwhyjx7RggEvW3YzWrinoELglqZAbjzIs=",
+         imageAlt: "Rear view of modern home with pool",
+         beds: 3,
+         baths: 2,
+         title:
+           "Modern home in city center in the heart of historic Los Angeles",
+         formattedPrice: "$1,900.00",
+         reviewCount: 34,
+         rating: 4,
+         Area: 500,
+         Rooms: 1,
+         Floors: 1,
+         
+       },{
+        imageUrl:
+          "https://media.istockphoto.com/id/864458934/photo/architects-engineer-discussing-at-the-table-with-blueprint-closeup-on-hands-and-project-print.jpg?s=612x612&w=0&k=20&c=-ODOOfKY-vxwhyjx7RggEvW3YzWrinoELglqZAbjzIs=",
+        imageAlt: "Rear view of modern home with pool",
+        beds: 3,
+        baths: 2,
+        title:
+          "Modern home in city center in the heart of historic Los Angeles",
+        formattedPrice: "$1,900.00",
+        reviewCount: 34,
+        rating: 4,
+        Area: 400,
+        Rooms: 1,
+        Floors: 2,
+      },{
+        imageUrl:
+          "https://media.istockphoto.com/id/864458934/photo/architects-engineer-discussing-at-the-table-with-blueprint-closeup-on-hands-and-project-print.jpg?s=612x612&w=0&k=20&c=-ODOOfKY-vxwhyjx7RggEvW3YzWrinoELglqZAbjzIs=",
+        imageAlt: "Rear view of modern home with pool",
+        beds: 3,
+        baths: 2,
+        title:
+          "Modern home in city center in the heart of historic Los Angeles",
+        formattedPrice: "$1,900.00",
+        reviewCount: 34,
+        rating: 4,
+        Area: 400,
+        Rooms: 2,
+        Floors: 1,
+      },{
+        imageUrl:
+          "https://media.istockphoto.com/id/864458934/photo/architects-engineer-discussing-at-the-table-with-blueprint-closeup-on-hands-and-project-print.jpg?s=612x612&w=0&k=20&c=-ODOOfKY-vxwhyjx7RggEvW3YzWrinoELglqZAbjzIs=",
+        imageAlt: "Rear view of modern home with pool",
+        beds: 3,
+        baths: 2,
+        title:
+          "Modern home in city center in the heart of historic Los Angeles",
+        formattedPrice: "$1,900.00",
+        reviewCount: 34,
+        rating: 4,
+        Area: 200,
+        Rooms: 1,
+        Floors: 2,
+      }
+      
+
+     ]
   return (
     <>
       <Center m={35}>
@@ -139,6 +144,7 @@ function Main() {
             colorScheme="teal"
             variant="outline"
           >
+
             500m<span>2</span>
           </Button>
         </Stack>
@@ -163,6 +169,7 @@ function Main() {
           <Box >
             <Collapse in={isOpen} animateOpacity>
             {item.Area == filterArea ? (
+
               <Box
               
                 maxW="300px"
@@ -225,6 +232,7 @@ function Main() {
             ) : null}
         </Collapse>
           </Box>
+
         ))}
       </Center>
     </>
