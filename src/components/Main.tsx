@@ -11,19 +11,7 @@ function Main() {
   const [filterArea, setFilterArea] = React.useState<any | null>(null);
 
  const AreaButtons = (area:number)=>{setFilterArea(area)}
-  const handleFilterRoomsChange= (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setFilterRooms(e.target.value ? parseInt(e.target.value) : null);
-  
 
-  };  const handleFilterRoomsChange2= (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setFilterFloors(e.target.value ? parseInt(e.target.value) : null);
-  
-
-  };  const handleFilterRoomsChange3= (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setFilterArea(e.target.value ? parseInt(e.target.value) : null);
-  
-
-  };
     interface houses {
       imageUrl: string,
       imageAlt: string,
@@ -105,16 +93,16 @@ function Main() {
      <Center m={35}>
         <Stack direction="row" spacing={4} align="center">
 
-          <Button onClick={()=>AreaButtons(200)} colorScheme="teal" variant="outline">
+          <Button onClick={()=>setFilterArea(200)} colorScheme="teal" variant="outline">
             200m<span>2</span>
           </Button>
-          <Button   onClick={()=>AreaButtons(300)} colorScheme="teal" variant="outline">
+          <Button   onClick={()=>setFilterArea(300)} colorScheme="teal" variant="outline">
             300m<span>2</span>
           </Button>
-          <Button   onClick={()=>AreaButtons(400)} colorScheme="teal" variant="outline">
+          <Button   onClick={()=>setFilterArea(400)} colorScheme="teal" variant="outline">
             400m<span>2</span>
           </Button>
-          <Button  onClick={()=>AreaButtons(500)} colorScheme="teal" variant="outline">
+          <Button  onClick={()=>setFilterArea(500)} colorScheme="teal" variant="outline">
             500m<span>2</span>
           </Button>
          
@@ -140,8 +128,7 @@ function Main() {
 
         {property.map((item) => (
 
-      <Box>
-        
+          <>
           { item.Area==filterArea  ?    <Box
             maxW="300px"
             borderWidth="1px"
@@ -200,9 +187,8 @@ function Main() {
               </Box>
             </Box>
           </Box> : null }
-
+          </>
       
-          </Box>
         ))}
       </Center>
     </>
