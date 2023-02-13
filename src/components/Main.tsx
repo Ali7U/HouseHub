@@ -1,8 +1,26 @@
 import { StarIcon } from "@chakra-ui/icons";
-import { Box, Center, Button, Stack, Image, Badge} from "@chakra-ui/react";
+import { Box, Center, Button, Stack, Image, Badge, Flex, Select, Text} from "@chakra-ui/react";
 import React from "react";
 
 function Main() {
+  const [filterRooms, setFilterRooms] = React.useState<any | null>(null);
+  const [filterFloors, setFilterFloors] = React.useState<any | null>(null);
+  const [filterArea, setFilterArea] = React.useState<any | null>(null);
+
+ const AreaButtons = (area:number)=>{setFilterArea(area)}
+  const handleFilterRoomsChange= (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setFilterRooms(e.target.value ? parseInt(e.target.value) : null);
+  
+
+  };  const handleFilterRoomsChange2= (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setFilterFloors(e.target.value ? parseInt(e.target.value) : null);
+  
+
+  };  const handleFilterRoomsChange3= (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setFilterArea(e.target.value ? parseInt(e.target.value) : null);
+  
+
+  };
     interface houses {
       imageUrl: string,
       imageAlt: string,
@@ -12,6 +30,10 @@ function Main() {
       formattedPrice: string,
       reviewCount: number,
       rating: number,
+      Area: number,
+      Floors: any,
+      Rooms: any,
+    
     }
      const property: houses[] = [
        {
@@ -25,30 +47,78 @@ function Main() {
          formattedPrice: "$1,900.00",
          reviewCount: 34,
          rating: 4,
-       },
+         Area: 500,
+         Rooms: 1,
+         Floors: 1,
+         
+       },{
+        imageUrl:
+          "https://media.istockphoto.com/id/864458934/photo/architects-engineer-discussing-at-the-table-with-blueprint-closeup-on-hands-and-project-print.jpg?s=612x612&w=0&k=20&c=-ODOOfKY-vxwhyjx7RggEvW3YzWrinoELglqZAbjzIs=",
+        imageAlt: "Rear view of modern home with pool",
+        beds: 3,
+        baths: 2,
+        title:
+          "Modern home in city center in the heart of historic Los Angeles",
+        formattedPrice: "$1,900.00",
+        reviewCount: 34,
+        rating: 4,
+        Area: 400,
+        Rooms: 1,
+        Floors: 2,
+      },{
+        imageUrl:
+          "https://media.istockphoto.com/id/864458934/photo/architects-engineer-discussing-at-the-table-with-blueprint-closeup-on-hands-and-project-print.jpg?s=612x612&w=0&k=20&c=-ODOOfKY-vxwhyjx7RggEvW3YzWrinoELglqZAbjzIs=",
+        imageAlt: "Rear view of modern home with pool",
+        beds: 3,
+        baths: 2,
+        title:
+          "Modern home in city center in the heart of historic Los Angeles",
+        formattedPrice: "$1,900.00",
+        reviewCount: 34,
+        rating: 4,
+        Area: 400,
+        Rooms: 2,
+        Floors: 1,
+      },{
+        imageUrl:
+          "https://media.istockphoto.com/id/864458934/photo/architects-engineer-discussing-at-the-table-with-blueprint-closeup-on-hands-and-project-print.jpg?s=612x612&w=0&k=20&c=-ODOOfKY-vxwhyjx7RggEvW3YzWrinoELglqZAbjzIs=",
+        imageAlt: "Rear view of modern home with pool",
+        beds: 3,
+        baths: 2,
+        title:
+          "Modern home in city center in the heart of historic Los Angeles",
+        formattedPrice: "$1,900.00",
+        reviewCount: 34,
+        rating: 4,
+        Area: 200,
+        Rooms: 1,
+        Floors: 2,
+      }
       
      ];
   return (
     <>
-      <Center m={35}>
+     <Center m={35}>
         <Stack direction="row" spacing={4} align="center">
-          <Button colorScheme="teal" variant="outline">
+          <Button onClick={()=>AreaButtons(200)} colorScheme="teal" variant="outline">
             200m<span>2</span>
           </Button>
-          <Button colorScheme="teal" variant="outline">
+          <Button   onClick={()=>AreaButtons(300)} colorScheme="teal" variant="outline">
             300m<span>2</span>
           </Button>
-          <Button colorScheme="teal" variant="outline">
+          <Button   onClick={()=>AreaButtons(400)} colorScheme="teal" variant="outline">
             400m<span>2</span>
           </Button>
-          <Button colorScheme="teal" variant="outline">
+          <Button  onClick={()=>AreaButtons(500)} colorScheme="teal" variant="outline">
             500m<span>2</span>
           </Button>
-          <Button colorScheme="teal" variant="outline">
-            other
-          </Button>
+         
         </Stack>
       </Center>
+  
+    
+
+      
       <Center
         mb={35}
         backgroundImage={
@@ -60,8 +130,12 @@ function Main() {
         padding={35}
         w={"100%"}
       >
+
+
         {property.map((item) => (
-          <Box
+      <Box>
+        
+          { item.Area==filterArea  ?    <Box
             maxW="sm"
             borderWidth="1px"
             borderRadius="lg"
@@ -118,6 +192,9 @@ function Main() {
                 </Box>
               </Box>
             </Box>
+          </Box> : null }
+
+      
           </Box>
         ))}
       </Center>

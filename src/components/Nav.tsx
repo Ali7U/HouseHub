@@ -52,7 +52,7 @@ export default function App() {
               <Button variant="ghost">Pricing</Button>
               <Button variant="ghost">Blog</Button>
               <Button variant="ghost">Company</Button>
-              <Link to="/LoginPage">
+              <Link to="/login">
               <Button variant="ghost">Sign in</Button>
               </Link>
             </HStack>
