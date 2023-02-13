@@ -9,19 +9,18 @@ import Login from "./Login";
 
 import Register from "./Register";
 import { Box } from "@chakra-ui/react";
-import Main from "./Main";
 
 function Router() {
   return (
     <div className="routers">
       <Nav />
       <Routes>
-        <Route path="/" element={<Home />} />
-         <Route path="/login" element={<Login />} /> 
-        <Route path="/Register" element={<Register />} />
-         <Route path="/Browse" element={<Listings />} />
-        <Route path="/main" element={<Main/>} />
+        <Route path="/" element={<Home />} />       
+         <Route path="/login" element={<Login />} /> <Route path="/Browse" element={<Listings />} />
+        <Route path="/LandingPage" element={<LandingPage />} />
+
       </Routes>
+      
       <Footer />
     </div>
   );
