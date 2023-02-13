@@ -1,127 +1,88 @@
 import {
   Box,
-  Flex,
-  HStack,
-  Image,
-  Link,
+  chakra,
+  Container,
   Stack,
   Text,
-  VStack,
-  Divider,
-  Icon,
-} from "@chakra-ui/react";
-import React from "react";
-import { GrInstagram } from "react-icons/gr";
-import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
-import { FiTwitter } from "react-icons/fi";
+  useColorModeValue,
+  VisuallyHidden,
+} from '@chakra-ui/react';
+import { FaAd, FaAmilia, FaCalculator, FaChair, FaDiscord, FaFacebook, FaGrinSquintTears, FaInstagram, FaLinkedin, FaPhone, FaRegComment, FaShare, FaTwitter, FaVoicemail, FaWhatsapp, FaYoutube } from 'react-icons/fa';
+import { ReactNode } from 'react';
+import { Link } from 'react-router-dom';
 
-export default function App() {
+const SocialButton = ({
+  children,
+  label,
+  href,
+}: {
+  children: ReactNode;
+  label: string;
+  href: string;
+}) => {
   return (
-    <Box bg="white" _dark={{ bg: "gray.600" }}>
-      <Stack
-        direction={{ base: "column", lg: "row" }}
-        w="full"
-        justify="space-between"
-        p={10}
-      >
-        <Flex justify="center">
-          <Image
-            src="src\image-removebg-preview.png" 
-            alt="Company Logo"
-            rounded="lg"
-            width={{ base: "150px", lg: "200px" }}
-            height={{ base: "75px", lg: "100px" }}
-            my={{ base: 2, lg: 0 }}
-          />
-        </Flex>
-        <HStack
-          alignItems="start"
-          flex={1}
-          justify="space-around"
-          fontSize={{ base: "12px", md: "16px" }}
-          color="gray.800"
-          _dark={{ color: "white" }}
-          textAlign={{ base: "center", md: "left" }}
-        >
-          <Flex justify="start" direction="column">
-            <Link textTransform="uppercase">Pre-Sale FAQS</Link>
-            <Link textTransform="uppercase">Submit a ticket</Link>
-          </Flex>
-          <Flex justify="start" direction="column">
-            <Link textTransform="uppercase">Services</Link>
-            <Link textTransform="uppercase">Theme Tweak</Link>
-          </Flex>
-        </HStack>
-        <HStack
-          alignItems="start"
-          flex={1}
-          justify="space-around"
-          fontSize={{ base: "12px", md: "16px" }}
-          color="gray.800"
-          _dark={{ color: "white" }}
-          textAlign={{ base: "center", md: "left" }}
-        >
-          <Flex justify="start" direction="column">
-            <Link textTransform="uppercase">Show Case</Link>
-            <Link textTransform="uppercase">Widget Kit</Link>
-            <Link textTransform="uppercase">Support</Link>
-          </Flex>
-          <Flex justify="start" direction="column">
-            <Link textTransform="uppercase">About Us</Link>
-            <Link textTransform="uppercase">Contact Us</Link>
-            <Link textTransform="uppercase">Resources</Link>
-          </Flex>
-        </HStack>
-      </Stack>
-      <Divider
-        w="95%"
-        mx="auto"
-        color="gray.600"
-        _dark={{ color: "#F9FAFB" }}
-        h="3.5px"
-      />
-      <VStack py={3}>
-        <HStack justify="center">
-          <Link>
-            <Icon
-              color="gray.800"
-              _dark={{ color: "white" }}
-              h="20px"
-              w="20px"
-              as={FaFacebookF}
-            />
-          </Link>
-          <Link>
-            <Icon
-              color="gray.800"
-              _dark={{ color: "white" }}
-              h="20px"
-              w="20px"
-              as={FiTwitter}
-            />
-          </Link>
-          <Link>
-            <Icon
-              _dark={{ color: "white" }}
-              h="20px"
-              w="20px"
-              as={GrInstagram}
-            />
-          </Link>
-          <Link>
-            <Icon
-              _dark={{ color: "white" }}
-              h="20px"
-              w="20px"
-              as={FaLinkedinIn}
-            />
-          </Link>
-        </HStack>
+    <chakra.button
+      bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.900')}
+      rounded={'full'}
+      w={8}
+      h={8}
+      cursor={'pointer'}
+      as={'a'}
+      href={href}
+      display={'inline-flex'}
+      alignItems={'center'}
+      justifyContent={'center'}
+      transition={'background 0.3s ease'}
+      _hover={{
+        bg: useColorModeValue('blackAlpha.700', 'whiteAlpha.800'),
+      }}>
+      <VisuallyHidden>{label}</VisuallyHidden>
+      {children}
+    </chakra.button>
+  );
+};
 
-        <Text textAlign="center" fontSize="smaller" _dark={{ color: "white" }}>
-          &copy;Copyright. All rights reserved.
-        </Text>
-      </VStack>
+export default function footer() {
+  const bg = useColorModeValue("white", "gray.800");
+
+  return (
+    <Box
+        bg={bg}
+        color={useColorModeValue('gray.900', 'gray.700')}>
+      <Container
+        as={Stack}
+        maxW={'2xl'}
+        py={4}
+        direction={{ base: 'column', md: 'row' }}
+        spacing={4}
+        justify={{ base: 'center', md: 'space-between' }}
+        align={{ base: 'center', md: 'center' }}>
+        <Text>© 2023 HOUSEHUB</Text>
+        <Stack direction={'row'} spacing={4}>
+          <SocialButton label={'Twitter'} href={'#'}>
+            <FaTwitter />
+          </SocialButton>
+          <SocialButton label={'Instagram'} href={'#'}>
+            <FaInstagram />
+          </SocialButton>
+          <SocialButton label={'Whatsapp'} href={'#'}>
+            <FaWhatsapp />
+          </SocialButton>
+          <SocialButton label={'Linkedin'} href={'#'}>
+            <FaLinkedin />
+          </SocialButton>
+          <SocialButton label={'Discord'} href={'#'}>
+            <FaDiscord />
+          </SocialButton>
+          <SocialButton label={'Facebook'} href={'#'}>
+            <FaFacebook />
+          </SocialButton>
+          <Link to={'/Contact'}>
+          <SocialButton label={'Comment'} href={'#'}>
+            <FaRegComment />
+          </SocialButton></Link>
+        </Stack>
+      </Container>
     </Box>
   );
 }
