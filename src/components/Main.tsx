@@ -128,8 +128,7 @@ function Main() {
 
         {property.map((item) => (
 
-      <Box>
-        
+          <>
           { item.Area==filterArea  ?    <Box
             maxW="300px"
             borderWidth="1px"
@@ -188,9 +187,8 @@ function Main() {
               </Box>
             </Box>
           </Box> : null }
-
+          </>
       
-          </Box>
         ))}
       </Center>
     </>

@@ -54,7 +54,8 @@ export default function App() {
             >
               <VisuallyHidden>Choc</VisuallyHidden>
             </chakra.a>
-            <Image  src="src\logo.png" height = "40px"></Image>          </Flex>
+            <Link to={"/"}>
+            <Image src="src\logo.png" height = "40px"></Image>       </Link>   </Flex>
           <HStack display="flex" alignItems="center" spacing={1}>
             <HStack
               spacing={1}
