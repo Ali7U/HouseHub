@@ -8,8 +8,8 @@ import Nav from "./Nav";
 import Login from "./Login";
 import Register from "./Register";
 import { Box } from "@chakra-ui/react";
-import Main from "./Main";
 import Contact from './Contact';
+import Main from "./Main";
 
 function Router() {
   return (
@@ -24,7 +24,6 @@ function Router() {
         <Route path="/Contact" element={<Contact/>} />
 
       </Routes>
-      
       <Footer />
     </div>
   );

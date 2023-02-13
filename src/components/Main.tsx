@@ -36,7 +36,10 @@ function Main() {
   ) => {
     setFilterArea(e.target.value ? parseInt(e.target.value) : null);
   };
-    const { isOpen, onToggle } = useDisclosure();
+
+
+  const [ isOpen, onToggle ] = React.useState<any>();
+
 
     interface houses {
       imageUrl: string,
@@ -79,7 +82,7 @@ function Main() {
         formattedPrice: "$1,900.00",
         reviewCount: 34,
         rating: 4,
-        Area: 400,
+        Area: 300,
         Rooms: 1,
         Floors: 2,
       },{
@@ -119,33 +122,33 @@ function Main() {
       <Center m={35}>
         <Stack direction="row" spacing={4} align="center" >
           <Button
-            onClick={() => {AreaButtons(200); onToggle()}}
+            onClick={() => {AreaButtons(200); onToggle(true)}}
             colorScheme="teal"
             variant="outline"
           >
-            200m<span>2</span>
+            200m<sup>2</sup>
           </Button>
           <Button
-            onClick={() => {AreaButtons(300); onToggle()}}
+            onClick={() => {AreaButtons(300); onToggle(true)}}
             colorScheme="teal"
             variant="outline"
           >
-            300m<span>2</span>
+            300m<sup>2</sup>
           </Button>
           <Button
-            onClick={() => {AreaButtons(400); onToggle()}}
+            onClick={() => {AreaButtons(400); onToggle(true)}}
             colorScheme="teal"
             variant="outline"
           >
-            400m<span>2</span>
+            400m<sup>2</sup>
           </Button>
           <Button
-            onClick={() => {AreaButtons(500); onToggle()}}
+            onClick={() => {AreaButtons(500); onToggle(true)}}
             colorScheme="teal"
             variant="outline"
           >
 
-            500m<span>2</span>
+            500m<sup>2</sup>
           </Button>
         </Stack>
       </Center>
@@ -166,7 +169,7 @@ function Main() {
       >
         {property.map((item) => (
           
-          <Box >
+          <Container >
             <Collapse in={isOpen} animateOpacity>
             {item.Area == filterArea ? (
 
@@ -231,7 +234,7 @@ function Main() {
               </Box>
             ) : null}
         </Collapse>
-          </Box>
+          </Container>
 
         ))}
       </Center>

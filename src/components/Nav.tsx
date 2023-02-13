@@ -63,24 +63,22 @@ export default function App() {
               color="brand.500"
               display={{ base: "none", md: "inline-flex" }}
             >
-              <Button variant="ghost">Features</Button>
-              <Button variant="ghost">Pricing</Button>
-              <Button variant="ghost">Blog</Button>
-              <Button variant="ghost">Company</Button>
+              <Button _hover={{backgroundColor: "#c4b04e"}} variant="ghost">Features</Button>
+              <Button _hover={{backgroundColor: "#c4b04e"}} variant="ghost">Pricing</Button>
+              <Button _hover={{backgroundColor: "#c4b04e"}} variant="ghost">Blog</Button>
+              <Button _hover={{backgroundColor: "#c4b04e"}} variant="ghost">Company</Button>
               {isloggedin ?
               
 
-              <Button  onClick={logout} variant="ghost">Log out</Button>
+              <Button  _hover={{backgroundColor:"red.200"}}onClick={logout} variant="ghost">Log out</Button>
 
               :
 
               <Link to="/login">
-              <Button variant="ghost">Sign in</Button>
+              <Button _hover={{backgroundColor:"green.200"}}variant="ghost">Sign in</Button>
               </Link>}
             </HStack>
-            <Button colorScheme="brand" size="sm">
-              Get Started
-            </Button>
+            
             <Box display={{ base: "inline-flex", md: "none" }}>
               <IconButton
                 display={{ base: "flex", md: "none" }}
