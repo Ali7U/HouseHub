@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Box, Center, Text, Flex, FormControl, FormLabel, Heading, HStack, Image, Input, Stack, Checkbox, Button } from '@chakra-ui/react'
 import { Link } from 'react-router-dom';
@@ -69,7 +69,7 @@ function Login() {
                 justify="space-between"
             >
                 <Checkbox color={'purple'}>Remember me</Checkbox>
-                <Link color={'purple.500'}>Forgot password</Link>
+                <Link color={'purple.500'} to={''}>Forgot password</Link>
                 </Stack>
                 <Button bgColor={'#0d7aee'} color={"white"}>SIGN IN</Button>
             </Stack>
