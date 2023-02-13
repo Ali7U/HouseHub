@@ -26,25 +26,60 @@ function Main() {
          reviewCount: 34,
          rating: 4,
        },
-      
+       {
+         imageUrl:
+           "https://media.istockphoto.com/id/864458934/photo/architects-engineer-discussing-at-the-table-with-blueprint-closeup-on-hands-and-project-print.jpg?s=612x612&w=0&k=20&c=-ODOOfKY-vxwhyjx7RggEvW3YzWrinoELglqZAbjzIs=",
+         imageAlt: "Rear view of modern home with pool",
+         beds: 3,
+         baths: 2,
+         title:
+           "Modern home in city center in the heart of historic Los Angeles",
+         formattedPrice: "$1,900.00",
+         reviewCount: 34,
+         rating: 4,
+       },
+       {
+         imageUrl:
+           "https://media.istockphoto.com/id/864458934/photo/architects-engineer-discussing-at-the-table-with-blueprint-closeup-on-hands-and-project-print.jpg?s=612x612&w=0&k=20&c=-ODOOfKY-vxwhyjx7RggEvW3YzWrinoELglqZAbjzIs=",
+         imageAlt: "Rear view of modern home with pool",
+         beds: 3,
+         baths: 2,
+         title:
+           "Modern home in city center in the heart of historic Los Angeles",
+         formattedPrice: "$1,900.00",
+         reviewCount: 34,
+         rating: 4,
+       },
+       {
+         imageUrl:
+           "https://media.istockphoto.com/id/864458934/photo/architects-engineer-discussing-at-the-table-with-blueprint-closeup-on-hands-and-project-print.jpg?s=612x612&w=0&k=20&c=-ODOOfKY-vxwhyjx7RggEvW3YzWrinoELglqZAbjzIs=",
+         imageAlt: "Rear view of modern home with pool",
+         beds: 3,
+         baths: 2,
+         title:
+           "Modern home in city center in the heart of historic Los Angeles",
+         formattedPrice: "$1,900.00",
+         reviewCount: 34,
+         rating: 4,
+       },
      ];
   return (
     <>
       <Center m={35}>
         <Stack direction="row" spacing={4} align="center">
-          <Button colorScheme="teal" variant="outline">
+          <Button w={"25%"} colorScheme="teal" variant="outline">
             200m<span>2</span>
           </Button>
-          <Button colorScheme="teal" variant="outline">
+          <Button w={"25%"} colorScheme="teal" variant="outline">
             300m<span>2</span>
           </Button>
-          <Button colorScheme="teal" variant="outline">
+          <Button w={"25%"} colorScheme="teal" variant="outline">
             400m<span>2</span>
           </Button>
-          <Button colorScheme="teal" variant="outline">
+          <Button w={"25%"} colorScheme="teal" variant="outline">
             500m<span>2</span>
           </Button>
-          <Button colorScheme="teal" variant="outline">
+          <Button w={"25%"} colorScheme="teal" variant="outline">
             other
           </Button>
         </Stack>
@@ -55,14 +90,15 @@ function Main() {
           "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGVuZ2luZWVyaW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1400&q=60"
         }
         display="flex"
-        // justifyContent
+        justifyContent={"space-around"}
         alignItems={"center"}
         padding={35}
         w={"100%"}
       >
         {property.map((item) => (
           <Box
-            maxW="sm"
+            maxW="300px"
+            
             borderWidth="1px"
             borderRadius="lg"
             overflow="hidden"
