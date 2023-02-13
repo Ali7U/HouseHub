@@ -2,6 +2,9 @@ import { StarIcon } from "@chakra-ui/icons";
 import { Box, Center, Button, Stack, Image, Badge, Flex, Select, Text} from "@chakra-ui/react";
 import React from "react";
 
+console.log(null || "string");
+
+
 function Main() {
   const [filterRooms, setFilterRooms] = React.useState<any | null>(null);
   const [filterFloors, setFilterFloors] = React.useState<any | null>(null);
@@ -95,11 +98,13 @@ function Main() {
         Floors: 2,
       }
       
+
      ];
   return (
     <>
      <Center m={35}>
         <Stack direction="row" spacing={4} align="center">
+
           <Button onClick={()=>AreaButtons(200)} colorScheme="teal" variant="outline">
             200m<span>2</span>
           </Button>
@@ -124,19 +129,21 @@ function Main() {
         backgroundImage={
           "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGVuZ2luZWVyaW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1400&q=60"
         }
+        backgroundSize={"cover"}
         display="flex"
-        // justifyContent
+        justifyContent={"space-around"}
         alignItems={"center"}
-        padding={35}
+        padding={45}
         w={"100%"}
       >
 
 
         {property.map((item) => (
+
       <Box>
         
           { item.Area==filterArea  ?    <Box
-            maxW="sm"
+            maxW="300px"
             borderWidth="1px"
             borderRadius="lg"
             overflow="hidden"

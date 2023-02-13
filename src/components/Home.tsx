@@ -61,7 +61,7 @@ export default function Home() {
               rounded="lg"
               _hover={{ bg: "gray.800" }}
               onClick={() => {
-                navigate("/login");
+                navigate("/main");
               }}
             >
               Start Now
