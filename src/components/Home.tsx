@@ -21,10 +21,17 @@ export default function Home() {
         // maxW={{ lg: "5xl" }}
         shadow={{ lg: "lg" }}
         rounded={{ lg: "lg" }}
-        h={650}
+        h={600}
         w={"100%"}
+        // h={{ base: 64, lg: "full" }}
+        // rounded={{ lg: "lg" }}
+        bgSize="cover"
+        style={{
+          backgroundImage:
+            'url("https://static.wixstatic.com/media/9f7b6e_584af36f32484e38a9da4f060fa45902~mv2.jpg/v1/fill/w_2500,h_1389,al_c/9f7b6e_584af36f32484e38a9da4f060fa45902~mv2.jpg")',
+        }}
       >
-        <Box py={12} px={16} maxW={{ base: "xl", lg: "5xl" }} w={{ lg: "40%" }}>
+        <Box py={6} px={6} maxW={{ base: "xl", lg: "5xl" }} w={{ lg: "40%" }}>
           <chakra.h2
             fontSize={{ base: "2xl", md: "3xl" }}
             color="gray "
@@ -54,7 +61,7 @@ export default function Home() {
               rounded="lg"
               _hover={{ bg: "gray.800" }}
               onClick={() => {
-                navigate("/login");
+                navigate("/main");
               }}
             >
               Start Now
@@ -62,15 +69,15 @@ export default function Home() {
           </Box>
         </Box>
         <Box w={{ lg: "60%" }}>
-          <Box
+          {/* <Box
             h={{ base: 64, lg: "full" }}
             rounded={{ lg: "lg" }}
             bgSize="cover"
             style={{
               backgroundImage:
-                "url('https://images.unsplash.com/photo-1611048267451-e6ed903d4a38?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bGl2aW5nJTIwcm9vbSUyMGludGVyaW9yJTIwZGVzaWdufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1400&q=60')",
+                'url("https://static.wixstatic.com/media/9f7b6e_584af36f32484e38a9da4f060fa45902~mv2.jpg/v1/fill/w_2500,h_1389,al_c/9f7b6e_584af36f32484e38a9da4f060fa45902~mv2.jpg")',
             }}
-          ></Box>
+          ></Box> */}
         </Box>
       </Box>
     </Flex>

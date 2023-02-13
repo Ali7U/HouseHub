@@ -2,7 +2,7 @@ import React from "react";
 
 import {
   chakra,
-  Box,
+  Box,Image,
   Flex,
   useColorModeValue,
   VisuallyHidden,
@@ -40,10 +40,7 @@ export default function App() {
             >
               <VisuallyHidden>Choc</VisuallyHidden>
             </chakra.a>
-            <chakra.h1 fontSize="xl" fontWeight="medium" ml="2">
-              Choc
-            </chakra.h1>
-          </Flex>
+            <Image  src="src\logo.png" height = "40px"></Image>          </Flex>
           <HStack display="flex" alignItems="center" spacing={1}>
             <HStack
               spacing={1}
@@ -55,7 +52,7 @@ export default function App() {
               <Button variant="ghost">Pricing</Button>
               <Button variant="ghost">Blog</Button>
               <Button variant="ghost">Company</Button>
-              <Link to="/LoginPage">
+              <Link to="/login">
               <Button variant="ghost">Sign in</Button>
               </Link>
             </HStack>
@@ -107,7 +104,7 @@ export default function App() {
                   Company
                 </Button>
                 <Button w="full" variant="ghost">
-                  Sign in
+                  Log in
                 </Button>
               </VStack>
             </Box>
