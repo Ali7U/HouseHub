@@ -4,8 +4,9 @@ import Footer from "./Footer";
 import Home from "./Home";
 import Nav from "./Nav";
 import Login from "./Login";
-import Register from "../Register";
+import Register from "./Register";
 import { Box } from "@chakra-ui/react";
+import { Form } from "react-router-dom";
 
 function Router() {
   return (
