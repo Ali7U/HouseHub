@@ -2,6 +2,9 @@ import { StarIcon } from "@chakra-ui/icons";
 import { Box, Center, Button, Stack, Image, Badge} from "@chakra-ui/react";
 import React from "react";
 
+console.log(null || "string");
+
+
 function Main() {
     interface houses {
       imageUrl: string,
@@ -89,10 +92,11 @@ function Main() {
         backgroundImage={
           "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGVuZ2luZWVyaW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1400&q=60"
         }
+        backgroundSize={"cover"}
         display="flex"
         justifyContent={"space-around"}
         alignItems={"center"}
-        padding={35}
+        padding={45}
         w={"100%"}
       >
         {property.map((item) => (
