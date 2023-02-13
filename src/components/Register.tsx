@@ -38,10 +38,11 @@ function Register() {
           spacing={6}
           p={6}
           bgColor='#fff'
+          border="2px solid #c4b04e"
           alignItems='center'
           justifyContent='center'
         >
-          <Heading fontSize='2xl' color='#0d7aee'>
+          <Heading fontSize='2xl' color='#c4b04e'>
             REGISTER
           </Heading>
           <FormControl id='user'>
@@ -62,7 +63,7 @@ function Register() {
             />
           </FormControl>
           {error && <Box color='red'>{error}</Box>}
-          <Button bgColor='#0d7aee' color='white' onClick={handleRegister}>
+          <Button bgColor='#c4b04e' color='white' onClick={handleRegister}>
             REGISTER
           </Button>
         </Stack>

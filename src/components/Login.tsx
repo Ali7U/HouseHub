@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Box, Center, Text, Flex, FormControl, FormLabel, Heading, HStack, Image, Input, Stack, Checkbox, Button } from '@chakra-ui/react'
@@ -52,8 +53,11 @@ function Login() {
           bgColor='#fff'
           alignItems='center'
           justifyContent='center'
+          border="2px solid #c4b04e"
+
         >
-          <Heading fontSize='2xl' color='#0d7aee'>
+          <Heading fontSize='2xl' color='#c4b04e
+'>
             LOGIN
           </Heading>
           <FormControl id='user'>
@@ -76,16 +80,16 @@ Remember me
 </Checkbox>
 <Link to='/forgot'>Forgot password?</Link>
 </Stack>
-<Button size='lg' bgColor='#0d7aee' w={40} color={"white"} onClick={handleLogin}>
+<Button size='lg' bgColor='#c4b04e' w={40} color={"white"} onClick={handleLogin}>
 Login
 </Button>
 <Center mt={6}>
 
 <Link to='/Register'>
-<Text>Don't have an account?</Text>
+<Text fontSize="20px">Don't have an account?</Text>
 </Link>
 </Center>
-</Stack>
+</Stack> 
 </Flex>
 </HStack>
 );
