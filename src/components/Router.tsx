@@ -6,8 +6,9 @@ import LandingPage from "./LandingPage";
 import Listings from "./Listings";
 import Nav from "./Nav";
 import Login from "./Login";
-import Register from "../Register";
+import Register from "./Register";
 import { Box } from "@chakra-ui/react";
+import Main from "./Main";
 
 function Router() {
   return (
