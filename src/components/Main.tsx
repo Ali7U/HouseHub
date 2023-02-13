@@ -1,16 +1,42 @@
 import { StarIcon } from "@chakra-ui/icons";
-import { Box, Center, Button, Stack, Image, Badge, Flex, Select, Text} from "@chakra-ui/react";
+import {
+  Box,
+  Center,
+  Button,
+  Stack,
+  Image,
+  Badge,
+  Flex,
+  Select,
+  Text,
+  Container,
+  useDisclosure,
+  Collapse,
+} from "@chakra-ui/react";
 import React from "react";
 
 console.log(null || "string");
-
 
 function Main() {
   const [filterRooms, setFilterRooms] = React.useState<any | null>(null);
   const [filterFloors, setFilterFloors] = React.useState<any | null>(null);
   const [filterArea, setFilterArea] = React.useState<any | null>(null);
 
- const AreaButtons = (area:number)=>{setFilterArea(area)}
+  const AreaButtons = (area: number) => setFilterArea(area);
+  const handleFilterRoomsChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setFilterRooms(e.target.value ? parseInt(e.target.value) : null);
+  };
+  const handleFilterRoomsChange2 = (
+    e: React.ChangeEvent<HTMLSelectElement>
+  ) => {
+    setFilterFloors(e.target.value ? parseInt(e.target.value) : null);
+  };
+  const handleFilterRoomsChange3 = (
+    e: React.ChangeEvent<HTMLSelectElement>
+  ) => {
+    setFilterArea(e.target.value ? parseInt(e.target.value) : null);
+  };
+    const { isOpen, onToggle } = useDisclosure();
 
     interface houses {
       imageUrl: string,
@@ -87,32 +113,46 @@ function Main() {
       }
       
 
-     ];
+     ]
   return (
     <>
-     <Center m={35}>
-        <Stack direction="row" spacing={4} align="center">
-
-          <Button onClick={()=>setFilterArea(200)} colorScheme="teal" variant="outline">
+      <Center m={35}>
+        <Stack direction="row" spacing={4} align="center" >
+          <Button
+            onClick={() => {AreaButtons(200); onToggle()}}
+            colorScheme="teal"
+            variant="outline"
+          >
             200m<span>2</span>
           </Button>
-          <Button   onClick={()=>setFilterArea(300)} colorScheme="teal" variant="outline">
+          <Button
+            onClick={() => {AreaButtons(300); onToggle()}}
+            colorScheme="teal"
+            variant="outline"
+          >
             300m<span>2</span>
           </Button>
-          <Button   onClick={()=>setFilterArea(400)} colorScheme="teal" variant="outline">
+          <Button
+            onClick={() => {AreaButtons(400); onToggle()}}
+            colorScheme="teal"
+            variant="outline"
+          >
             400m<span>2</span>
           </Button>
-          <Button  onClick={()=>setFilterArea(500)} colorScheme="teal" variant="outline">
+          <Button
+            onClick={() => {AreaButtons(500); onToggle()}}
+            colorScheme="teal"
+            variant="outline"
+          >
+
             500m<span>2</span>
           </Button>
-         
         </Stack>
       </Center>
-  
-    
 
-      
+
       <Center
+        // height={850}
         mb={35}
         backgroundImage={
           "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGVuZ2luZWVyaW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1400&q=60"
@@ -121,74 +161,78 @@ function Main() {
         display="flex"
         justifyContent={"space-around"}
         alignItems={"center"}
-        padding={45}
+        // padding={45}
         w={"100%"}
       >
-
-
         {property.map((item) => (
-
-          <>
-          { item.Area==filterArea  ?    <Box
-            maxW="300px"
-            borderWidth="1px"
-            borderRadius="lg"
-            overflow="hidden"
-            backgroundColor={"#ccc8"}
-          >
-            <Image src={item.imageUrl} alt={item.imageAlt} />
-
-            <Box p="6">
-              <Box display="flex" alignItems="baseline">
-                <Badge borderRadius="full" px="2" colorScheme="teal">
-                  New
-                </Badge>
-                <Box
-                  color="gray.500"
-                  fontWeight="semibold"
-                  letterSpacing="wide"
-                  fontSize="xs"
-                  textTransform="uppercase"
-                  ml="2"
-                >
-                  {item.beds} beds &bull; {item.baths} baths
-                </Box>
-              </Box>
+          
+          <Box >
+            <Collapse in={isOpen} animateOpacity>
+            {item.Area == filterArea ? (
 
               <Box
-                mt="1"
-                fontWeight="semibold"
-                as="h4"
-                lineHeight="tight"
-                noOfLines={1}
+              
+                maxW="300px"
+                borderWidth="1px"
+                borderRadius="lg"
+                overflow="hidden"
+                backgroundColor={"#ccc8"}
               >
-                {item.title}
-              </Box>
+                <Image src={item.imageUrl} alt={item.imageAlt} />
 
-              <Box>
-                {item.formattedPrice}
-                <Box as="span" color="gray.600" fontSize="sm">
-                  / wk
+                <Box p="6">
+                  <Box display="flex" alignItems="baseline">
+                    <Badge borderRadius="full" px="2" colorScheme="teal">
+                      New
+                    </Badge>
+                    <Box
+                      color="gray.500"
+                      fontWeight="semibold"
+                      letterSpacing="wide"
+                      fontSize="xs"
+                      textTransform="uppercase"
+                      ml="2"
+                    >
+                      {item.beds} beds &bull; {item.baths} baths
+                    </Box>
+                  </Box>
+
+                  <Box
+                    mt="1"
+                    fontWeight="semibold"
+                    as="h4"
+                    lineHeight="tight"
+                    noOfLines={1}
+                  >
+                    {item.title}
+                  </Box>
+
+                  <Box>
+                    {item.formattedPrice}
+                    <Box as="span" color="gray.600" fontSize="sm">
+                      / wk
+                    </Box>
+                  </Box>
+
+                  <Box display="flex" mt="2" alignItems="center">
+                    {Array(5)
+                      .fill("")
+                      .map((_, i) => (
+                        <StarIcon
+                        key={i}
+                          color={i < item.rating ? "teal.500" : "gray.300"}
+                          />
+                          ))}
+                    <Box as="span" ml="2" color="gray.600" fontSize="sm">
+                      {item.reviewCount} reviews
+                    </Box>
+                  </Box>
                 </Box>
               </Box>
+            ) : null}
+        </Collapse>
+          </Box>
 
-              <Box display="flex" mt="2" alignItems="center">
-                {Array(5)
-                  .fill("")
-                  .map((_, i) => (
-                    <StarIcon
-                      key={i}
-                      color={i < item.rating ? "teal.500" : "gray.300"}
-                    />
-                  ))}
-                <Box as="span" ml="2" color="gray.600" fontSize="sm">
-                  {item.reviewCount} reviews
-                </Box>
-              </Box>
-            </Box>
-          </Box> : null }
-          </>
-      
         ))}
       </Center>
     </>
