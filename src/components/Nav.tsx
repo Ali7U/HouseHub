@@ -106,7 +106,7 @@ export default function App() {
                 bg={bg}
                 spacing={3}
                 rounded="sm"
-                shadow="sm"
+                shadow="lg"
               >
                 <CloseButton
                   aria-label="Close menu"
