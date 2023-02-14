@@ -3,6 +3,7 @@ import { FaUserAlt } from "react-icons/fa";
 import { BsTelephoneFill } from "react-icons/Bs";
 import {MdEmail} from "react-icons/Md"
 import {BsChatRightTextFill} from "react-icons/Bs"
+import {MdSubtitles} from "react-icons/Md"
 import './Contact.css'
 export default function Contact() {
   return (
@@ -27,6 +28,10 @@ export default function Contact() {
          <div className="input-group">
             <input type="email" id="email" required />
             <label htmlFor="email"><MdEmail/> Your Email</label>
+         </div>
+         <div className="input-group">
+            <input type="text" id="subject" required />
+            <label htmlFor="subject"><MdSubtitles/> Subject</label>
          </div>
          <div className="input-group">
             <textarea id="message" rows={8} required></textarea>
