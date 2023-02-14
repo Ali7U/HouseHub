@@ -62,11 +62,11 @@ function Login() {
           </Heading>
           <FormControl id='user'>
             <FormLabel>Username</FormLabel>
-            <Input placeholder='Enter username' value={userName} onChange={e => setUserName(e.target.value)} />
+            <Input id='inp' placeholder='Enter username' value={userName} onChange={e => setUserName(e.target.value)} />
           </FormControl>
           <FormControl id='password'>
             <FormLabel>Password</FormLabel>
-            <Input
+            <Input id='inp'
               type='password'
               placeholder='Enter password'
               value={password}

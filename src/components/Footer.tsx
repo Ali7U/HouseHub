@@ -7,8 +7,9 @@ import {
   useColorModeValue,
   VisuallyHidden,
 } from '@chakra-ui/react';
-import { FaAd, FaAmilia, FaCalculator, FaChair, FaDiscord, FaFacebook, FaGrinSquintTears, FaInstagram, FaLinkedin, FaPhone, FaRegComment, FaShare, FaTwitter, FaVoicemail, FaWhatsapp, FaYoutube } from 'react-icons/fa';
+// 
 import { ReactNode } from 'react';
+import { FaDiscord, FaFacebook, FaInstagram, FaLinkedin, FaRegComment, FaTwitter, FaWhatsapp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const SocialButton = ({
@@ -86,3 +87,4 @@ export default function footer() {
     </Box>
   );
 }
+

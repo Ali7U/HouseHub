@@ -6,6 +6,8 @@ function Register() {
   const [userName, setUserName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [repassword, setRePassword] = useState('');
+  const [phone, setPhone] = useState('');
   const [error, setError] = useState('');
 
   const handleRegister = async () => {
@@ -46,8 +48,8 @@ function Register() {
             REGISTER
           </Heading>
           <FormControl id='user'>
-            <FormLabel>Username</FormLabel>
-            <Input placeholder='Enter username' value={userName} onChange={e => setUserName(e.target.value)} />
+            <FormLabel>Full name</FormLabel>
+            <Input placeholder='Enter Full name: ' value={userName} onChange={e => setUserName(e.target.value)} />
           </FormControl>
           <FormControl id='email'>
             <FormLabel>Email</FormLabel>
@@ -60,6 +62,15 @@ function Register() {
               placeholder='Enter password'
               value={password}
               onChange={e => setPassword(e.target.value)}
+            />
+          </FormControl>
+          <FormControl id='password'>
+            <FormLabel>Re-Password</FormLabel>
+            <Input
+              type='password'
+              placeholder='Enter Re-password '
+              value={password}
+              onChange={e => setRePassword(e.target.value)}
             />
           </FormControl>
           {error && <Box color='red'>{error}</Box>}

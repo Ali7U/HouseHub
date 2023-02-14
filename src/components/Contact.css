@@ -18,16 +18,6 @@ form {
   max-width: 600px;
 }
 
-#name,
-#number,
-#email,
-#message {
-  padding-left: 10px;
-}
-#message {
-  padding-top: 10px;
-}
-
 .input-group {
   margin-bottom: 30px;
   position: relative;

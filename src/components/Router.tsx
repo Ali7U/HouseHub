@@ -6,10 +6,13 @@ import LandingPage from "./LandingPage";
 import Listings from "./Listings";
 import Nav from "./Nav";
 import Login from "./Login";
-import Register from "./Register";
 import { Box } from "@chakra-ui/react";
 import Contact from './Contact';
 import Main from "./Main";
+// import Contact from './Contact';
+import Register from "./Register";
+import Model from "./Model"; 
+import Apitest from "./Apitest";
 
 function Router() {
   return (
@@ -17,13 +20,16 @@ function Router() {
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
          <Route path="/login" element={<Login />} /> 
         <Route path="/Register" element={<Register />} />
          <Route path="/Browse" element={<Listings />} />
         <Route path="/main" element={<Main/>} />
         <Route path="/Contact" element={<Contact/>} />
-
+        <Route path="/Apitest" element={<Apitest/>} />
       </Routes>
+      
+      
       <Footer />
     </div>
   );

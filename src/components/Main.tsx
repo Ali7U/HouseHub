@@ -1,3 +1,4 @@
+
 import { StarIcon } from "@chakra-ui/icons";
 import {
   Box,
@@ -59,7 +60,7 @@ function Main() {
   const property: houses[] = [
     {
       imageUrl:
-        "https://media.istockphoto.com/id/864458934/photo/architects-engineer-discussing-at-the-table-with-blueprint-closeup-on-hands-and-project-print.jpg?s=612x612&w=0&k=20&c=-ODOOfKY-vxwhyjx7RggEvW3YzWrinoELglqZAbjzIs=",
+        "src/assets/Four/First1.png",
       imageAlt: "Rear view of modern home with pool",
       beds: 3,
       baths: 2,
@@ -113,6 +114,35 @@ function Main() {
       Rooms: 1,
       Floors: 2,
     },
+    {
+      imageUrl:
+        "https://media.istockphoto.com/id/864458934/photo/architects-engineer-discussing-at-the-table-with-blueprint-closeup-on-hands-and-project-print.jpg?s=612x612&w=0&k=20&c=-ODOOfKY-vxwhyjx7RggEvW3YzWrinoELglqZAbjzIs=",
+      imageAlt: "Rear view of modern home with pool",
+      beds: 3,
+      baths: 2,
+      title: "Modern home in city center in the heart of historic Los Angeles",
+      formattedPrice: "$1,900.00",
+      reviewCount: 34,
+      rating: 4,
+      Area: 200,
+      Rooms: 1,
+      Floors: 2,
+    },
+        {
+      imageUrl:
+        "https://media.istockphoto.com/id/864458934/photo/architects-engineer-discussing-at-the-table-with-blueprint-closeup-on-hands-and-project-print.jpg?s=612x612&w=0&k=20&c=-ODOOfKY-vxwhyjx7RggEvW3YzWrinoELglqZAbjzIs=",
+      imageAlt: "Rear view of modern home with pool",
+      beds: 3,
+      baths: 2,
+      title: "Modern home in city center in the heart of historic Los Angeles",
+      formattedPrice: "$1,900.00",
+      reviewCount: 34,
+      rating: 4,
+      Area: 200,
+      Rooms: 1,
+      Floors: 2,
+    },
+    
   ];
 
     
@@ -160,9 +190,9 @@ function Main() {
       <Center
         // height={850}
         // mb={35}
-        backgroundImage={
-          "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGVuZ2luZWVyaW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1400&q=60"
-        }
+        // backgroundImage={
+        //   "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGVuZ2luZWVyaW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1400&q=60"
+        // }
         backgroundSize={"cover"}
         display="flex"
         justifyContent={"space-around"}
@@ -170,11 +200,10 @@ function Main() {
         // padding={45}
         w={"100%"}
       >
-        {property.map((item) => (
+        {property.filter(item=>item.Area==filterArea).map((item) => (
 
           <Container >
             <Collapse in={isOpen} animateOpacity>
-              {item.Area == filterArea ? (
                 <Box
                   maxW="300px"
                   borderWidth="1px"
@@ -234,8 +263,7 @@ function Main() {
                   </Box>
                 </Box>
 
-              // </Box>
-            ) : null}
+           
         </Collapse>
           </Container>
 
