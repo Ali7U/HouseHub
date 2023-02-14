@@ -9,6 +9,7 @@ import {
 } from '@chakra-ui/react';
 // import { FaAd, FaAmilia, FaCalculator, FaChair, FaDiscord, FaFacebook, FaGrinSquintTears, FaInstagram, FaLinkedin, FaPhone, FaRegComment, FaShare, FaTwitter, FaVoicemail, FaWhatsapp, FaYoutube } from 'react-icons/fa';
 import { ReactNode } from 'react';
+import { FaDiscord, FaFacebook, FaInstagram, FaLinkedin, FaRegComment, FaTwitter } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const SocialButton = ({
@@ -60,25 +61,25 @@ export default function footer() {
         <Text>© 2023 HOUSEHUB</Text>
         <Stack direction={'row'} spacing={4}>
           <SocialButton label={'Twitter'} href={'#'}>
-            {/* <FaTwitter /> */}
+            <FaTwitter />
           </SocialButton>
           <SocialButton label={'Instagram'} href={'#'}>
-            {/* <FaInstagram /> */}
+            <FaInstagram />
           </SocialButton>
           <SocialButton label={'Whatsapp'} href={'#'}>
           </SocialButton>
           <SocialButton label={'Linkedin'} href={'#'}>
-            {/* <FaLinkedin /> */}
+            <FaLinkedin />
           </SocialButton>
           <SocialButton label={'Discord'} href={'#'}>
-            {/* <FaDiscord /> */}
+            <FaDiscord />
           </SocialButton>
           <SocialButton label={'Facebook'} href={'#'}>
-            {/* <FaFacebook /> */}
+            <FaFacebook />
           </SocialButton>
           <Link to={'/Contact'}>
           <SocialButton label={'Comment'} href={'#'}>
-            {/* <FaRegComment /> */}
+            <FaRegComment />
           </SocialButton></Link>
         </Stack>
       </Container>
