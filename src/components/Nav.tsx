@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState
+} from "react";
 
 import {
   chakra,
@@ -12,12 +13,21 @@ import {
   VStack,
   IconButton,
   CloseButton,
+  AlertDialog,
+  AlertDialogBody,
+  AlertDialogContent,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogOverlay,
 } from "@chakra-ui/react";
 import { AiOutlineMenu } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 
 export default function App() {
+  const navigate = useNavigate()
   const [isloggedin, setisloggedin] = React.useState<boolean>();
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const cancelRef:any = React.useRef()
 
   const bg = useColorModeValue("white", "gray.800");
   const mobileNav = useDisclosure();
@@ -26,8 +36,6 @@ export default function App() {
 
     },[]);
   function logout() {
-
-
     localStorage.clear()
     setisloggedin(false)
 
@@ -37,6 +45,32 @@ export default function App() {
 
   return (
     <React.Fragment>
+        <AlertDialog
+        isOpen={isOpen}
+        leastDestructiveRef ={cancelRef}
+        onClose={onClose}
+      >
+        <AlertDialogOverlay>
+          <AlertDialogContent>
+            <AlertDialogHeader fontSize='lg' fontWeight='bold'>
+              Log out
+            </AlertDialogHeader>
+
+            <AlertDialogBody>
+              Are you sure you want to log out? 
+            </AlertDialogBody>
+
+            <AlertDialogFooter>
+              <Button ref={cancelRef} onClick={onClose}>
+                Cancel
+              </Button>
+              <Button colorScheme='red' ref={cancelRef} onClick={()=>{(onClose()); localStorage.clear();  setisloggedin(false); navigate("/")}} ml={3}>
+                Log out
+              </Button>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialogOverlay>
+      </AlertDialog>
       <chakra.header
         bg={bg}
         w="full"
@@ -70,7 +104,7 @@ export default function App() {
               {isloggedin ?
               
 
-              <Button  _hover={{backgroundColor:"red.200"}}onClick={logout} variant="ghost">Log out</Button>
+              <Button  _hover={{backgroundColor:"red.200"}}onClick={onOpen} variant="ghost">Log out</Button>
 
               :
 
@@ -91,6 +125,7 @@ export default function App() {
               />
 
               <VStack
+              zIndex={"2"}
                 pos="absolute"
                 top={0}
                 left={0}
