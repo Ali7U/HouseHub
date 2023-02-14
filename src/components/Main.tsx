@@ -199,11 +199,10 @@ function Main() {
         // padding={45}
         w={"100%"}
       >
-        {property.map((item) => (
+        {property.filter(item=>item.Area==filterArea).map((item) => (
 
           <Container >
             <Collapse in={isOpen} animateOpacity>
-              {item.Area == filterArea ? (
                 <Box
                   maxW="300px"
                   borderWidth="1px"
@@ -263,8 +262,7 @@ function Main() {
                   </Box>
                 </Box>
 
-              // </Box>
-            ) : null}
+           
         </Collapse>
           </Container>
 
