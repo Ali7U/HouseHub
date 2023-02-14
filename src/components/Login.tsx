@@ -41,58 +41,82 @@ function Login() {
   };
 
   return (
-    <HStack w='full' h='full' bgColor='#fff' align='center'>
-      <Flex width='full' height='90vh' alignItems='center' justifyContent='center'>
+    <HStack w="full" h="full" bgColor="#fff" align="center">
+      <Flex
+        width="full"
+        height="90vh"
+        alignItems="center"
+        justifyContent="center"
+      >
         <Stack
-          boxShadow='2xl'
-          w='full'
-          maxW='xl'
-          h='80vh'
+          boxShadow="2xl"
+          w="full"
+          maxW="xl"
+          h="80vh"
           spacing={6}
           p={6}
-          bgColor='#fff'
-          alignItems='center'
-          justifyContent='center'
+          bgColor="#fff"
+          alignItems="center"
+          justifyContent="center"
           border="2px solid #c4b04e"
-
         >
-          <Heading fontSize='2xl' color='#c4b04e
-'>
+          <Heading
+            fontSize="2xl"
+            color="#c4b04e
+"
+          >
             LOGIN
           </Heading>
-          <FormControl id='user'>
+          mt={-26}
+          <FormControl id="user">
             <FormLabel>Username</FormLabel>
-            <Input placeholder='Enter username' value={userName} onChange={e => setUserName(e.target.value)} />
-          </FormControl>
-          <FormControl id='password'>
-            <FormLabel>Password</FormLabel>
             <Input
-              type='password'
-              placeholder='Enter password'
-              value={password}
-              onChange={e => setPassword(e.target.value)}
+              placeholder="Enter username"
+              mt={"26"}
+              value={userName}
+              onChange={(e) => setUserName(e.target.value)}
             />
           </FormControl>
-          {error && <Box color='red'>{error}</Box>}
-          <Stack spacing={4} direction='row' align='start' justify='space-between'>
-            <Checkbox color='purple' size='lg'>
-Remember me
-</Checkbox>
-<Link to='/forgot'>Forgot password?</Link>
-</Stack>
-<Button size='lg' bgColor='#c4b04e' w={40} color={"white"} onClick={handleLogin}>
-Login
-</Button>
-<Center mt={6}>
-
-<Link to='/Register'>
-<Text fontSize="20px">Don't have an account?</Text>
-</Link>
-</Center>
-</Stack> 
-</Flex>
-</HStack>
-);
+          <FormControl id="password">
+            <FormLabel>Password</FormLabel>
+            <Input
+              type="password"
+              placeholder="Enter password"
+              value={password}
+              mt={"26"}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </FormControl>
+          {error && <Box color="red">{error}</Box>}
+          <Stack
+            spacing={4}
+            direction="row"
+            align="start"
+            justify="space-between"
+          >
+            <Checkbox color="purple" size="lg">
+              Remember me
+            </Checkbox>
+            <Link to="/forgot">Forgot password?</Link>
+          </Stack>
+          <Button
+            size="lg"
+            bgColor="#c4b04e"
+            w={40}
+            color={"white"}
+            onClick={handleLogin}
+          >
+            Login
+          </Button>
+          <Center mt={6}>
+            <Link to="/Register">
+              <Text fontSize="20px">Don't have an account?</Text>
+            </Link>
+          </Center>
+        </Stack>
+      </Flex>
+    </HStack>
+  );
 }
 
 export default Login;
