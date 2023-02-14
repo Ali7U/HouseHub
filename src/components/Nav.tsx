@@ -121,7 +121,6 @@ export default function App() {
                 color="gray.800"
                 _dark={{ color: "inherit" }}
                 variant="ghost"
-                icon={<AiOutlineMenu />}
                 onClick={mobileNav.onOpen}
               />
 
@@ -145,7 +144,7 @@ export default function App() {
                   aria-label="Close menu"
                   onClick={mobileNav.onClose}
                 />
-
+<AiOutlineMenu/>
                 <Button w="full" variant="ghost">
                   Features
                 </Button>
