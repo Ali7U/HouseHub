@@ -113,6 +113,35 @@ function Main() {
       Rooms: 1,
       Floors: 2,
     },
+    {
+      imageUrl:
+        "https://media.istockphoto.com/id/864458934/photo/architects-engineer-discussing-at-the-table-with-blueprint-closeup-on-hands-and-project-print.jpg?s=612x612&w=0&k=20&c=-ODOOfKY-vxwhyjx7RggEvW3YzWrinoELglqZAbjzIs=",
+      imageAlt: "Rear view of modern home with pool",
+      beds: 3,
+      baths: 2,
+      title: "Modern home in city center in the heart of historic Los Angeles",
+      formattedPrice: "$1,900.00",
+      reviewCount: 34,
+      rating: 4,
+      Area: 200,
+      Rooms: 1,
+      Floors: 2,
+    },
+        {
+      imageUrl:
+        "https://media.istockphoto.com/id/864458934/photo/architects-engineer-discussing-at-the-table-with-blueprint-closeup-on-hands-and-project-print.jpg?s=612x612&w=0&k=20&c=-ODOOfKY-vxwhyjx7RggEvW3YzWrinoELglqZAbjzIs=",
+      imageAlt: "Rear view of modern home with pool",
+      beds: 3,
+      baths: 2,
+      title: "Modern home in city center in the heart of historic Los Angeles",
+      formattedPrice: "$1,900.00",
+      reviewCount: 34,
+      rating: 4,
+      Area: 200,
+      Rooms: 1,
+      Floors: 2,
+    },
+    
   ];
 
     
