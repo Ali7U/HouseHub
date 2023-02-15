@@ -6,11 +6,6 @@ import { GoLocation } from 'react-icons/go';
 import { FaBed, FaLayerGroup } from "react-icons/fa";
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-
-
-
-
-
 const images = [
   {
     id: 1,
@@ -91,7 +86,7 @@ function StatsCard(props: StatsCardProps) {
 function Details() {
   return (
     <>
-    <Box bgColor={"#eee"} >
+    <Box bgColor={"#eee"} h={"100vh"}>
     <Box maxW="7xl" mx={'auto'} pt={0} px={{ base: 2, sm: 12, md: 17 }}>
       <chakra.h1 
         textAlign={'center'}
@@ -174,13 +169,17 @@ function Details() {
       justifyContent="center"
     >
     
-    <Grid templateColumns='repeat(2, 1fr)' justifyContent={"center"} alignItems={"center"} w={"90vw"} gap={6}>
-    <Image id='1' src='https://o.remove.bg/downloads/5b64245a-b959-4489-8db0-b6d006667774/4-Bedroom-3D-House-Plans-removebg-preview-removebg-preview.png' alt='Dan Abramov' />
-    <Image id='2' src='https://o.remove.bg/downloads/5b64245a-b959-4489-8db0-b6d006667774/4-Bedroom-3D-House-Plans-removebg-preview-removebg-preview.png' alt='Dan Abramov' />
+    <Grid templateColumns='repeat(3, 1fr)' justifyContent={"center"} alignItems={"center"} w={"90vw"} gap={6} pt={10}>
+    
+    <Image id='1' src='https://tech-lagoon.com/imagechef/image-to-edge/ce27be26-4e6d-4b6a-be3f-790ff4b83fe1?1676456442549?n=3561' alt='Blue print' />
+    <Image id='1' src='https://i.imgur.com/YMZEiR4.jpg' alt='Blue print' />
+    <Image id='2' src='https://o.remove.bg/downloads/3a01d1a6-7781-4bf1-aa7e-044d4ea0683e/4-Bedroom-3D-House-Plans-removebg-preview-removebg-preview.png' alt='3d' />
 </Grid>
 </Flex>
     
-           <Button px={"40px"} py={"25px"}> Get contact</Button>
+           <Box>
+           <Button px={"40px"} py={"25px"} mb={"40px"}>Get contact</Button>
+           </Box>
         
    </Box>
    </Box>

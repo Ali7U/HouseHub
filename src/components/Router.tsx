@@ -9,9 +9,10 @@ import Login from "./Login";
 import { Box } from "@chakra-ui/react";
 import Main from "./Main";
 import Contact from './Contact';
-import Main from "./Main";
 import GenerateImage from "./GenerateImage";
 import Profile from "./Profile";
+import Register from "./Register";
+import Details from "./Details";
 
 
 function Router() {
@@ -31,6 +32,8 @@ function Router() {
         <Route path="/Contact" element={<Contact/>} />
         <Route path="/GenerateImage" element={<GenerateImage/>} />
         <Route path="/profile" element={<Profile/>} />
+        <Route path="/Details" element={<Details/>} />
+
 
 
 

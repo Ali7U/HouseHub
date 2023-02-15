@@ -16,7 +16,7 @@ function Apitest() {
   const [img, setimg] = React.useState<any>([]);
   const [promptinput, setprompt] = React.useState<any>();
   
-  const apiKey = "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  ";
+  const apiKey = "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";
 const configuration = new Configuration({
   apiKey: apiKey
 });
