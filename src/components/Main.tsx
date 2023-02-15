@@ -15,6 +15,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import Nav from "./Nav";
 
 console.log(null || "string");
 
@@ -205,6 +206,7 @@ function Main() {
     
   return (
     <>
+    <Nav/>
       <Center m={35}>
         <Stack direction="row" spacing={8} align="center"  >
           

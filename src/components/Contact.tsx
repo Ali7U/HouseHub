@@ -5,8 +5,9 @@ import {MdEmail} from "react-icons/Md"
 import {BsChatRightTextFill} from "react-icons/Bs"
 import {MdSubtitles} from "react-icons/Md"
 import './Contact.css'
+import Nav from './Nav';
 export default function Contact() {
-  return (
+  return (<> <Nav/> 
     <div className="contact">
         
     <form>
@@ -39,6 +40,6 @@ export default function Contact() {
          </div>
          <button type="submit" id="btn1"> SEND</button>
     </form>
-    </div>
+    </div></> 
   )
 }
