@@ -14,6 +14,7 @@ import {
   useDisclosure,
   Collapse,
 } from "@chakra-ui/react";
+import { repeat } from "lodash";
 import React from "react";
 
 console.log(null || "string");
@@ -74,7 +75,7 @@ function Main() {
     },
     {
       imageUrl:
-        "https://media.istockphoto.com/id/864458934/photo/architects-engineer-discussing-at-the-table-with-blueprint-closeup-on-hands-and-project-print.jpg?s=612x612&w=0&k=20&c=-ODOOfKY-vxwhyjx7RggEvW3YzWrinoELglqZAbjzIs=",
+        "src/assets/Four/First1.png",
       imageAlt: "Rear view of modern home with pool",
       beds: 3,
       baths: 2,
@@ -88,7 +89,7 @@ function Main() {
     },
     {
       imageUrl:
-        "https://media.istockphoto.com/id/864458934/photo/architects-engineer-discussing-at-the-table-with-blueprint-closeup-on-hands-and-project-print.jpg?s=612x612&w=0&k=20&c=-ODOOfKY-vxwhyjx7RggEvW3YzWrinoELglqZAbjzIs=",
+      "src/assets/Four/First1.png",
       imageAlt: "Rear view of modern home with pool",
       beds: 3,
       baths: 2,
@@ -102,7 +103,7 @@ function Main() {
     },
     {
       imageUrl:
-        "https://media.istockphoto.com/id/864458934/photo/architects-engineer-discussing-at-the-table-with-blueprint-closeup-on-hands-and-project-print.jpg?s=612x612&w=0&k=20&c=-ODOOfKY-vxwhyjx7RggEvW3YzWrinoELglqZAbjzIs=",
+      "src/assets/Four/First1.png",
       imageAlt: "Rear view of modern home with pool",
       beds: 3,
       baths: 2,
@@ -116,7 +117,7 @@ function Main() {
     },
     {
       imageUrl:
-        "https://media.istockphoto.com/id/864458934/photo/architects-engineer-discussing-at-the-table-with-blueprint-closeup-on-hands-and-project-print.jpg?s=612x612&w=0&k=20&c=-ODOOfKY-vxwhyjx7RggEvW3YzWrinoELglqZAbjzIs=",
+      "src/assets/Four/First1.png",
       imageAlt: "Rear view of modern home with pool",
       beds: 3,
       baths: 2,
@@ -130,7 +131,7 @@ function Main() {
     },
         {
       imageUrl:
-        "https://media.istockphoto.com/id/864458934/photo/architects-engineer-discussing-at-the-table-with-blueprint-closeup-on-hands-and-project-print.jpg?s=612x612&w=0&k=20&c=-ODOOfKY-vxwhyjx7RggEvW3YzWrinoELglqZAbjzIs=",
+      "src/assets/Four/First1.png",
       imageAlt: "Rear view of modern home with pool",
       beds: 3,
       baths: 2,
@@ -195,6 +196,7 @@ function Main() {
         // }
         backgroundSize={"cover"}
         display="flex"
+        gridTemplateColumns={'repeat, 1fr'}
         justifyContent={"space-around"}
         alignItems={"center"}
         // padding={45}

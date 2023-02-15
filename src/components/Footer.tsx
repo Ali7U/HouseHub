@@ -6,6 +6,7 @@ import {
   Text,
   useColorModeValue,
   VisuallyHidden,
+  BoxProps
 } from '@chakra-ui/react';
 // 
 import { ReactNode } from 'react';
@@ -43,7 +44,7 @@ const SocialButton = ({
   );
 };
 
-export default function footer() {
+export default function Footer() {
   const bg = useColorModeValue("white", "gray.800");
 
   return (
@@ -87,4 +88,3 @@ export default function footer() {
     </Box>
   );
 }
-
