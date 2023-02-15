@@ -122,15 +122,14 @@ async function generate(){
         <Input
           size="lg"
           color="brand.900"
-          placeholder="Enter your email..."
-          bg="white"
+          placeholder="Describe the house of your dreams"          bg="white"
         />
         <Button
           w="full"
           mt={2}
           color="white"
           variant="solid"
-          colorScheme="facebook"
+          bg="#2F4858"
           size="lg"
         >
           Get Started
@@ -185,8 +184,8 @@ async function generate(){
       <CircularProgress isIndeterminate size="400px" color='#2F4858' />
   :            
   
-             
-  <Container><Carousel  >
+          <> 
+ <Carousel  >
         <div>
      
         <img src={img[0]} /> 
@@ -201,7 +200,7 @@ async function generate(){
 
             <p className="legend"></p>
         </div>
-    </Carousel> <Button onClick={Save} bg="red">Save</Button></Container>}
+    </Carousel><Button ml = "50%" color="white" bg ="red.700" onClick={save}>Save</Button></>  }
   </Container>
 </SimpleGrid>;
     </>

@@ -2,6 +2,10 @@ import React, { useEffect } from 'react'
 import Nav from './Nav';
 
 function Profile() {
+  const [username, setusername] = React.useState<any>();
+  const [email, setEmail] = React.useState<any>();
+  const [images, setImages] = React.useState<string[]>([]);
+
 
 
   useEffect (  () => {
@@ -13,15 +17,24 @@ function Profile() {
           return res.json();
       }
      
-    }).then(tasks => {
-  console.log(tasks) 
+    }).then(res => {
+      setEmail(res[0].email)
+      setusername(res[0].username);
+      setImages(res[res.length-1].images);
+        console.log(images)
+       console.log(res)
    })
   }, [])
   
 
 
   return (
-    <div><Nav/><p></p></div>
+    <div><Nav/> <p>
+      
+      {username}
+
+      <img style={{height:"200px"}}src={images[0]}></img>
+      </p></div>
   )
 }
 
