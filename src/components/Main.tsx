@@ -216,11 +216,12 @@ function Main() {
           <Button
 
 
-onClick={() => {AreaButtons(200); onToggle(true)}}
 
-colorScheme="teal"
-variant="outline"
->
+            colorScheme='blue'
+            variant="outline" 
+            h={61}
+            fontSize={21}
+          >
             200m<sup>2</sup>
           </Button>
           <Button
@@ -260,17 +261,10 @@ onClick={() => {AreaButtons(400); onToggle(true)}}
       </Center>
 
       <Center
-        // height={850}
-        // mb={35}
-
-        // backgroundImage={
-          //   "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGVuZ2luZWVyaW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1400&q=60"
-        // }
         backgroundSize={"cover"}
         display="flex"
         justifyContent={"space-around"}
         alignItems={"center"}
-        // padding={45}
         w={"100%"}
         
       >
@@ -341,7 +335,7 @@ onClick={() => {AreaButtons(400); onToggle(true)}}
 
                     <Box>
                     <Stack direction="row" paddingTop={5} paddingLeft={120}>
-                      <Button backgroundColor={'#e6d894'} onClick={()=>{}}>select</Button>
+                      <Button backgroundColor={'#e6d894'} onClick={()=>{}}>Select</Button>
                     </Stack></Box>
         </Collapse>
           </Container>
