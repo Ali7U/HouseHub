@@ -71,7 +71,6 @@ function Main() {
       Area: 500,
       Rooms: 5,
       Floors: 1,
-<<<<<<< HEAD
       Kitchen: 2,
       Pool: 1,
       Garden: 1,
@@ -108,6 +107,16 @@ function Main() {
       Kitchen: 1,
       Pool: "none",
       Garden: "none",
+      Rooms: 1,
+      Floors: 1,
+    },
+    {
+      imageUrl:
+      "https://media.discordapp.net/attachments/1074592773518405694/1075093776726491166/2nd_1.png?width=1020&height=1020",
+      imageAlt: "Rear view of modern home with pool",
+      Area: 500,
+      Rooms: 1,
+      Floors: 1,
     },
     {
       imageUrl:
@@ -119,32 +128,6 @@ function Main() {
       Kitchen: 2,
       Pool: 1,
       Garden: 1,
-=======
-    },
-    {
-      imageUrl:
-      "https://i.top4top.io/p_26012fu111.jpg",
-      imageAlt: "Rear view of modern home with pool",
-      Area: 500,
-      Rooms: 1,
-      Floors: 1,
-    },
-    {
-      imageUrl:
-      "https://media.discordapp.net/attachments/1074592773518405694/1075093776206405723/3rd_1.png?width=1020&height=1020",
-      imageAlt: "Rear view of modern home with pool",
-      Area: 500,
-      Rooms: 1,
-      Floors: 1,
-    },
-    {
-      imageUrl:
-      "https://media.discordapp.net/attachments/1074592773518405694/1075093776726491166/2nd_1.png?width=1020&height=1020",
-      imageAlt: "Rear view of modern home with pool",
-      Area: 500,
-      Rooms: 1,
-      Floors: 1,
->>>>>>> b089578f87061417c3ffbe52692e1cbaff103ac7
     },
 
     
@@ -202,8 +185,6 @@ function Main() {
       </Center>
 
       <Center
-
-       
         backgroundSize={"cover"}
         display="flex"
         gridTemplateColumns={'repeat, 1fr'}
@@ -212,6 +193,7 @@ function Main() {
         w={"100%"}
         
       >
+
         {property.filter(item=>item.Area==filterArea).map((item) => (
 
           <Container>
@@ -226,10 +208,24 @@ function Main() {
                 >
                   <Image src={item.imageUrl} alt={item.imageAlt} transition={''}/>
 
+                    <Box display="flex" mt="2" alignItems="center">
+                      {Array(5)
+                        .fill("")
+                        .map((_, i) => (
+                          <StarIcon
+                          key={i}
+                          // color={i < item.rating ? "teal.500" : "gray.300"}
+                          />
+                          ))}
+                      <Box as="span" ml="2" color="gray.600" fontSize="sm">
+                        {/* {item.reviewCount} reviews */}
+                      </Box>
+                    </Box>
+                  </Box>
                 </Box>
                     <Box>
                     <Stack direction="row" paddingTop={5} paddingLeft={120}>
-                      <Button backgroundColor={'#e6d894'} onClick={()=>{localStorage.setItem("DetailsImage", item.imageUrl); navigate('/Details')}}>Select</Button>
+                      <Button backgroundColor={'#e6d894'} onClick={()=>{localStorage.setItem("DetailsImage", item.imageUrl);  navigate('/Details')}}>Select</Button>
                     </Stack></Box>
         </Collapse>
           </Container>
