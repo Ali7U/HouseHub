@@ -7,13 +7,9 @@ import Listings from "./Listings";
 import Nav from "./Nav";
 import Login from "./Login";
 import { Box } from "@chakra-ui/react";
+import Main from "./Main";
 import Contact from './Contact';
 import Main from "./Main";
-// import Contact from './Contact';
-import Register from "./Register";
-import Apitest from "./Apitest";
-import Details from "./Details";
-import ThreeD from './ThreeD'
 
 function Router() {
   return (
@@ -27,12 +23,8 @@ function Router() {
          <Route path="/Browse" element={<Listings />} />
         <Route path="/main" element={<Main/>} />
         <Route path="/Contact" element={<Contact/>} />
-        <Route path="/Apitest" element={<Apitest/>} />
-        <Route path="/Details" element={<Details/>}/>
-        <Route path="/Three" element={<ThreeD/>}/>
+
       </Routes>
-      
-      
       <Footer />
     </div>
   );

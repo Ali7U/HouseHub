@@ -44,12 +44,12 @@ function Register() {
           h="80vh"
           spacing={6}
           p={6}
-          bgColor="#fff"
+          bgColor='#fff'
           border="2px solid #c4b04e"
-          alignItems="center"
-          justifyContent="center"
+          alignItems='center'
+          justifyContent='center'
         >
-          <Heading fontSize="2xl" color="#c4b04e">
+          <Heading fontSize='2xl' color='#c4b04e'>
             REGISTER
           </Heading>
           <FormControl id='user'>
