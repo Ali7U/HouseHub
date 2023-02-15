@@ -17,8 +17,8 @@ function Register() {
     }
 
     try {
-      const response = await axios.post('https://63e20921ad0093bf29c66077.mockapi.io/Signup', {
-        username: userName,
+      const response = await axios.post('https://63e208d4ad0093bf29c65b2d.mockapi.io/Users', {
+        userName,
         email,
         password,
       });
