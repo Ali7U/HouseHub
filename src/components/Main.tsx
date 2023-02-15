@@ -1,4 +1,3 @@
-
 import { StarIcon } from "@chakra-ui/icons";
 import {
   Box,
@@ -14,19 +13,13 @@ import {
   useDisclosure,
   Collapse,
 } from "@chakra-ui/react";
-import { repeat } from "lodash";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import Details from "./Details";
-
-
-
-
 
 console.log(null || "string");
 
 function Main() {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
   const [filterRooms, setFilterRooms] = React.useState<any | null>(null);
   const [filterFloors, setFilterFloors] = React.useState<any | null>(null);
   const [filterArea, setFilterArea] = React.useState<any | null>(null);
@@ -58,55 +51,30 @@ function Main() {
     Area: number;
     Floors: any;
     Rooms: any;
-    Kitchen: any;
-    Pool: any;
-    Garden: any;
     
   }
   const property: houses[] = [
     {
       imageUrl:
-        "https://media.istockphoto.com/id/864458934/photo/architects-engineer-discussing-at-the-table-with-blueprint-closeup-on-hands-and-project-print.jpg?s=612x612&w=0&k=20&c=-ODOOfKY-vxwhyjx7RggEvW3YzWrinoELglqZAbjzIs=",
+      "https://cdn.discordapp.com/attachments/1074592773518405694/1075093777213046954/1.png",
       imageAlt: "Rear view of modern home with pool",
       Area: 500,
-      Rooms: 5,
+      Rooms: 1,
       Floors: 1,
-      Kitchen: 2,
-      Pool: 1,
-      Garden: 1,
     },
     {
       imageUrl:
-        "https://media.istockphoto.com/id/864458934/photo/architects-engineer-discussing-at-the-table-with-blueprint-closeup-on-hands-and-project-print.jpg?s=612x612&w=0&k=20&c=-ODOOfKY-vxwhyjx7RggEvW3YzWrinoELglqZAbjzIs=",
-      imageAlt: "Rear view of modern home with pool",
-      Area: 400,
-      Rooms: 4,
-      Floors: 1,
-      Kitchen: 2,
-      Pool: "none",
-      Garden: 1,
-    },
-    {
-      imageUrl:
-        "https://media.istockphoto.com/id/864458934/photo/architects-engineer-discussing-at-the-table-with-blueprint-closeup-on-hands-and-project-print.jpg?s=612x612&w=0&k=20&c=-ODOOfKY-vxwhyjx7RggEvW3YzWrinoELglqZAbjzIs=",
+      "https://i.top4top.io/p_26012fu111.jpg",
       imageAlt: "Rear view of modern home with pool",
       Area: 500,
-      Rooms: 8,
-      Floors: 2,
-      Kitchen: 2,
-      Pool: 1,
-      Garden: "none",
+      Rooms: 1,
+      Floors: 1,
     },
     {
       imageUrl:
-        "https://media.istockphoto.com/id/864458934/photo/architects-engineer-discussing-at-the-table-with-blueprint-closeup-on-hands-and-project-print.jpg?s=612x612&w=0&k=20&c=-ODOOfKY-vxwhyjx7RggEvW3YzWrinoELglqZAbjzIs=",
+      "https://media.discordapp.net/attachments/1074592773518405694/1075093776206405723/3rd_1.png?width=1020&height=1020",
       imageAlt: "Rear view of modern home with pool",
-      Area: 200,
-      Rooms: 7,
-      Floors: 2,
-      Kitchen: 1,
-      Pool: "none",
-      Garden: "none",
+      Area: 500,
       Rooms: 1,
       Floors: 1,
     },
@@ -118,17 +86,118 @@ function Main() {
       Rooms: 1,
       Floors: 1,
     },
-    {
-      imageUrl:
-      "src/assets/Four/First1.png",
-      imageAlt: "Rear view of modern home with pool",
-      Area: 500,
-      Rooms: 1,
-      Floors: 2,
-      Kitchen: 2,
-      Pool: 1,
-      Garden: 1,
-    },
+// --------------------500---------------
+{
+  imageUrl:
+  "https://i.top4top.io/p_26012fu111.jpg",
+  imageAlt: "Rear view of modern home with pool",
+  Area: 400,
+  Rooms: 1,
+  Floors: 1,
+},
+{
+  imageUrl:
+  "https://cdn.discordapp.com/attachments/1074592773518405694/1075093777213046954/1.png",
+  imageAlt: "Rear view of modern home with pool",
+  Area: 400,
+  Rooms: 1,
+  Floors: 1,
+},
+{
+  imageUrl:
+  "https://media.discordapp.net/attachments/1074592773518405694/1075093776726491166/2nd_1.png?width=1020&height=1020",
+
+  imageAlt: "Rear view of modern home with pool",
+  Area: 400,
+  Rooms: 1,
+  Floors: 1,
+},
+{
+  imageUrl:
+  "https://media.discordapp.net/attachments/1074592773518405694/1075093776206405723/3rd_1.png?width=1020&height=1020",
+
+  imageAlt: "Rear view of modern home with pool",
+  Area: 400,
+  Rooms: 1,
+  Floors: 1,
+},
+// -----------------400
+{
+  imageUrl:
+  "https://media.discordapp.net/attachments/1074592773518405694/1075093776206405723/3rd_1.png?width=1020&height=1020",
+
+  imageAlt: "Rear view of modern home with pool",
+  Area: 300,
+  Rooms: 1,
+  Floors: 1,
+},
+{
+  imageUrl:
+  "https://media.discordapp.net/attachments/1074592773518405694/1075093776726491166/2nd_1.png?width=1020&height=1020",
+
+  imageAlt: "Rear view of modern home with pool",
+  Area: 300,
+  Rooms: 1,
+  Floors: 1,
+},
+{
+  imageUrl:
+  "https://i.top4top.io/p_26012fu111.jpg",
+
+
+  imageAlt: "Rear view of modern home with pool",
+  Area: 300,
+  Rooms: 1,
+  Floors: 1,
+},
+{
+  imageUrl:
+  "https://cdn.discordapp.com/attachments/1074592773518405694/1075093777213046954/1.png",
+
+  imageAlt: "Rear view of modern home with pool",
+  Area: 300,
+  Rooms: 1,
+  Floors: 1,
+},
+// -------------300
+{
+  imageUrl:  "https://media.discordapp.net/attachments/1074592773518405694/1075093776726491166/2nd_1.png?width=1020&height=1020",
+
+
+  imageAlt: "Rear view of modern home with pool",
+  Area: 200,
+  Rooms: 1,
+  Floors: 1,
+},
+{
+  imageUrl:
+  "https://media.discordapp.net/attachments/1074592773518405694/1075093776206405723/3rd_1.png?width=1020&height=1020",
+
+
+  imageAlt: "Rear view of modern home with pool",
+  Area: 200,
+  Rooms: 1,
+  Floors: 1,
+},
+{
+  imageUrl:
+  "https://cdn.discordapp.com/attachments/1074592773518405694/1075093777213046954/1.png",
+
+  imageAlt: "Rear view of modern home with pool",
+  Area: 200,
+  Rooms: 1,
+  Floors: 1,
+},
+{
+  imageUrl:
+  "https://i.top4top.io/p_26012fu111.jpg",
+
+  imageAlt: "Rear view of modern home with pool",
+  Area: 200,
+  Rooms: 1,
+  Floors: 1,
+},
+// ----------------200
 
     
   ];
@@ -185,15 +254,15 @@ function Main() {
       </Center>
 
       <Center
+
+       
         backgroundSize={"cover"}
         display="flex"
-        gridTemplateColumns={'repeat, 1fr'}
         justifyContent={"space-around"}
         alignItems={"center"}
         w={"100%"}
         
       >
-
         {property.filter(item=>item.Area==filterArea).map((item) => (
 
           <Container>
@@ -208,20 +277,6 @@ function Main() {
                 >
                   <Image src={item.imageUrl} alt={item.imageAlt} transition={''}/>
 
-                    <Box display="flex" mt="2" alignItems="center">
-                      {Array(5)
-                        .fill("")
-                        .map((_, i) => (
-                          <StarIcon
-                          key={i}
-                          // color={i < item.rating ? "teal.500" : "gray.300"}
-                          />
-                          ))}
-                      <Box as="span" ml="2" color="gray.600" fontSize="sm">
-                        {/* {item.reviewCount} reviews */}
-                      </Box>
-                    </Box>
-                  </Box>
                 </Box>
                     <Box>
                     <Stack direction="row" paddingTop={5} paddingLeft={120}>

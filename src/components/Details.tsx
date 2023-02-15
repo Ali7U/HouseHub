@@ -25,23 +25,22 @@ const images = [
 ];
 
 const image:any = localStorage.getItem("DetailsImage")
-const property:any = localStorage.getItem("DetailsProperty")
 const MotionSimpleGrid = motion(SimpleGrid);
 
 const stats = [
   {
     title: 'Floor',
-    stat: {property},
+    stat: '2',
     icon: <FaLayerGroup size={'3em'} />,
   },
   {
     title: 'Bedrooms',
-    stat: {property},
+    stat: '6',
     icon: <FaBed size={'3em'} />,
   },
   {
     title: 'Location',
-    stat: {property},
+    stat: 'Jeddah, SA',
     icon: <GoLocation size={'3em'} />,
   },
 ];
@@ -144,7 +143,7 @@ function Details() {
 <Box py={12} px={6} maxW={"200vw"} w={"80vw"}>
           <UnorderedList listStyleType={"none"} > 
             <ListItem fontSize={"32px"} >First Floor 
-              <UnorderedList fontSize={"16px"} listStyleType={"-"} spacing={3}> 
+              <UnorderedList pt={10} fontSize={"16px"} listStyleType={"-"} spacing={3}> 
             <ListItem >Spacious living room with large windows</ListItem>
             <ListItem>Dining room adjacent to living room and kitchen</ListItem>
             <ListItem>Kitchen with modern amenities</ListItem>
