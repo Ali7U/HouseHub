@@ -71,8 +71,8 @@ export default function App() {
           </AlertDialogContent>
         </AlertDialogOverlay>
       </AlertDialog>
-      <chakra.header
-        bg={bg}
+      <chakra.header zIndex={"1"}
+        bg={"white"}
         w="full"
         px={{ base: 2, sm: 4 }}
         py={4}
@@ -88,7 +88,7 @@ export default function App() {
             >
               <VisuallyHidden>Choc</VisuallyHidden>
             </chakra.a>
-            <Link to={"/"}>
+            <Link   to={"/"}>
             <Image src="src\logo.png" height = "40px"></Image>       </Link>   </Flex>
           <HStack display="flex" alignItems="center" spacing={1}>
             <HStack
@@ -97,14 +97,16 @@ export default function App() {
               color="brand.500"
               display={{ base: "none", md: "inline-flex" }}
             >
-              <Button _hover={{backgroundColor: "#c4b04e"}} variant="ghost">Features</Button>
-              <Button _hover={{backgroundColor: "#c4b04e"}} variant="ghost">Pricing</Button>
-              <Button _hover={{backgroundColor: "#c4b04e"}} variant="ghost">Blog</Button>
-              <Button _hover={{backgroundColor: "#c4b04e"}} variant="ghost">Company</Button>
+              <Button  _hover={{backgroundColor: "#2F4858", color:"white"}}  onClick={()=>navigate("/Home")}variant="ghost">Home</Button>
+              <Button  _hover={{backgroundColor: "#2F4858", color:"white"}} onClick={()=>navigate("/GenerateImage")} variant="ghost">Image Generator</Button>
+              <Button  _hover={{backgroundColor: "#2F4858", color:"white"}} onClick={()=>navigate("/main")} variant="ghost">Design</Button>
+
+              <Button   _hover={{backgroundColor: "#2F4858", color:"white"}} onClick={()=>navigate("/contact")} variant="ghost">Contact Us</Button>
+              <Button   _hover={{backgroundColor: "#c4b04e"}} onClick={()=>navigate("/profile")} variant="ghost">Account</Button>
               {isloggedin ?
               
 
-              <Button  _hover={{backgroundColor:"red.200"}}onClick={onOpen} variant="ghost">Log out</Button>
+              <Button    _hover={{backgroundColor:"red.300"}}onClick={onOpen} variant="ghost">Log out</Button>
 
               :
 

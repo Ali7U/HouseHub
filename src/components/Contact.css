@@ -1,4 +1,4 @@
-.contact{
+.contact{padding: 50px;
     width: 100%;
     background-position: center;
     background-size: cover;
@@ -12,7 +12,7 @@ form{
     max-width: 600px;
 }
 #name,#number,#email,#subject,#message{
-    padding-left: 10px;
+    padding-left: 140px;
 }
 
 .input-group{
@@ -38,6 +38,7 @@ textarea{
 }
 
 label{
+    
     height: 100%;
     position:absolute;
     left: 0;
@@ -49,10 +50,11 @@ label{
     grid-template-columns: 20px 150px;
     align-items: center; 
     font-size: 14px;
-    margin-left: 10px;
+    margin-left: 10px;padding-left: 20px;
 }
 
-.input-group .z8 {
+.input-group .z8 {    padding-left: 10px;
+
     height: 0;
     padding-top: 10px;
 }

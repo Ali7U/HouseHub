@@ -14,6 +14,7 @@ import {
   Collapse,
 } from "@chakra-ui/react";
 import React from "react";
+import Nav from "./Nav";
 
 console.log(null || "string");
 
@@ -146,7 +147,7 @@ function Main() {
 
     
   return (
-    <>
+    <> <Nav/>
       <Center m={35}>
         <Stack direction="row" spacing={4} align="center">
           <Button

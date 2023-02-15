@@ -1,11 +1,12 @@
 import React from "react";
 import { Box, Flex, Link, chakra } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
+import Nav from "./Nav";
 
 export default function Home() {
   const navigate = useNavigate();
   return (
-    <Flex
+    <> <Nav/>  <Flex
       bg="#edf3f8"
       _dark={{ bg: "#3e3e3e" }}
       //   p={50}
@@ -81,5 +82,6 @@ export default function Home() {
         </Box>
       </Box>
     </Flex>
+    </>  
   );
 }
