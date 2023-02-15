@@ -1,4 +1,4 @@
-import { Box, SimpleGrid,Stat, StatLabel, StatNumber, useColorModeValue, chakra,  Flex, Text, Image, Grid, Heading, ListItem, UnorderedList, GridItem } from '@chakra-ui/react'
+import { Box, SimpleGrid,Stat, StatLabel, StatNumber, useColorModeValue, chakra,  Flex, Text, Image, Grid, Heading, ListItem, UnorderedList, GridItem, Button } from '@chakra-ui/react'
 import React from 'react'
 import { ReactNode } from 'react';
 import { FiServer } from 'react-icons/fi';
@@ -6,6 +6,20 @@ import { GoLocation } from 'react-icons/go';
 import { FaBed, FaLayerGroup } from "react-icons/fa";
 import { motion } from 'framer-motion';
 
+
+
+const images = [
+  {
+    id: 1,
+    src: "https://o.remove.bg/downloads/5b64245a-b959-4489-8db0-b6d006667774/4-Bedroom-3D-House-Plans-removebg-preview-removebg-preview.png",
+    alt: "Image 1"
+  },
+  {
+    id: 2,
+    src: "https://o.remove.bg/downloads/5b64245a-b959-4489-8db0-b6d006667774/4-Bedroom-3D-House-Plans-removebg-preview-removebg-preview.png",
+    alt: "Image 2"
+  },
+];
 
 
 const MotionSimpleGrid = motion(SimpleGrid);
@@ -40,6 +54,10 @@ function StatsCard(props: StatsCardProps) {
   return (
     <Stat
       px={{ base: 2, md: 4 }}
+      _hover={{
+        background: "white",
+        color: "teal.500",
+      }}
       py={'5'}
       shadow={'xl'}
       border={'1px solid'}
@@ -70,16 +88,16 @@ function StatsCard(props: StatsCardProps) {
 function Details() {
   return (
     <>
-    <Box bgColor={"#eee"}>
+    <Box bgColor={"#eee"} >
     <Box maxW="7xl" mx={'auto'} pt={0} px={{ base: 2, sm: 12, md: 17 }}>
-      <chakra.h1
+      <chakra.h1 
         textAlign={'center'}
         fontSize={'4xl'}
         py={10}
         fontWeight={'bold'}>
         Your building is expanding, our ideas too.
       </chakra.h1>
-      <MotionSimpleGrid
+      <MotionSimpleGrid 
       columns={{ base: 1, md: 3 }}
       spacing={{ base: 5, lg: 8 }}
       initial={{ opacity: 0, y: 40 }}
@@ -157,18 +175,16 @@ function Details() {
       justifyContent="center"
     >
     
-    <Grid templateColumns='repeat(3, 1fr)' justifyContent={"center"} alignItems={"center"} w={"90vw"} gap={6}>
+    <Grid templateColumns='repeat(2, 1fr)' justifyContent={"center"} alignItems={"center"} w={"90vw"} gap={6}>
     <Image id='1' src='https://o.remove.bg/downloads/5b64245a-b959-4489-8db0-b6d006667774/4-Bedroom-3D-House-Plans-removebg-preview-removebg-preview.png' alt='Dan Abramov' />
     <Image id='2' src='https://o.remove.bg/downloads/5b64245a-b959-4489-8db0-b6d006667774/4-Bedroom-3D-House-Plans-removebg-preview-removebg-preview.png' alt='Dan Abramov' />
-    <Image id='3' src='https://o.remove.bg/downloads/5b64245a-b959-4489-8db0-b6d006667774/4-Bedroom-3D-House-Plans-removebg-preview-removebg-preview.png' alt='Dan Abramov' />
 </Grid>
-
 </Flex>
+    
+           <Button px={"40px"} py={"25px"}> Get contact</Button>
         
    </Box>
    </Box>
-
-
    </>
   )
 }

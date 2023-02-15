@@ -9,8 +9,8 @@ import Login from "./Login";
 import { Box } from "@chakra-ui/react";
 import Main from "./Main";
 import Contact from './Contact';
-import Main from "./Main";
-
+import Register from "./Register";
+import Details from "./Details";
 function Router() {
   return (
     <div className="routers">
@@ -18,11 +18,11 @@ function Router() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
-         <Route path="/login" element={<Login />} /> 
         <Route path="/Register" element={<Register />} />
          <Route path="/Browse" element={<Listings />} />
         <Route path="/main" element={<Main/>} />
         <Route path="/Contact" element={<Contact/>} />
+        <Route path="/Details" element={<Details/>} />
 
       </Routes>
       <Footer />

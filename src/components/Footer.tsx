@@ -49,6 +49,7 @@ export default function Footer() {
 
   return (
     <Box
+        
         bg={bg}
         color={useColorModeValue('gray.900', 'gray.700')}>
       <Container
