@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Box, Center, Text, Flex, FormControl, FormLabel, Heading, HStack, Image, Input, Stack, Checkbox, Button } from '@chakra-ui/react'
 import { Link } from 'react-router-dom';
+import Nav from './Nav';
 
 function Login() {
   const [userName, setUserName] = useState('');
@@ -34,7 +35,7 @@ function Login() {
         return;
       }
       localStorage.setItem('userName', userName);
-      window.location.href = '/';
+      window.location.href = '/home';
     } catch (err) {
       setError('An error occurred, please try again later');
     }

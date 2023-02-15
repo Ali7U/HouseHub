@@ -43,11 +43,11 @@ const SocialButton = ({
   );
 };
 
-export default function footer() {
+export default function Footer() {
   const bg = useColorModeValue("white", "gray.800");
 
   return (
-    <Box
+    <Box position={"fixed"} bottom="0" zIndex={"1"} w="100%"
         bg={bg}
         color={useColorModeValue('gray.900', 'gray.700')}>
       <Container

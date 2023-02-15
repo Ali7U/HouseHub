@@ -11,22 +11,31 @@ import Register from "./Register";
 import { Box } from "@chakra-ui/react";
 import Contact from './Contact';
 import Main from "./Main";
+import GenerateImage from "./GenerateImage";
+import Profile from "./Profile";
 
 
 function Router() {
   return (
     <div className="routers">
-      <Nav />
+       
+
+      
       <Routes>
-        <Route path="/" element={<Home />} />
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/home" element={<Home />} />
+
          <Route path="/login" element={<Login />} /> 
         <Route path="/Register" element={<Register />} />
          <Route path="/Browse" element={<Listings />} />
         <Route path="/main" element={<Main/>} />
         <Route path="/Contact" element={<Contact/>} />
+        <Route path="/GenerateImage" element={<GenerateImage/>} />
+        <Route path="/profile" element={<Profile/>} />
 
-      </Routes>
-      <Footer />
+
+
+      </Routes><Footer/>
     </div>
   );
 }

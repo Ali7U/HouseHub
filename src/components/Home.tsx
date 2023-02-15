@@ -1,12 +1,15 @@
 import React from "react";
 import { Box, Flex, Link, chakra } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
+import Nav from "./Nav";
 import bg1 from '../assets/background1.png'
 
 export default function Home() {
   const navigate = useNavigate();
   return (
 
+
+    <><Nav/>
       <Flex
         bg="#edf3f8"
         _dark={{ bg: "#3e3e3e" }}
@@ -86,6 +89,6 @@ export default function Home() {
           ></Box> */}
           {/* </Box> */}
         </Box>
-      </Flex>
+      </Flex></>
   );
 }
