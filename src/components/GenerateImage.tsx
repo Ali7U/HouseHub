@@ -16,20 +16,22 @@ function Apitest() {
   const [img, setimg] = React.useState<any>([]);
   const [promptinput, setprompt] = React.useState<any>();
   
-  const apiKey = "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";
+  const apiKey = "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  ";
 const configuration = new Configuration({
   apiKey: apiKey
 });
 
 const openai = new OpenAIApi(configuration);
-
-
+ 
+const data:any = [img[0], img[1], img[2], promptinput]
 async function save(){
 
-  await fetch(`https://63e20921ad0093bf29c66077.mockapi.io/Signup?username=${localStorage.getItem("userName")}`, {
+  console.log(data)
+
+  await fetch(`https://63e208d4ad0093bf29c65b2d.mockapi.io/Users/${localStorage.getItem("id")}/Data`, {
     method: 'POST', 
     headers: {'content-type':'application/json'},
-    body: JSON.stringify({images: img, prompt: promptinput})
+    body: JSON.stringify({images: data})
   })
 
 

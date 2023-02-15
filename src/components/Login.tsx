@@ -8,6 +8,7 @@ function Login() {
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [Id, setID] = useState('');
 
   useEffect(() => {
     const storedUserName = localStorage.getItem('userName');
@@ -18,22 +19,23 @@ function Login() {
 
   const handleLogin = async () => {
     setError('');
-    if (!userName || !password) {
-      setError('Please enter both username and password');
-      return;
-    }
+    
     try {
-      const response = await axios.get(`https://63e20921ad0093bf29c66077.mockapi.io/Signup?username=${userName}`);
+      const response = await axios.get(`https://63e208d4ad0093bf29c65b2d.mockapi.io/Users/?userName=${userName}`);
       if (response.data.length === 0) {
         setError('Incorrect username or password');
         return;
       }
       const user = response.data[0];
+      console.log(user);
+
       if (user.password !== password) {
         setError('Incorrect username or password');
         return;
       }
       localStorage.setItem('userName', userName);
+      localStorage.setItem('id', user.id);
+
       window.location.href = '/home';
     } catch (err) {
       setError('An error occurred, please try again later');

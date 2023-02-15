@@ -10,7 +10,7 @@ export default function Home() {
 
 
     <><Nav/>
-      <Flex
+      <Flex pt="40px"
         bg="#edf3f8"
         _dark={{ bg: "#3e3e3e" }}
         //   p={50}
