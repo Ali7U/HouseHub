@@ -28,26 +28,38 @@ function Register() {
     }
   };
 
+<<<<<<< HEAD
   return (<><Nav/>
     <HStack w='full' h='full' bgColor='#fff' align='center'>
       <Flex width='full' height='90vh' alignItems='center' justifyContent='center'>
+=======
+  return (
+    <HStack w="full" h="full" bgColor="#fff" align="center">
+      <Flex
+        width="full"
+        height="90vh"
+        alignItems="center"
+        justifyContent="center"
+      >
+>>>>>>> b089578f87061417c3ffbe52692e1cbaff103ac7
         <Stack
-          boxShadow='2xl'
-          w='full'
-          maxW='xl'
-          h='80vh'
+          boxShadow="2xl"
+          w="full"
+          maxW="xl"
+          h="80vh"
           spacing={6}
           p={6}
-          bgColor='#fff'
+          bgColor="#fff"
           border="2px solid #c4b04e"
-          alignItems='center'
-          justifyContent='center'
+          alignItems="center"
+          justifyContent="center"
         >
-          <Heading fontSize='2xl' color='#c4b04e'>
+          <Heading fontSize="2xl" color="#c4b04e">
             REGISTER
           </Heading>
-          <FormControl id='user'>
+          <FormControl id="user">
             <FormLabel>Username</FormLabel>
+<<<<<<< HEAD
             <Input placeholder='Enter username' value={userName} onChange={e => setUserName(e.target.value)} />
           </FormControl>
           <FormControl >
@@ -56,15 +68,36 @@ function Register() {
           </FormControl>
           <FormControl id='password'>
             <FormLabel>Password</FormLabel>
+=======
+>>>>>>> b089578f87061417c3ffbe52692e1cbaff103ac7
             <Input
-              type='password'
-              placeholder='Enter password'
-              value={password}
-              onChange={e => setPassword(e.target.value)}
+              placeholder="Enter username"
+              mt={"26"}
+              value={userName}
+              onChange={(e) => setUserName(e.target.value)}
             />
           </FormControl>
-          {error && <Box color='red'>{error}</Box>}
-          <Button bgColor='#c4b04e' color='white' onClick={handleRegister}>
+          <FormControl id="email">
+            <FormLabel>Email</FormLabel>
+            <Input
+              placeholder="Enter email"
+              value={email}
+              mt={"26"}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </FormControl>
+          <FormControl id="password">
+            <FormLabel>Password</FormLabel>
+            <Input
+              type="password"
+              placeholder="Enter password"
+              value={password}
+              mt={"26"}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </FormControl>
+          {error && <Box color="red">{error}</Box>}
+          <Button bgColor="#c4b04e" color="white" onClick={handleRegister}>
             REGISTER
           </Button>
         </Stack>
