@@ -5,6 +5,9 @@ import { FiServer } from 'react-icons/fi';
 import { GoLocation } from 'react-icons/go';
 import { FaBed, FaLayerGroup } from "react-icons/fa";
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
+
+
 
 
 
@@ -21,7 +24,7 @@ const images = [
   },
 ];
 
-
+const image = localStorage.getItem("DetailsImage")
 const MotionSimpleGrid = motion(SimpleGrid);
 
 const stats = [
@@ -155,11 +158,7 @@ function Details() {
             h={{ base: 64, lg: "full" }}
             rounded={{ lg: "lg" }}
             bgSize="cover"
-            style={{
-              backgroundImage:
-                "url('/src/assets/Four/First1.png')",
-                backgroundRepeat: "no-repeat"
-            }}
+            bgImage={image}
           ></Box>
         </Box>
         

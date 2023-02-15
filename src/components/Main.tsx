@@ -16,10 +16,17 @@ import {
 } from "@chakra-ui/react";
 import { repeat } from "lodash";
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import Details from "./Details";
+
+
+
+
 
 console.log(null || "string");
 
 function Main() {
+  const navigate = useNavigate();
   const [filterRooms, setFilterRooms] = React.useState<any | null>(null);
   const [filterFloors, setFilterFloors] = React.useState<any | null>(null);
   const [filterArea, setFilterArea] = React.useState<any | null>(null);
@@ -55,7 +62,15 @@ function Main() {
         "https://media.istockphoto.com/id/864458934/photo/architects-engineer-discussing-at-the-table-with-blueprint-closeup-on-hands-and-project-print.jpg?s=612x612&w=0&k=20&c=-ODOOfKY-vxwhyjx7RggEvW3YzWrinoELglqZAbjzIs=",
       imageAlt: "Rear view of modern home with pool",
       Area: 500,
-      Rooms: 1,
+      Rooms: 5,
+      Floors: 1,
+    },
+    {
+      imageUrl:
+        "https://media.istockphoto.com/id/864458934/photo/architects-engineer-discussing-at-the-table-with-blueprint-closeup-on-hands-and-project-print.jpg?s=612x612&w=0&k=20&c=-ODOOfKY-vxwhyjx7RggEvW3YzWrinoELglqZAbjzIs=",
+      imageAlt: "Rear view of modern home with pool",
+      Area: 400,
+      Rooms: 4,
       Floors: 1,
     },
     {
@@ -63,24 +78,15 @@ function Main() {
         "https://media.istockphoto.com/id/864458934/photo/architects-engineer-discussing-at-the-table-with-blueprint-closeup-on-hands-and-project-print.jpg?s=612x612&w=0&k=20&c=-ODOOfKY-vxwhyjx7RggEvW3YzWrinoELglqZAbjzIs=",
       imageAlt: "Rear view of modern home with pool",
       Area: 500,
-      Rooms: 1,
-      Floors: 1,
+      Rooms: 8,
+      Floors: 2,
     },
     {
       imageUrl:
         "https://media.istockphoto.com/id/864458934/photo/architects-engineer-discussing-at-the-table-with-blueprint-closeup-on-hands-and-project-print.jpg?s=612x612&w=0&k=20&c=-ODOOfKY-vxwhyjx7RggEvW3YzWrinoELglqZAbjzIs=",
       imageAlt: "Rear view of modern home with pool",
       Area: 500,
-      Rooms: 1,
-      Floors: 1,
-    },
-    {
-      imageUrl:
-        "https://media.istockphoto.com/id/864458934/photo/architects-engineer-discussing-at-the-table-with-blueprint-closeup-on-hands-and-project-print.jpg?s=612x612&w=0&k=20&c=-ODOOfKY-vxwhyjx7RggEvW3YzWrinoELglqZAbjzIs=",
-      imageAlt: "Rear view of modern home with pool",
-      Area: 500,
-      Rooms: 1,
-
+      Rooms: 7,
       Floors: 2,
     },
     {
@@ -184,7 +190,7 @@ function Main() {
 
                     <Box>
                     <Stack direction="row" paddingTop={5} paddingLeft={120}>
-                      <Button backgroundColor={'#e6d894'} onClick={()=>{}}>select</Button>
+                      <Button backgroundColor={'#e6d894'} onClick={()=>{localStorage.setItem("DetailsImage", item.imageUrl); navigate('/Details')}}>select</Button>
                     </Stack></Box>
         </Collapse>
           </Container>
