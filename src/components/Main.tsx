@@ -215,34 +215,19 @@ function Main() {
           
           <Button
 
-<<<<<<< HEAD
 
-            onClick={() => {AreaButtons(200); onToggle(true)}}
-
-            colorScheme='blue'
-            variant="outline"
-            h={61}
-            fontSize={21}
-          >
-=======
 onClick={() => {AreaButtons(200); onToggle(true)}}
 
 colorScheme="teal"
 variant="outline"
 >
->>>>>>> Ali-branch
             200m<sup>2</sup>
           </Button>
           <Button
 
-<<<<<<< HEAD
 
-            onClick={() => {AreaButtons(300); onToggle(true)}}
-            colorScheme='blue'
-=======
 onClick={() => {AreaButtons(300); onToggle(true)}}
 colorScheme="teal"
->>>>>>> Ali-branch
             variant="outline"
             h={61}
             fontSize={21}
@@ -251,14 +236,9 @@ colorScheme="teal"
           </Button>
           <Button
 
-<<<<<<< HEAD
-          
-            onClick={() => {AreaButtons(400); onToggle(true)}}
-            colorScheme='blue'
-=======
+
 onClick={() => {AreaButtons(400); onToggle(true)}}
             colorScheme="teal"
->>>>>>> Ali-branch
             variant="outline"
             h={61}
             fontSize={21}
@@ -282,13 +262,10 @@ onClick={() => {AreaButtons(400); onToggle(true)}}
       <Center
         // height={850}
         // mb={35}
-<<<<<<< HEAD
-       
-=======
+
         // backgroundImage={
           //   "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGVuZ2luZWVyaW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1400&q=60"
         // }
->>>>>>> Ali-branch
         backgroundSize={"cover"}
         display="flex"
         justifyContent={"space-around"}
@@ -307,13 +284,7 @@ onClick={() => {AreaButtons(400); onToggle(true)}}
                   borderWidth="1px"
                   borderRadius="lg"
                   overflow="hidden"
-<<<<<<< HEAD
-                  backgroundColor={"#FFFDF1"}
-                  h="300px"
-                >
-                  <Image src={item.imageUrl} alt={item.imageAlt} transition={''}/>
 
-=======
                   backgroundColor={"#ccc8"}
                   >
                   <Image src={item.imageUrl} alt={item.imageAlt} />
@@ -331,7 +302,7 @@ onClick={() => {AreaButtons(400); onToggle(true)}}
                         textTransform="uppercase"
                         ml="2"
                         >
-                        {item.beds} beds &bull; {item.baths} baths
+                        {/* {item.beds} beds &bull; {item.baths} baths */}
                       </Box>
                     </Box>
 
@@ -342,11 +313,11 @@ onClick={() => {AreaButtons(400); onToggle(true)}}
                       lineHeight="tight"
                       noOfLines={1}
                       >
-                      {item.title}
+                      {/* {item.title} */}
                     </Box>
 
                     <Box>
-                      {item.formattedPrice}
+                      {/* {item.formattedPrice} */}
                       <Box as="span" color="gray.600" fontSize="sm">
                         / wk
                       </Box>
@@ -358,15 +329,14 @@ onClick={() => {AreaButtons(400); onToggle(true)}}
                         .map((_, i) => (
                           <StarIcon
                           key={i}
-                          color={i < item.rating ? "teal.500" : "gray.300"}
+                          // color={i < item.rating ? "teal.500" : "gray.300"}
                           />
                           ))}
                       <Box as="span" ml="2" color="gray.600" fontSize="sm">
-                        {item.reviewCount} reviews
+                        {/* {item.reviewCount} reviews */}
                       </Box>
                     </Box>
                   </Box>
->>>>>>> Ali-branch
                 </Box>
 
                     <Box>
@@ -378,11 +348,9 @@ onClick={() => {AreaButtons(400); onToggle(true)}}
 
 ))}
       </Center>
-<<<<<<< HEAD
-      
-=======
 
->>>>>>> Ali-branch
+
+
     </>
   );
 }
