@@ -25,9 +25,12 @@
   0%{
     background-image: url(./assets/midj.jpg);    
    }
+   25%{
+    background-image: url(./assets/midj5.jpg);
+   }
  
      50%{
-    background-image: url(./assets/midj2.jpg);    
+    background-image: url(./assets/midj4.jpg);    
     
    }
    
