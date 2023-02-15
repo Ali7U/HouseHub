@@ -209,26 +209,26 @@ function Main() {
 
   return (
     <>
-
       <Center m={35}>
-        <Stack direction="row" spacing={8} align="center"  >
-          
+        <Stack direction="row" spacing={8} align="center">
           <Button
-
-
-
-            colorScheme='blue'
-            variant="outline" 
+            onClick={() => {
+              AreaButtons(200);
+              onToggle(true);
+            }}
+            colorScheme="blue"
+            variant="outline"
             h={61}
             fontSize={21}
           >
             200m<sup>2</sup>
           </Button>
           <Button
-
-
-onClick={() => {AreaButtons(300); onToggle(true)}}
-colorScheme="teal"
+            onClick={() => {
+              AreaButtons(300);
+              onToggle(true);
+            }}
+            colorScheme="teal"
             variant="outline"
             h={61}
             fontSize={21}
@@ -236,9 +236,10 @@ colorScheme="teal"
             300m<sup>2</sup>
           </Button>
           <Button
-
-
-onClick={() => {AreaButtons(400); onToggle(true)}}
+            onClick={() => {
+              AreaButtons(400);
+              onToggle(true);
+            }}
             colorScheme="teal"
             variant="outline"
             h={61}
@@ -247,10 +248,11 @@ onClick={() => {AreaButtons(400); onToggle(true)}}
             400m<sup>2</sup>
           </Button>
           <Button
-
-
-            onClick={() => {AreaButtons(500); onToggle(true)}}
-            colorScheme='blue'
+            onClick={() => {
+              AreaButtons(500);
+              onToggle(true);
+            }}
+            colorScheme="blue"
             variant="outline"
             h={61}
             fontSize={21}
@@ -266,21 +268,19 @@ onClick={() => {AreaButtons(400); onToggle(true)}}
         justifyContent={"space-around"}
         alignItems={"center"}
         w={"100%"}
-        
       >
-
-        {property.filter(item=>item.Area==filterArea).map((item) => (
-
-          <Container>
-            <Collapse in={isOpen} animateOpacity>
+        {property
+          .filter((item) => item.Area == filterArea)
+          .map((item) => (
+            <Container>
+              <Collapse in={isOpen} animateOpacity>
                 <Box
                   maxW="400px"
                   borderWidth="1px"
                   borderRadius="lg"
                   overflow="hidden"
-
                   backgroundColor={"#ccc8"}
-                  >
+                >
                   <Image src={item.imageUrl} alt={item.imageAlt} />
 
                   <Box p="6">
@@ -295,7 +295,7 @@ onClick={() => {AreaButtons(400); onToggle(true)}}
                         fontSize="xs"
                         textTransform="uppercase"
                         ml="2"
-                        >
+                      >
                         {/* {item.beds} beds &bull; {item.baths} baths */}
                       </Box>
                     </Box>
@@ -306,7 +306,7 @@ onClick={() => {AreaButtons(400); onToggle(true)}}
                       as="h4"
                       lineHeight="tight"
                       noOfLines={1}
-                      >
+                    >
                       {/* {item.title} */}
                     </Box>
 
@@ -322,10 +322,10 @@ onClick={() => {AreaButtons(400); onToggle(true)}}
                         .fill("")
                         .map((_, i) => (
                           <StarIcon
-                          key={i}
-                          // color={i < item.rating ? "teal.500" : "gray.300"}
+                            key={i}
+                            // color={i < item.rating ? "teal.500" : "gray.300"}
                           />
-                          ))}
+                        ))}
                       <Box as="span" ml="2" color="gray.600" fontSize="sm">
                         {/* {item.reviewCount} reviews */}
                       </Box>
@@ -333,18 +333,17 @@ onClick={() => {AreaButtons(400); onToggle(true)}}
                   </Box>
                 </Box>
 
-                    <Box>
-                    <Stack direction="row" paddingTop={5} paddingLeft={120}>
-                      <Button backgroundColor={'#e6d894'} onClick={()=>{}}>Select</Button>
-                    </Stack></Box>
-        </Collapse>
-          </Container>
-
-))}
+                <Box>
+                  <Stack direction="row" paddingTop={5} paddingLeft={120}>
+                    <Button backgroundColor={"#e6d894"} onClick={() => {}}>
+                      Select
+                    </Button>
+                  </Stack>
+                </Box>
+              </Collapse>
+            </Container>
+          ))}
       </Center>
-
-
-
     </>
   );
 }
