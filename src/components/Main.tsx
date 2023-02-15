@@ -211,7 +211,7 @@ function Main() {
             onClick={() => {AreaButtons(200); onToggle(true)}}
 
             colorScheme='blue'
-            variant="outline"
+            variant="outline" 
             h={61}
             fontSize={21}
           >
@@ -252,14 +252,12 @@ function Main() {
       </Center>
 
       <Center
-        // height={850}
-        // mb={35}
+
        
         backgroundSize={"cover"}
         display="flex"
         justifyContent={"space-around"}
         alignItems={"center"}
-        // padding={45}
         w={"100%"}
         
       >
@@ -280,7 +278,7 @@ function Main() {
                 </Box>
                     <Box>
                     <Stack direction="row" paddingTop={5} paddingLeft={120}>
-                      <Button backgroundColor={'#e6d894'} onClick={()=>{}}>select</Button>
+                      <Button backgroundColor={'#e6d894'} onClick={()=>{}}>Select</Button>
                     </Stack></Box>
         </Collapse>
           </Container>
