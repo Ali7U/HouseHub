@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Box, Center, Flex, FormControl, FormLabel, Heading, HStack, Image, Input, Stack, Checkbox, Link, Button } from '@chakra-ui/react'
+import Nav from './Nav';
 
 function Register() {
   const [userName, setUserName] = useState('');
@@ -27,7 +28,7 @@ function Register() {
     }
   };
 
-  return (
+  return (<><Nav/>
     <HStack w='full' h='full' bgColor='#fff' align='center'>
       <Flex width='full' height='90vh' alignItems='center' justifyContent='center'>
         <Stack
@@ -49,7 +50,7 @@ function Register() {
             <FormLabel>Username</FormLabel>
             <Input placeholder='Enter username' value={userName} onChange={e => setUserName(e.target.value)} />
           </FormControl>
-          <FormControl id='email'>
+          <FormControl >
             <FormLabel>Email</FormLabel>
             <Input placeholder='Enter email' value={email} onChange={e => setEmail(e.target.value)} />
           </FormControl>
@@ -68,7 +69,7 @@ function Register() {
           </Button>
         </Stack>
       </Flex>
-    </HStack>
+    </HStack></>
   );
 }
 

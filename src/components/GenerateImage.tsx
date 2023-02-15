@@ -23,39 +23,31 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 
+async function save(){
 
-
-async function generate(){
-  setimg([null,null,null])
   await fetch(`https://63e20921ad0093bf29c66077.mockapi.io/Signup?username=${localStorage.getItem("userName")}`, {
     method: 'POST', 
     headers: {'content-type':'application/json'},
-    body: JSON.stringify({img: img})
+    body: JSON.stringify({images: img, prompt: promptinput})
   })
-  
-  await fetch(`https://63e20921ad0093bf29c66077.mockapi.io/Signup?username=${localStorage.getItem("userName")}`, {
-    method: 'GET',
-    headers: {'content-type':'application/json'},
-  }).then(res => {
-    if (res.ok) {
-        return res.json();
-    }
-   
-  }).then(tasks => {
-console.log(tasks) 
- })
 
+
+}
+
+async function generate(){
+  setimg([null,null,null])
+ 
+  
   console.log(promptinput);
-await openai.createImage({   
+  await openai.createImage({   
   prompt:promptinput,
-n: 3,
-size: "512x512", }).then((response) => {
+  n: 3,
+  size: "512x512", }).then((response) => {
   console.log(response)
   setimg([response.data.data[0].url, response.data.data[1].url,response.data.data[2].url])
   localStorage.setItem("images", JSON.stringify(img))
   localStorage.setItem("prompt", promptinput)
 
-  setprompt("")
 
 }).catch((error) => {
   console.error(error);
@@ -187,7 +179,30 @@ size: "512x512", }).then((response) => {
       Be descriptive and creative with your prompt. They key to a good result is your prompt!
     </chakra.p>
   </Flex>
+  <Container>
 
+  {img[0] == null ?       
+      <CircularProgress isIndeterminate size="400px" color='#2F4858' />
+  :            
+  
+             
+  <Container><Carousel  >
+        <div>
+     
+        <img src={img[0]} /> 
+            <p className="legend"></p>
+        </div>
+        <div>
+         <img src={img[0]} />
+            <p className="legend"></p>
+        </div>
+        <div>
+       <img src={img[0]} />
+
+            <p className="legend"></p>
+        </div>
+    </Carousel> <Button onClick={Save} bg="red">Save</Button></Container>}
+  </Container>
 </SimpleGrid>;
     </>
   )
