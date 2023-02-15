@@ -1,11 +1,13 @@
 import React from "react";
 import { Box, Flex, Link, chakra } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
+import bg1 from '../assets/background1.png'
 
 export default function Home() {
   const navigate = useNavigate();
   return (
     <Flex
+
       bg="#edf3f8"
       _dark={{ bg: "#3e3e3e" }}
       //   p={50}
@@ -21,15 +23,20 @@ export default function Home() {
         // maxW={{ lg: "5xl" }}
         shadow={{ lg: "lg" }}
         rounded={{ lg: "lg" }}
-        h={600}
+        h={"80vh"}
         w={"100%"}
         // h={{ base: 64, lg: "full" }}
         // rounded={{ lg: "lg" }}
         bgSize="cover"
-        style={{
-          backgroundImage:
-            'url("https://static.wixstatic.com/media/9f7b6e_584af36f32484e38a9da4f060fa45902~mv2.jpg/v1/fill/w_2500,h_1389,al_c/9f7b6e_584af36f32484e38a9da4f060fa45902~mv2.jpg")',
-        }}
+        // style={
+        //   {
+        //     backgroundImage:
+        //       `url(${bg1})`,
+              
+              
+        //   }
+          
+        // }
       >
         <Box py={6} px={6} maxW={{ base: "xl", lg: "5xl" }} w={{ lg: "40%" }}>
           <chakra.h2

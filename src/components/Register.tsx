@@ -30,47 +30,49 @@ function Register() {
   };
 
   return (
-    <HStack w='full' h='full' bgColor='#fff' align='center'>
-      <Flex width='full' height='90vh' alignItems='center' justifyContent='center'>
+    <HStack w="full" h="full" bgColor="#fff" align="center">
+      <Flex
+        width="full"
+        height="90vh"
+        alignItems="center"
+        justifyContent="center"
+      >
         <Stack
-          boxShadow='2xl'
-          w='full'
-          maxW='xl'
-          h='80vh'
+          boxShadow="2xl"
+          w="full"
+          maxW="xl"
+          h="80vh"
           spacing={6}
           p={6}
-          bgColor='#fff'
+          bgColor="#fff"
           border="2px solid #c4b04e"
-          alignItems='center'
-          justifyContent='center'
+          alignItems="center"
+          justifyContent="center"
         >
-          <Heading fontSize='2xl' color='#c4b04e'>
+          <Heading fontSize="2xl" color="#c4b04e">
             REGISTER
           </Heading>
           <FormControl id='user'>
-            <FormLabel>Full name</FormLabel>
-            <Input placeholder='Enter Full name: ' value={userName} onChange={e => setUserName(e.target.value)} />
+            <FormLabel>Username</FormLabel>
+            <Input placeholder='Enter username' value={userName} onChange={e => setUserName(e.target.value)} />
           </FormControl>
-          <FormControl id='email'>
+          <FormControl id="email">
             <FormLabel>Email</FormLabel>
-            <Input placeholder='Enter email' value={email} onChange={e => setEmail(e.target.value)} />
-          </FormControl>
-          <FormControl id='password'>
-            <FormLabel>Password</FormLabel>
             <Input
-              type='password'
-              placeholder='Enter password'
-              value={password}
-              onChange={e => setPassword(e.target.value)}
+              placeholder="Enter email"
+              value={email}
+              mt={"26"}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </FormControl>
-          <FormControl id='password'>
-            <FormLabel>Re-Password</FormLabel>
+          <FormControl id="password">
+            <FormLabel>Password</FormLabel>
             <Input
-              type='password'
-              placeholder='Enter Re-password '
+              type="password"
+              placeholder="Enter password"
               value={password}
-              onChange={e => setRePassword(e.target.value)}
+              mt={"26"}
+              onChange={(e) => setPassword(e.target.value)}
             />
           </FormControl>
           {error && <Box color='red'>{error}</Box>}
