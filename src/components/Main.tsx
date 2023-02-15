@@ -147,28 +147,29 @@ function Main() {
     
   return (
     <>
+
       <Center m={35}>
         <Stack direction="row" spacing={4} align="center">
           <Button
 
-            onClick={() => {AreaButtons(200); onToggle(true)}}
+onClick={() => {AreaButtons(200); onToggle(true)}}
 
-            colorScheme="teal"
-            variant="outline"
-          >
+colorScheme="teal"
+variant="outline"
+>
             200m<sup>2</sup>
           </Button>
           <Button
 
-            onClick={() => {AreaButtons(300); onToggle(true)}}
-            colorScheme="teal"
+onClick={() => {AreaButtons(300); onToggle(true)}}
+colorScheme="teal"
             variant="outline"
           >
             300m<sup>2</sup>
           </Button>
           <Button
 
-            onClick={() => {AreaButtons(400); onToggle(true)}}
+onClick={() => {AreaButtons(400); onToggle(true)}}
             colorScheme="teal"
             variant="outline"
           >
@@ -189,9 +190,9 @@ function Main() {
       <Center
         // height={850}
         // mb={35}
-        backgroundImage={
-          "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGVuZ2luZWVyaW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1400&q=60"
-        }
+        // backgroundImage={
+          //   "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGVuZ2luZWVyaW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1400&q=60"
+        // }
         backgroundSize={"cover"}
         display="flex"
         justifyContent={"space-around"}
@@ -209,7 +210,7 @@ function Main() {
                   borderRadius="lg"
                   overflow="hidden"
                   backgroundColor={"#ccc8"}
-                >
+                  >
                   <Image src={item.imageUrl} alt={item.imageAlt} />
 
                   <Box p="6">
@@ -224,7 +225,7 @@ function Main() {
                         fontSize="xs"
                         textTransform="uppercase"
                         ml="2"
-                      >
+                        >
                         {item.beds} beds &bull; {item.baths} baths
                       </Box>
                     </Box>
@@ -235,7 +236,7 @@ function Main() {
                       as="h4"
                       lineHeight="tight"
                       noOfLines={1}
-                    >
+                      >
                       {item.title}
                     </Box>
 
@@ -251,10 +252,10 @@ function Main() {
                         .fill("")
                         .map((_, i) => (
                           <StarIcon
-                            key={i}
-                            color={i < item.rating ? "teal.500" : "gray.300"}
+                          key={i}
+                          color={i < item.rating ? "teal.500" : "gray.300"}
                           />
-                        ))}
+                          ))}
                       <Box as="span" ml="2" color="gray.600" fontSize="sm">
                         {item.reviewCount} reviews
                       </Box>
@@ -266,8 +267,9 @@ function Main() {
         </Collapse>
           </Container>
 
-        ))}
+))}
       </Center>
+
     </>
   );
 }

@@ -1,18 +1,106 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  
 }
-
-
-
-.routers{
+.home {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
+  background-size: cover;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100vh;
   height: 100vh;
-  display: flex;
-  
-  flex-direction: column;
-  justify-content: space-between;
+  /* display: block; */
+  /* margin-left: ; */
+  background-position: center;
+  overflow-x: hidden;
+  /* animation: change 10s infinite ease-in-out; */
+  animation: change 5s infinite ease-in-out ;
+
+  /* a */
+}
+
+@keyframes change {
+  0%{
+    background-image: url(./assets/midj.jpg);    
+   }
+ 
+     50%{
+    background-image: url(./assets/midj2.jpg);    
+    
+   }
+   
+     75%{
+    background-image: url(./assets/midj3.jpg);    
+    
+   }
+   100%{
+    background-image: url(./assets/midj.jpg);    
+
+   }
 }
 
 
+/* .home {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
+  
+  width: 100%;
+  max-width: 100%;
+  max-height: 100vh;
+  height: 100vh;
+  /* display: block; */
+  /* margin-left: ; */
+  /* background-position: center; */
+  /* overflow-x: hidden; */
+  /* animation: change 10s infinite ease-in-out; */
+  /* animation: change 17s infinite ease-in-out ; */
+
+  /* a */
+/* } */
+/* 
+@keyframes change {
+  0%{
+    background-image: url(./assets/bag1.jpeg);    
+    
+   }
+   10%{
+    background-image: url(./assets/bag2.jpeg);    
+    
+   }
+    20%{
+    background-image: url(./assets/bag3.jpeg);    
+    
+   }
+     30%{
+    background-image: url(./assets/bag4.jpeg);    
+    
+   }
+     40%{
+    background-image: url(./assets/bag5.jpeg);    
+    
+   }
+     50%{
+    background-image: url(./assets/bag6.jpeg);    
+    
+   }
+     60%{
+    background-image: url(./assets/bag7.jpeg);    
+    
+   }
+     70%{
+    background-image: url(./assets/bag8.jpeg);    
+    
+   }
+     80%{
+    background-image: url(./assets/bag9.jpeg);    
+    
+   }
+     90%{
+    background-image: url(./assets/bag10.jpeg);    
+    
+   }
+     100%{
+    background-image: url(./assets/bag11.jpeg);    
+    
+   }
+} */ 
