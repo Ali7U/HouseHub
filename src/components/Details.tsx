@@ -158,9 +158,9 @@ function Details() {
     >
     
     <Grid templateColumns='repeat(3, 1fr)' justifyContent={"center"} alignItems={"center"} w={"90vw"} gap={6}>
-    <Image src='https://o.remove.bg/downloads/5b64245a-b959-4489-8db0-b6d006667774/4-Bedroom-3D-House-Plans-removebg-preview-removebg-preview.png' alt='Dan Abramov' />
-    <Image src='https://o.remove.bg/downloads/5b64245a-b959-4489-8db0-b6d006667774/4-Bedroom-3D-House-Plans-removebg-preview-removebg-preview.png' alt='Dan Abramov' />
-    <Image src='https://o.remove.bg/downloads/5b64245a-b959-4489-8db0-b6d006667774/4-Bedroom-3D-House-Plans-removebg-preview-removebg-preview.png' alt='Dan Abramov' />
+    <Image id='1' src='https://o.remove.bg/downloads/5b64245a-b959-4489-8db0-b6d006667774/4-Bedroom-3D-House-Plans-removebg-preview-removebg-preview.png' alt='Dan Abramov' />
+    <Image id='2' src='https://o.remove.bg/downloads/5b64245a-b959-4489-8db0-b6d006667774/4-Bedroom-3D-House-Plans-removebg-preview-removebg-preview.png' alt='Dan Abramov' />
+    <Image id='3' src='https://o.remove.bg/downloads/5b64245a-b959-4489-8db0-b6d006667774/4-Bedroom-3D-House-Plans-removebg-preview-removebg-preview.png' alt='Dan Abramov' />
 </Grid>
 
 </Flex>
