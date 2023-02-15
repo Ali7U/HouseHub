@@ -38,150 +38,224 @@ function Main() {
     setFilterArea(e.target.value ? parseInt(e.target.value) : null);
   };
 
-
-
-  const [ isOpen, onToggle ] = React.useState<any>();
-
-
+  const [isOpen, onToggle] = React.useState<any>();
 
   interface houses {
     imageUrl: string;
     imageAlt: string;
-    beds: number;
-    baths: 2;
-    title: string;
-    formattedPrice: string;
-    reviewCount: number;
-    rating: number;
     Area: number;
     Floors: any;
     Rooms: any;
+    
   }
   const property: houses[] = [
     {
       imageUrl:
-        "src/assets/Four/First1.png",
+        "https://media.istockphoto.com/id/864458934/photo/architects-engineer-discussing-at-the-table-with-blueprint-closeup-on-hands-and-project-print.jpg?s=612x612&w=0&k=20&c=-ODOOfKY-vxwhyjx7RggEvW3YzWrinoELglqZAbjzIs=",
       imageAlt: "Rear view of modern home with pool",
-      beds: 3,
-      baths: 2,
-      title: "Modern home in city center in the heart of historic Los Angeles",
-      formattedPrice: "$1,900.00",
-      reviewCount: 34,
-      rating: 4,
       Area: 500,
       Rooms: 1,
       Floors: 1,
     },
     {
       imageUrl:
-        "https://media.istockphoto.com/id/864458934/photo/architects-engineer-discussing-at-the-table-with-blueprint-closeup-on-hands-and-project-print.jpg?s=612x612&w=0&k=20&c=-ODOOfKY-vxwhyjx7RggEvW3YzWrinoELglqZAbjzIs=",
+      "https://i.top4top.io/p_26012fu111.jpg",
       imageAlt: "Rear view of modern home with pool",
-      beds: 3,
-      baths: 2,
-      title: "Modern home in city center in the heart of historic Los Angeles",
-      formattedPrice: "$1,900.00",
-      reviewCount: 34,
-      rating: 4,
-      Area: 400,
+      Area: 500,
       Rooms: 1,
-      Floors: 2,
-    },
-    {
-      imageUrl:
-        "https://media.istockphoto.com/id/864458934/photo/architects-engineer-discussing-at-the-table-with-blueprint-closeup-on-hands-and-project-print.jpg?s=612x612&w=0&k=20&c=-ODOOfKY-vxwhyjx7RggEvW3YzWrinoELglqZAbjzIs=",
-      imageAlt: "Rear view of modern home with pool",
-      beds: 3,
-      baths: 2,
-      title: "Modern home in city center in the heart of historic Los Angeles",
-      formattedPrice: "$1,900.00",
-      reviewCount: 34,
-      rating: 4,
-      Area: 400,
-      Rooms: 2,
       Floors: 1,
     },
     {
       imageUrl:
-        "https://media.istockphoto.com/id/864458934/photo/architects-engineer-discussing-at-the-table-with-blueprint-closeup-on-hands-and-project-print.jpg?s=612x612&w=0&k=20&c=-ODOOfKY-vxwhyjx7RggEvW3YzWrinoELglqZAbjzIs=",
+      "https://media.discordapp.net/attachments/1074592773518405694/1075093776206405723/3rd_1.png?width=1020&height=1020",
       imageAlt: "Rear view of modern home with pool",
-      beds: 3,
-      baths: 2,
-      title: "Modern home in city center in the heart of historic Los Angeles",
-      formattedPrice: "$1,900.00",
-      reviewCount: 34,
-      rating: 4,
-      Area: 200,
+      Area: 500,
       Rooms: 1,
+      Floors: 1,
+    },
+    {
+      imageUrl:
+      "https://media.discordapp.net/attachments/1074592773518405694/1075093776726491166/2nd_1.png?width=1020&height=1020",
+      imageAlt: "Rear view of modern home with pool",
+      Area: 500,
+      Rooms: 1,
+
       Floors: 2,
     },
     {
       imageUrl:
         "https://media.istockphoto.com/id/864458934/photo/architects-engineer-discussing-at-the-table-with-blueprint-closeup-on-hands-and-project-print.jpg?s=612x612&w=0&k=20&c=-ODOOfKY-vxwhyjx7RggEvW3YzWrinoELglqZAbjzIs=",
       imageAlt: "Rear view of modern home with pool",
-      beds: 3,
-      baths: 2,
-      title: "Modern home in city center in the heart of historic Los Angeles",
-      formattedPrice: "$1,900.00",
-      reviewCount: 34,
-      rating: 4,
+     
+
       Area: 200,
       Rooms: 1,
       Floors: 2,
     },
-        {
-      imageUrl:
-        "https://media.istockphoto.com/id/864458934/photo/architects-engineer-discussing-at-the-table-with-blueprint-closeup-on-hands-and-project-print.jpg?s=612x612&w=0&k=20&c=-ODOOfKY-vxwhyjx7RggEvW3YzWrinoELglqZAbjzIs=",
-      imageAlt: "Rear view of modern home with pool",
-      beds: 3,
-      baths: 2,
-      title: "Modern home in city center in the heart of historic Los Angeles",
-      formattedPrice: "$1,900.00",
-      reviewCount: 34,
-      rating: 4,
-      Area: 200,
-      Rooms: 1,
-      Floors: 2,
-    },
+// --------------------500---------------
+{
+  imageUrl:
+  "https://i.top4top.io/p_26012fu111.jpg",
+  imageAlt: "Rear view of modern home with pool",
+  Area: 400,
+  Rooms: 1,
+  Floors: 1,
+},
+{
+  imageUrl:
+  "https://cdn.discordapp.com/attachments/1074592773518405694/1075093777213046954/1.png",
+  imageAlt: "Rear view of modern home with pool",
+  Area: 400,
+  Rooms: 1,
+  Floors: 1,
+},
+{
+  imageUrl:
+  "https://media.discordapp.net/attachments/1074592773518405694/1075093776726491166/2nd_1.png?width=1020&height=1020",
+
+  imageAlt: "Rear view of modern home with pool",
+  Area: 400,
+  Rooms: 1,
+  Floors: 1,
+},
+{
+  imageUrl:
+  "https://media.discordapp.net/attachments/1074592773518405694/1075093776206405723/3rd_1.png?width=1020&height=1020",
+
+  imageAlt: "Rear view of modern home with pool",
+  Area: 400,
+  Rooms: 1,
+  Floors: 1,
+},
+// -----------------400
+{
+  imageUrl:
+  "https://media.discordapp.net/attachments/1074592773518405694/1075093776206405723/3rd_1.png?width=1020&height=1020",
+
+  imageAlt: "Rear view of modern home with pool",
+  Area: 300,
+  Rooms: 1,
+  Floors: 1,
+},
+{
+  imageUrl:
+  "https://media.discordapp.net/attachments/1074592773518405694/1075093776726491166/2nd_1.png?width=1020&height=1020",
+
+  imageAlt: "Rear view of modern home with pool",
+  Area: 300,
+  Rooms: 1,
+  Floors: 1,
+},
+{
+  imageUrl:
+  "https://i.top4top.io/p_26012fu111.jpg",
+
+
+  imageAlt: "Rear view of modern home with pool",
+  Area: 300,
+  Rooms: 1,
+  Floors: 1,
+},
+{
+  imageUrl:
+  "https://cdn.discordapp.com/attachments/1074592773518405694/1075093777213046954/1.png",
+
+  imageAlt: "Rear view of modern home with pool",
+  Area: 300,
+  Rooms: 1,
+  Floors: 1,
+},
+// -------------300
+{
+  imageUrl:  "https://media.discordapp.net/attachments/1074592773518405694/1075093776726491166/2nd_1.png?width=1020&height=1020",
+
+
+  imageAlt: "Rear view of modern home with pool",
+  Area: 200,
+  Rooms: 1,
+  Floors: 1,
+},
+{
+  imageUrl:
+  "https://media.discordapp.net/attachments/1074592773518405694/1075093776206405723/3rd_1.png?width=1020&height=1020",
+
+
+  imageAlt: "Rear view of modern home with pool",
+  Area: 200,
+  Rooms: 1,
+  Floors: 1,
+},
+{
+  imageUrl:
+  "https://cdn.discordapp.com/attachments/1074592773518405694/1075093777213046954/1.png",
+
+  imageAlt: "Rear view of modern home with pool",
+  Area: 200,
+  Rooms: 1,
+  Floors: 1,
+},
+{
+  imageUrl:
+  "https://i.top4top.io/p_26012fu111.jpg",
+
+  imageAlt: "Rear view of modern home with pool",
+  Area: 200,
+  Rooms: 1,
+  Floors: 1,
+},
+// ----------------200
+
     
   ];
 
-    
   return (
     <>
       <Center m={35}>
-        <Stack direction="row" spacing={4} align="center">
+        <Stack direction="row" spacing={8} align="center"  >
+          
           <Button
+
 
             onClick={() => {AreaButtons(200); onToggle(true)}}
 
-            colorScheme="teal"
+            colorScheme='blue'
             variant="outline"
+            h={61}
+            fontSize={21}
           >
             200m<sup>2</sup>
           </Button>
           <Button
 
+
             onClick={() => {AreaButtons(300); onToggle(true)}}
-            colorScheme="teal"
+            colorScheme='blue'
             variant="outline"
+            h={61}
+            fontSize={21}
           >
             300m<sup>2</sup>
           </Button>
           <Button
 
+          
             onClick={() => {AreaButtons(400); onToggle(true)}}
-            colorScheme="teal"
+            colorScheme='blue'
             variant="outline"
+            h={61}
+            fontSize={21}
           >
             400m<sup>2</sup>
           </Button>
           <Button
 
-            onClick={() => {AreaButtons(500); onToggle(true)}}
-            colorScheme="teal"
-            variant="outline"
-          >
 
+            onClick={() => {AreaButtons(500); onToggle(true)}}
+            colorScheme='blue'
+            variant="outline"
+            h={61}
+            fontSize={21}
+          >
             500m<sup>2</sup>
           </Button>
         </Stack>
@@ -190,85 +264,42 @@ function Main() {
       <Center
         // height={850}
         // mb={35}
-        backgroundImage={
-          "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGVuZ2luZWVyaW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1400&q=60"
-        }
+       
         backgroundSize={"cover"}
         display="flex"
         justifyContent={"space-around"}
         alignItems={"center"}
         // padding={45}
         w={"100%"}
+        
       >
+
         {property.filter(item=>item.Area==filterArea).map((item) => (
 
-          <Container >
+          <Container>
             <Collapse in={isOpen} animateOpacity>
                 <Box
-                  maxW="300px"
+                  maxW="400px"
                   borderWidth="1px"
                   borderRadius="lg"
                   overflow="hidden"
-                  backgroundColor={"#ccc8"}
+                  backgroundColor={"#FFFDF1"}
+                  h="300px"
                 >
-                  <Image src={item.imageUrl} alt={item.imageAlt} />
+                  <Image src={item.imageUrl} alt={item.imageAlt} transition={''}/>
 
-                  <Box p="6">
-                    <Box display="flex" alignItems="baseline">
-                      <Badge borderRadius="full" px="2" colorScheme="teal">
-                        New
-                      </Badge>
-                      <Box
-                        color="gray.500"
-                        fontWeight="semibold"
-                        letterSpacing="wide"
-                        fontSize="xs"
-                        textTransform="uppercase"
-                        ml="2"
-                      >
-                        {item.beds} beds &bull; {item.baths} baths
-                      </Box>
-                    </Box>
-
-                    <Box
-                      mt="1"
-                      fontWeight="semibold"
-                      as="h4"
-                      lineHeight="tight"
-                      noOfLines={1}
-                    >
-                      {item.title}
-                    </Box>
-
-                    <Box>
-                      {item.formattedPrice}
-                      <Box as="span" color="gray.600" fontSize="sm">
-                        / wk
-                      </Box>
-                    </Box>
-
-                    <Box display="flex" mt="2" alignItems="center">
-                      {Array(5)
-                        .fill("")
-                        .map((_, i) => (
-                          <StarIcon
-                            key={i}
-                            color={i < item.rating ? "teal.500" : "gray.300"}
-                          />
-                        ))}
-                      <Box as="span" ml="2" color="gray.600" fontSize="sm">
-                        {item.reviewCount} reviews
-                      </Box>
-                    </Box>
-                  </Box>
                 </Box>
 
-           
+                    <Box>
+                    <Stack direction="row" paddingTop={5} paddingLeft={120}>
+                      <Button backgroundColor={'#e6d894'} onClick={()=>{}}>select</Button>
+                    </Stack></Box>
         </Collapse>
           </Container>
 
         ))}
       </Center>
+      
     </>
   );
 }
