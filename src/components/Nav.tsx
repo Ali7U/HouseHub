@@ -95,15 +95,8 @@ export default function App() {
             >
               <VisuallyHidden>Choc</VisuallyHidden>
             </chakra.a>
-<<<<<<< HEAD
             <Link   to={"/"}>
             <Image src="src\logo.png" height = "40px"></Image>       </Link>   </Flex>
-=======
-            <Link to={"/"}>
-              <Image src="src\logo.png" height="40px"></Image>{" "}
-            </Link>{" "}
-          </Flex>
->>>>>>> b089578f87061417c3ffbe52692e1cbaff103ac7
           <HStack display="flex" alignItems="center" spacing={1}>
             <HStack
               spacing={1}
@@ -111,7 +104,6 @@ export default function App() {
               color="brand.500"
               display={{ base: "none", md: "inline-flex" }}
             >
-<<<<<<< HEAD
               <Button  _hover={{backgroundColor: "#2F4858", color:"white"}}  onClick={()=>navigate("/Home")}variant="ghost">Home</Button>
               <Button  _hover={{backgroundColor: "#2F4858", color:"white"}} onClick={()=>navigate("/GenerateImage")} variant="ghost">Image Generator</Button>
               <Button  _hover={{backgroundColor: "#2F4858", color:"white"}} onClick={()=>navigate("/main")} variant="ghost">Design</Button>
@@ -128,38 +120,6 @@ export default function App() {
               <Link to="/login">
               <Button _hover={{backgroundColor:"green.200"}}variant="ghost">Sign in</Button>
               </Link>}
-=======
-              <Button _hover={{ backgroundColor: "#c4b04e" }} variant="ghost">
-                Features
-              </Button>
-              <Button _hover={{ backgroundColor: "#c4b04e" }} variant="ghost">
-                Pricing
-              </Button>
-              <Button _hover={{ backgroundColor: "#c4b04e" }} variant="ghost">
-                Blog
-              </Button>
-              <Button _hover={{ backgroundColor: "#c4b04e" }} variant="ghost">
-                Company
-              </Button>
-              {isloggedin ? (
-                <Button
-                  _hover={{ backgroundColor: "red.200" }}
-                  onClick={onOpen}
-                  variant="ghost"
-                >
-                  Log out
-                </Button>
-              ) : (
-                <Link to="/login">
-                  <Button
-                    _hover={{ backgroundColor: "green.200" }}
-                    variant="ghost"
-                  >
-                    Sign in
-                  </Button>
-                </Link>
-              )}
->>>>>>> b089578f87061417c3ffbe52692e1cbaff103ac7
             </HStack>
 
             <Box display={{ base: "inline-flex", md: "none" }}>

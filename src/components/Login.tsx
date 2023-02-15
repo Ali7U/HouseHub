@@ -41,11 +41,6 @@ function Login() {
     }
   };
 
-<<<<<<< HEAD
-  return (<><Nav/>
-    <HStack w='full' h='full' bgColor='#fff' align='center'>
-      <Flex width='full' height='90vh' alignItems='center' justifyContent='center'>
-=======
   return (
     <HStack w="full" h="full" bgColor="#fff" align="center">
       <Flex
@@ -54,7 +49,6 @@ function Login() {
         alignItems="center"
         justifyContent="center"
       >
->>>>>>> b089578f87061417c3ffbe52692e1cbaff103ac7
         <Stack
           boxShadow="2xl"
           w="full"
@@ -84,28 +78,6 @@ function Login() {
               onChange={(e) => setUserName(e.target.value)}
             />
           </FormControl>
-<<<<<<< HEAD
-          {error && <Box color='red'>{error}</Box>}
-          <Stack spacing={4} direction='row' align='start' justify='space-between'>
-            <Checkbox color='purple' size='lg'>
-Remember me
-</Checkbox>
-<Link to='/forgot'>Forgot password?</Link>
-</Stack>
-<Button size='lg' bgColor='#c4b04e' w={40} color={"white"} onClick={handleLogin}>
-Login
-</Button>
-<Center mt={6}>
-
-<Link to='/Register'>
-<Text fontSize="20px">Don't have an account?</Text>
-</Link>
-</Center>
-</Stack> 
-</Flex>
-</HStack></>
-);
-=======
           <FormControl id="password">
             <FormLabel>Password</FormLabel>
             <Input
@@ -146,7 +118,6 @@ Login
       </Flex>
     </HStack>
   );
->>>>>>> b089578f87061417c3ffbe52692e1cbaff103ac7
 }
 
 export default Login;

@@ -28,11 +28,6 @@ function Register() {
     }
   };
 
-<<<<<<< HEAD
-  return (<><Nav/>
-    <HStack w='full' h='full' bgColor='#fff' align='center'>
-      <Flex width='full' height='90vh' alignItems='center' justifyContent='center'>
-=======
   return (
     <HStack w="full" h="full" bgColor="#fff" align="center">
       <Flex
@@ -41,7 +36,6 @@ function Register() {
         alignItems="center"
         justifyContent="center"
       >
->>>>>>> b089578f87061417c3ffbe52692e1cbaff103ac7
         <Stack
           boxShadow="2xl"
           w="full"
@@ -59,17 +53,6 @@ function Register() {
           </Heading>
           <FormControl id="user">
             <FormLabel>Username</FormLabel>
-<<<<<<< HEAD
-            <Input placeholder='Enter username' value={userName} onChange={e => setUserName(e.target.value)} />
-          </FormControl>
-          <FormControl >
-            <FormLabel>Email</FormLabel>
-            <Input placeholder='Enter email' value={email} onChange={e => setEmail(e.target.value)} />
-          </FormControl>
-          <FormControl id='password'>
-            <FormLabel>Password</FormLabel>
-=======
->>>>>>> b089578f87061417c3ffbe52692e1cbaff103ac7
             <Input
               placeholder="Enter username"
               mt={"26"}
@@ -102,7 +85,7 @@ function Register() {
           </Button>
         </Stack>
       </Flex>
-    </HStack></>
+    </HStack>
   );
 }
 
