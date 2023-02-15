@@ -42,10 +42,11 @@ export default function Home() {
               _dark={{ color: "white" }}
               fontWeight="bold"
               mt={35}
+              // Sp={5}
             >
               Build Your New{" "}
               <chakra.span color="brand.600" _dark={{ color: "brand.400" }}>
-                Idea
+                House
               </chakra.span>
             </chakra.h2>
             <chakra.p mt={4} color="gray " _dark={{ color: "gray.400" }}>
