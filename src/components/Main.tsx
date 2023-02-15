@@ -37,11 +37,7 @@ function Main() {
     setFilterArea(e.target.value ? parseInt(e.target.value) : null);
   };
 
-
-
-  const [ isOpen, onToggle ] = React.useState<any>();
-
-
+  const [isOpen, onToggle] = React.useState<any>();
 
   interface houses {
     imageUrl: string;
@@ -127,7 +123,7 @@ function Main() {
       Rooms: 1,
       Floors: 2,
     },
-        {
+    {
       imageUrl:
         "https://media.istockphoto.com/id/864458934/photo/architects-engineer-discussing-at-the-table-with-blueprint-closeup-on-hands-and-project-print.jpg?s=612x612&w=0&k=20&c=-ODOOfKY-vxwhyjx7RggEvW3YzWrinoELglqZAbjzIs=",
       imageAlt: "Rear view of modern home with pool",
@@ -141,46 +137,50 @@ function Main() {
       Rooms: 1,
       Floors: 2,
     },
-    
   ];
 
-    
   return (
     <>
       <Center m={35}>
         <Stack direction="row" spacing={4} align="center">
           <Button
-
-            onClick={() => {AreaButtons(200); onToggle(true)}}
-
+            onClick={() => {
+              AreaButtons(200);
+              onToggle(true);
+            }}
             colorScheme="teal"
             variant="outline"
           >
             200m<sup>2</sup>
           </Button>
           <Button
-
-            onClick={() => {AreaButtons(300); onToggle(true)}}
+            onClick={() => {
+              AreaButtons(300);
+              onToggle(true);
+            }}
             colorScheme="teal"
             variant="outline"
           >
             300m<sup>2</sup>
           </Button>
           <Button
-
-            onClick={() => {AreaButtons(400); onToggle(true)}}
+            onClick={() => {
+              AreaButtons(400);
+              onToggle(true);
+            }}
             colorScheme="teal"
             variant="outline"
           >
             400m<sup>2</sup>
           </Button>
           <Button
-
-            onClick={() => {AreaButtons(500); onToggle(true)}}
+            onClick={() => {
+              AreaButtons(500);
+              onToggle(true);
+            }}
             colorScheme="teal"
             variant="outline"
           >
-
             500m<sup>2</sup>
           </Button>
         </Stack>
@@ -189,9 +189,7 @@ function Main() {
       <Center
         // height={850}
         // mb={35}
-        backgroundImage={
-          "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGVuZ2luZWVyaW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1400&q=60"
-        }
+       
         backgroundSize={"cover"}
         display="flex"
         justifyContent={"space-around"}
@@ -199,10 +197,11 @@ function Main() {
         // padding={45}
         w={"100%"}
       >
-        {property.filter(item=>item.Area==filterArea).map((item) => (
-
-          <Container >
-            <Collapse in={isOpen} animateOpacity>
+        {property
+          .filter((item) => item.Area == filterArea)
+          .map((item) => (
+            <Container>
+              <Collapse in={isOpen} animateOpacity>
                 <Box
                   maxW="300px"
                   borderWidth="1px"
@@ -261,12 +260,9 @@ function Main() {
                     </Box>
                   </Box>
                 </Box>
-
-           
-        </Collapse>
-          </Container>
-
-        ))}
+              </Collapse>
+            </Container>
+          ))}
       </Center>
     </>
   );
