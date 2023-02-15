@@ -54,6 +54,9 @@ function Main() {
     Area: number;
     Floors: any;
     Rooms: any;
+    Kitchen: any;
+    Pool: any;
+    Garden: any;
     
   }
   const property: houses[] = [
@@ -64,6 +67,9 @@ function Main() {
       Area: 500,
       Rooms: 5,
       Floors: 1,
+      Kitchen: 2,
+      Pool: 1,
+      Garden: 1,
     },
     {
       imageUrl:
@@ -72,6 +78,9 @@ function Main() {
       Area: 400,
       Rooms: 4,
       Floors: 1,
+      Kitchen: 2,
+      Pool: "none",
+      Garden: 1,
     },
     {
       imageUrl:
@@ -80,24 +89,31 @@ function Main() {
       Area: 500,
       Rooms: 8,
       Floors: 2,
+      Kitchen: 2,
+      Pool: 1,
+      Garden: "none",
     },
     {
       imageUrl:
         "https://media.istockphoto.com/id/864458934/photo/architects-engineer-discussing-at-the-table-with-blueprint-closeup-on-hands-and-project-print.jpg?s=612x612&w=0&k=20&c=-ODOOfKY-vxwhyjx7RggEvW3YzWrinoELglqZAbjzIs=",
       imageAlt: "Rear view of modern home with pool",
-      Area: 500,
+      Area: 200,
       Rooms: 7,
       Floors: 2,
+      Kitchen: 1,
+      Pool: "none",
+      Garden: "none",
     },
     {
       imageUrl:
       "src/assets/Four/First1.png",
       imageAlt: "Rear view of modern home with pool",
-     
-
-      Area: 200,
+      Area: 500,
       Rooms: 1,
       Floors: 2,
+      Kitchen: 2,
+      Pool: 1,
+      Garden: 1,
     },
 
     

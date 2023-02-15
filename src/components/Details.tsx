@@ -24,23 +24,24 @@ const images = [
   },
 ];
 
-const image = localStorage.getItem("DetailsImage")
+const image:any = localStorage.getItem("DetailsImage")
+const property:any = localStorage.getItem("DetailsProperty")
 const MotionSimpleGrid = motion(SimpleGrid);
 
 const stats = [
   {
     title: 'Floor',
-    stat: '2',
+    stat: {property},
     icon: <FaLayerGroup size={'3em'} />,
   },
   {
     title: 'Bedrooms',
-    stat: '6',
+    stat: {property},
     icon: <FaBed size={'3em'} />,
   },
   {
     title: 'Location',
-    stat: 'Jeddah, SA',
+    stat: {property},
     icon: <GoLocation size={'3em'} />,
   },
 ];
