@@ -1,0 +1,61 @@
+.home {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
+    animation: change 17s infinite ease-in-out 
+
+    /* display: block; /
+    / margin-left: ; /
+    background-position: center;
+    overflow-x: hidden;
+    / animation: change 10s infinite ease-in-out; /
+    animation: change 17s infinite ease-in-out 
+  
+    / a */
+  }
+  
+  @keyframes change {
+    0%{
+        background-image: url("src\assets\image11.jpeg");
+        background-size: cover;
+     }
+     10%{
+        background-image: url("src\assets\image10.jpeg");
+        background-size: cover;
+     }
+      20%{
+        background-image: url("src\assets\image9.jpeg");
+        background-size: cover
+     }
+       30%{
+        background-image: url("src\assets\image8.jpeg");
+        background-size: cover
+     }
+       40%{
+        background-image: url("src\assets\image7.jpeg");
+        background-size: cover
+     }      
+
+       50%{
+        background-image: url("src\assets\image6.jpeg");
+        background-size: cover
+     }
+       60%{
+        background-image: url("src\assets\image5.jpeg");
+        background-size: cover
+     }
+       70%{
+        background-image: url("src\assets\image4.jpeg");
+        background-size: cover
+     }
+       80%{
+        background-image: url("src\assets\image3.jpeg");
+        background-size: cover
+     }
+       90%{
+        background-image: url("src\assets\image2.jpeg");
+        background-size: cover
+     }
+       100%{
+      background-image: url("src\assets\image1.jpeg");
+      background-size: cover;
+     }
+  }

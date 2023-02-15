@@ -6,6 +6,7 @@ import { Carousel } from 'react-responsive-carousel';
 import Profile from './Profile';
 import axios from 'axios';
 import Nav from './Nav';
+import './LandingPage.css'
 
 
 
@@ -15,7 +16,7 @@ function Apitest() {
   const [img, setimg] = React.useState<any>([]);
   const [promptinput, setprompt] = React.useState<any>();
   
-  const apiKey = "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";
+  const apiKey = "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  ";
 const configuration = new Configuration({
   apiKey: apiKey
 });

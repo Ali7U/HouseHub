@@ -28,10 +28,9 @@ export default function LandingPage(){
               
 
 
-      <Box  
+      <Box  className="home"
         w="full"
         h="container.lg"
-        backgroundImage="url(https://static.wixstatic.com/media/9f7b6e_584af36f32484e38a9da4f060fa45902~mv2.jpg/v1/fill/w_2500,h_1389,al_c/9f7b6e_584af36f32484e38a9da4f060fa45902~mv2.jpg)"
         bgPos="center"
         bgSize="cover"
       >
