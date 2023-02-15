@@ -8,9 +8,14 @@ import Nav from "./Nav";
 import Login from "./Login";
 import { Box } from "@chakra-ui/react";
 import Main from "./Main";
+<<<<<<< HEAD
 import Contact from './Contact';
 import Register from "./Register";
 import Details from "./Details";
+=======
+
+
+>>>>>>> 077de96283c91d59f6e5321dd18a581bcd8e18ab
 function Router() {
   return (
     <div className="routers">
