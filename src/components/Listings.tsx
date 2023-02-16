@@ -9,7 +9,6 @@ type Home = {
   price: number;
   location: string;
 };
-
 const homes: Home[] = [
   {
     id: 1,
