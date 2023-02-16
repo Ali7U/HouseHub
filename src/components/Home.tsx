@@ -2,93 +2,91 @@ import React from "react";
 import { Box, Flex, Link, chakra } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import Nav from "./Nav";
-import bg1 from '../assets/background1.png'
+import video from "../assets/bgv.mp4";
 
 export default function Home() {
   const navigate = useNavigate();
   return (
-
-
-    <><Nav/>
-      <Flex
-        bg="#edf3f8"
-        _dark={{ bg: "#3e3e3e" }}
-        //   p={50}
+    <>
+      <Nav />
+      <Box
         w="full"
-        alignItems="center"
-        justifyContent="center"
+        h="100vh"
+        position="relative"
+        overflow="hidden"
+        _before={{
+          content: `""`,
+          display: "block",
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          backgroundColor: "rgba(0,0,0,0.5)",
+          zIndex: 0,
+        }}
       >
-        <Box
-          bg="white"
-          _dark={{ bg: "gray.800" }}
-          // mx={{ lg: 8 }}
-          display={{ lg: "flex" }}
-          // maxW={{ lg: "5xl" }}
-          shadow={{ lg: "lg" }}
-          rounded={{ lg: "lg" }}
-          h={600}
-          w={"100%"}
-          // h={{ base: 64, lg: "full" }}
-          // rounded={{ lg: "lg" }}
-          bgSize="cover"
-          // style={{
-          //   backgroundImage:
-          //     'url("https://static.wixstatic.com/media/9f7b6e_584af36f32484e38a9da4f060fa45902~mv2.jpg/v1/fill/w_2500,h_1389,al_c/9f7b6e_584af36f32484e38a9da4f060fa45902~mv2.jpg")',
-          // }}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            minWidth: "100%",
+            minHeight: "100%",
+            width: "auto",
+            height: "auto",
+            zIndex: -1,
+          }}
         >
-    <div className="home">
+          <source src={video} type="video/mp4" />
+        </video>
 
-          <Box py={6} px={6} maxW={{ base: "xl", lg: "5xl" }} w={{ lg: "40%" }}>
-            <chakra.h2
-              fontSize={{ base: "2xl", md: "3xl" }}
-              color="gray "
-              _dark={{ color: "white" }}
-              fontWeight="bold"
-              mt={35}
-              // Sp={5}
-            >
-              Build Your New{" "}
-              <chakra.span color="brand.600" _dark={{ color: "brand.400" }}>
-                House
-              </chakra.span>
-            </chakra.h2>
-            <chakra.p mt={4} color="gray " _dark={{ color: "gray.400" }}>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem
-              modi reprehenderit vitae exercitationem aliquid dolores ullam
-              temporibus enim expedita aperiam mollitia iure consectetur dicta
-              tenetur, porro consequuntur saepe accusantium consequatur.
-            </chakra.p>
-
-            <Box mt={8}>
-              <Link
-                bg="gray.900"
-                color="gray.100"
-                px={5}
-                py={3}
-                fontWeight="semibold"
-                rounded="lg"
-                _hover={{ bg: "gray.800" }}
-                onClick={() => {
-                  navigate("/main");
-                }}
-              >
-                Start Now
-              </Link>
-            </Box>
-          </Box>
-          </div>
-          {/* <Box w={{ lg: "60%" }}> */}
-            {/* <Box
-            h={{ base: 64, lg: "full" }}
-            rounded={{ lg: "lg" }}
-            bgSize="cover"
-            style={{
-              backgroundImage:
-                'url("https://static.wixstatic.com/media/9f7b6e_584af36f32484e38a9da4f060fa45902~mv2.jpg/v1/fill/w_2500,h_1389,al_c/9f7b6e_584af36f32484e38a9da4f060fa45902~mv2.jpg")',
+        <Box
+          position="relative"
+          zIndex={1}
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+          justifyContent="center"
+          height="100%"
+          padding={"300px"}
+        >
+          <chakra.h2
+            fontSize={{ base: "2xl", md: "3xl" }}
+            color="white "
+            _dark={{ color: "white" }}
+            fontWeight="bold"
+            mb={6}
+          >
+            Find your dream home with our HouseHub {" "}
+            <chakra.span color="brand.600" _dark={{ color: "brand.400" }}>
+            platform
+            </chakra.span>
+          </chakra.h2>
+          <chakra.p color="#eee" _dark={{ color: "gray.400" }} mb={8}>
+          Discover Properties That Fit Your Lifestyle and Budget in Your Desired Location Today!
+          </chakra.p>
+          <Link
+            bg="gray.900"
+            color="gray.100"
+            px={5}
+            py={3}
+            fontWeight="semibold"
+            rounded="lg"
+            _hover={{ bg: "gray.800" }}
+            onClick={() => {
+              navigate("/main");
             }}
-          ></Box> */}
-          {/* </Box> */}
+          >
+            Start Now
+          </Link>
         </Box>
-      </Flex></>
+      </Box>
+    </>
   );
 }

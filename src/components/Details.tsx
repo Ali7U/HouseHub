@@ -5,7 +5,7 @@ import { FiServer } from 'react-icons/fi';
 import { GoLocation } from 'react-icons/go';
 import { FaBed, FaLayerGroup } from "react-icons/fa";
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 const images = [
   {
     id: 1,
@@ -176,11 +176,13 @@ function Details() {
     <Image id='2' src='https://o.remove.bg/downloads/3a01d1a6-7781-4bf1-aa7e-044d4ea0683e/4-Bedroom-3D-House-Plans-removebg-preview-removebg-preview.png' alt='3d' />
 </Grid>
 </Flex>
-    
-           <Box>
-           <Button px={"40px"} py={"25px"} mb={"40px"}>Get contact</Button>
-           </Box>
-        
+<Flex bgColor={"#eee"} right={0} p={5} justifyContent={"center"} >
+  <Link to={'/OrderDetails'}>
+  <Button colorScheme="teal" size="lg">
+    Place Order
+  </Button>
+  </Link>
+</Flex> 
    </Box>
    </Box>
    </>

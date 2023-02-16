@@ -13,6 +13,7 @@ import GenerateImage from "./GenerateImage";
 import Profile from "./Profile";
 import Register from "./Register";
 import Details from "./Details";
+import OrderDetails from "./OrderDetails";
 
 
 function Router() {
@@ -33,6 +34,7 @@ function Router() {
         <Route path="/GenerateImage" element={<GenerateImage/>} />
         <Route path="/profile" element={<Profile/>} />
         <Route path="/Details" element={<Details/>} />
+        <Route path="/OrderDetails" element={<OrderDetails email={"to your email"}/>} />
 
 
 
