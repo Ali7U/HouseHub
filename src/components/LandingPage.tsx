@@ -116,7 +116,7 @@ export default function LandingPage(){
           _dark={{ color: "gray.400" }}
           lineHeight={{ md: "shorter" }}
         >
-           Welcome to HouseHub! A place for all things house design.
+           Welcome to <span style={{color:"#c4b04e"}}>HouseHub</span>! A place for all things house design.
         </chakra.h2>
         <chakra.p
           mb={5}
