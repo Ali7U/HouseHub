@@ -17,19 +17,22 @@ function Apitest() {
     onClose,
     onOpen,
   } = useDisclosure({ defaultIsOpen: false })
+
   const [img, setimg] = React.useState<string[]|null[]>(["https://via.placeholder.com/1024","https://via.placeholder.com/1024","https://via.placeholder.com/1024","https://via.placeholder.com/1024"]);
 
   const [promptinput, setprompt] = React.useState<any>();
   
-  const apiKey = "";
+
 const configuration = new Configuration({
-  apiKey: apiKey
+  apiKey: process.env.REACT_APP_KEY
 });
+
 const openai = new OpenAIApi(configuration);
  
 async function save(){
   onClose()
   console.log(img)
+
   await fetch(`https://63e208d4ad0093bf29c65b2d.mockapi.io/Users/${localStorage.getItem("id")}/Data`, {
     method: 'POST', 
     headers: {'content-type':'application/json'},
