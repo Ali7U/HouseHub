@@ -37,7 +37,7 @@ function Router() {
 
 
 
-      </Routes><Footer/>
+      </Routes>
     </div>
   );
 }

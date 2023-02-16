@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import { Box, Center, Flex, FormControl, FormLabel, Heading, HStack, Image, Input, Stack, Checkbox, Link, Button } from '@chakra-ui/react'
+import {Link} from 'react-router-dom'
+import { Box, Center, Flex, FormControl, FormLabel, Heading, HStack, Image, Input, Stack, Checkbox, Button } from '@chakra-ui/react'
 import Nav from './Nav';
 
 function Register() {
@@ -49,7 +50,10 @@ function Register() {
           border="2px solid #c4b04e"
           alignItems='center'
           justifyContent='center'
-        >
+        >   
+        <Link to={"/"}>
+        <Image position={"relative"} top="-50px" src="src\logo.png" height = "40px"></Image>       </Link> 
+
           <Heading fontSize='2xl' color='#c4b04e'>
             REGISTER
           </Heading>

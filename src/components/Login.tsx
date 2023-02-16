@@ -17,15 +17,12 @@ function Login() {
     }
   }, []);
 
-  const handleLogin = async () => {
+  const handleLogin = async () => { console.log(password); console.log(userName)
     setError('');
     
     try {
       const response = await axios.get(`https://63e208d4ad0093bf29c65b2d.mockapi.io/Users/?userName=${userName}`);
-      if (response.data.length === 0) {
-        setError('Incorrect username or password');
-        return;
-      }
+     
       const user = response.data[0];
       console.log(user);
 
@@ -57,9 +54,10 @@ function Login() {
           justifyContent='center'
           border="2px solid #c4b04e"
 
-        >
+        > <Link   to={"/"}>
+        <Image position={"relative"} top="-50px" src="src\logo.png" height = "40px"></Image>       </Link> 
           <Heading fontSize='2xl' color='#c4b04e
-'>
+'>        
             LOGIN
           </Heading>
           <FormControl id='user'>

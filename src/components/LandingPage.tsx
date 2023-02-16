@@ -51,20 +51,38 @@ export default function LandingPage(){
             > <Image mb = "50px" src="src\logo.png"></Image>  
               Build Your new Idea
           
-            </Heading><Button onClick={handleClick}>Learn more!</Button><Link to="/home">
+            </Heading><Button         boxShadow="dark-lg" style= {{color:"white", backgroundColor:"#2F4858"}}onClick={handleClick}>Learn more</Button>
+            
+            {localStorage.getItem("userName") !== null  ?   <Link to="/home">
             <Button
+                                        color="white"
+
+                                        boxShadow="dark-lg"
+
               bg="#c4b04e"
-              textTransform="uppercase"
               w="fit-content"
             >
-              Start 
-            </Button>  </Link>       
+                            Get Started 
+ 
+            </Button>
+              </Link>   :   <Link to="/login">
+            <Button
+                        boxShadow="dark-lg"
+
+              color="whiteAlpha.800"
+              bg="#c4b04e"
+              w="fit-content"
+            >
+              Get Started 
+            </Button>
+              </Link>  }
+               
 
 
           </Stack>
         </Flex>
       </Box> <Flex ref={ref}
-      bg="#edf3f8"
+      bg="#2F4858"
       _dark={{ bg: "#3e3e3e" }}
       p={20}
       w="full"
@@ -98,7 +116,7 @@ export default function LandingPage(){
           _dark={{ color: "gray.400" }}
           lineHeight={{ md: "shorter" }}
         >
-          Decide how you integrate Payments
+           Welcome to HouseHub! A place for all things house design.
         </chakra.h2>
         <chakra.p
           mb={5}
@@ -107,17 +125,20 @@ export default function LandingPage(){
           _dark={{ color: "gray.400" }}
           fontSize={{ md: "lg" }}
         >
-          Love to code? Next to our ready-made and free plugins you can use
-          our expansive yet simple API; decide how you integrate Payments
-          and build advanced and reliable products yourself from scratch.
+         Whether you're looking to build a new home, renovate an existing one, or simply refresh your decor, we've got you covered. With a wide range of pre-made templates to choose from and a powerful AI image generator, we make it easy to bring your design ideas to life. Browse our collection today and start building your dream home!
         </chakra.p>
        
       </Box>
       <Box
+      
+      bg="gray.200"   backgroundSize="cover"
+      backgroundRepeat={"no-repeat"}
+      backgroundImage="url(https://img.freepik.com/free-vector/doodle-concept-with-architect-worker-holding-blueprint-engineering-architecture-job-background-professional-engineer-helmet-with-work-tools-compass-pencil-crane-line-art-vector-illustration_107791-11233.jpg?w=1480&t=st=1676516114~exp=1676516714~hmac=67fea5b50496699194ad72ad3e3678744249350d554130dc1550b812dd28c102)"
         w="full"
         h="full"
+        boxShadow="dark-lg"
+
         py={48}
-        bg="gray.200"
         _dark={{ bg: "gray.700" }}
       ></Box>
     </SimpleGrid> 
@@ -140,7 +161,7 @@ export default function LandingPage(){
               lineHeight={{ md: "shorter" }}
               textShadow="2px 0 currentcolor"
             >
-              Clear overview for efficient tracking
+              A platform for everybody
             </chakra.h2>
             <chakra.p
               mb={5}
@@ -149,9 +170,7 @@ export default function LandingPage(){
               _dark={{ color: "gray.400" }}
               fontSize={{ md: "lg" }}
             >
-              Handle your subscriptions and transactions efficiently with the
-              clear overview in Dashboard. Features like the smart search option
-              allow you to quickly find any data you’re looking for.
+               We've created a platform that makes it easy and affordable to design the house of your dreams. With a variety of styles, sizes, and floor plans to choose from, you're sure to find something that fits your needs and budget. Plus, our AI image generator provides endless inspiration for your interiors and exteriors. It's never been easier to create a space you love.
             </chakra.p>
          
           </Box>
@@ -159,7 +178,12 @@ export default function LandingPage(){
             w="full"
             h="full"
             py={48}
-            bg="gray.200"
+            boxShadow="dark-lg"
+
+            bg="gray.200"   backgroundSize="cover"
+            backgroundRepeat={"no-repeat"}
+            backgroundImage="url(https://img.freepik.com/free-vector/man-robot-with-computers-sitting-together-workplace-artificial-intelligence-workforce-future-flat-illustration_74855-20635.jpg?w=1380&t=st=1676515804~exp=1676516404~hmac=ef52b3dec059d1f3f1138d3fbe6b190ea462823da753b3d80e68d443acd50141)"
+
             _dark={{ bg: "gray.700" }}
           ></Box>
         </SimpleGrid>
@@ -182,7 +206,7 @@ export default function LandingPage(){
               _dark={{ color: "gray.400" }}
               lineHeight={{ md: "shorter" }}
             >
-              Decide how you integrate Payments
+              Get Started!
             </chakra.h2>
             <chakra.p
               mb={5}
@@ -191,29 +215,39 @@ export default function LandingPage(){
               _dark={{ color: "gray.400" }}
               fontSize={{ md: "lg" }}
             >
-              Love to code? Next to our ready-made and free plugins you can use
-              our expansive yet simple API; decide how you integrate Payments
-              and build advanced and reliable products yourself from scratch.
+              Our platform combines the convenience of pre-made templates with the creativity of an AI image generator, giving you the tools you need to design a space that reflects your unique style and personality. From sleek and modern to cozy and minimal, we've got something for everyone. Let us help you transform your house into a home you love.
             </chakra.p>
             <Link to="/home">
+            {localStorage.getItem("userName") !== null  ?   <Link to="/home">
             <Button
-              w={{ base: "full", sm: "auto" }}
-              size="lg"
-              bg="gray.900"
-              _dark={{ bg: "gray.700" }}
-              _hover={{ bg: "gray.700", _dark: { bg: "gray.600" } }}
-              color="gray.100"
-              as="a"
+              bg="#2F4858"
+          color="white"
+          size="lg"
+              w="fit-content"            boxShadow="dark-lg"
+
             >
-              Start now!
-            </Button></Link>
+              Start Now! 
+            </Button>
+              </Link>   :   <Link to="/login">
+            <Button
+              bg="#c4b04e"
+             
+              w="fit-content"
+            >
+              Start Now!  
+            </Button>
+              </Link>  }
+               </Link>
           </Box>
           <Box
             w="full"
             h="full"
             py={48}
-                    backgroundImage="url(https://static.wixstatic.com/media/9f7b6e_584af36f32484e38a9da4f060fa45902~mv2.jpg/v1/fill/w_2500,h_1389,al_c/9f7b6e_584af36f32484e38a9da4f060fa45902~mv2.jpg)"
-
+            boxShadow="dark-lg"
+            backgroundSize="cover"
+            backgroundRepeat={"no-repeat"}
+                    backgroundImage="url(https://img.freepik.com/free-photo/robot-handshake-human-background-futuristic-digital-age_53876-129770.jpg?w=1060&t=st=1676515061~exp=1676515661~hmac=9a808a56860cb391e14bd6ff8d523fbf9d1eb9237092d5390f0f4ded52108841)"
+            
             _dark={{ bg: "gray.700" }}
           ></Box>
         </SimpleGrid>
