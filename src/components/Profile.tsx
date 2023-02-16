@@ -77,7 +77,7 @@ function Profile() {
 
       <div style={{ height:"100%", backgroundColor: "#2F4858"}}>
       <Container      >
-        <Heading size = "3xl" color="#c4b04e" > Generated Prompts</Heading>
+        <Heading  size = "3xl" color="#c4b04e" > Generated Prompts</Heading>
         {groupedImages.map((group, index) => (
           <React.Fragment  key={index}>
             <Card mt = "30px"
