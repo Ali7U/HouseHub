@@ -1,7 +1,7 @@
 import React from 'react'
 import { Configuration, OpenAIApi } from "openai";
-import {Image, Text, Badge, Box, Button, chakra, Flex, Input, InputGroup, InputRightElement, SimpleGrid, VisuallyHidden, Container, Spinner, CircularProgress, Heading } from "@chakra-ui/react";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import {Image, Text, Badge, Box, Button, chakra, Flex, Input, InputGroup, InputRightElement, SimpleGrid, VisuallyHidden, Container, Spinner, CircularProgress, Heading, useDisclosure, Alert, AlertDescription, AlertIcon, AlertTitle, CloseButton } from "@chakra-ui/react";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; 
 import { Carousel } from 'react-responsive-carousel';
 import Profile from './Profile';
 import axios from 'axios';
@@ -12,40 +12,47 @@ import './LandingPage.css'
 
 function Apitest() {
   
-  
-  const [img, setimg] = React.useState<any>([]);
+  const {
+    isOpen: isVisible,
+    onClose,
+    onOpen,
+  } = useDisclosure({ defaultIsOpen: false })
+  const [img, setimg] = React.useState<string[]|null[]>(["https://via.placeholder.com/1024","https://via.placeholder.com/1024","https://via.placeholder.com/1024","https://via.placeholder.com/1024"]);
+
   const [promptinput, setprompt] = React.useState<any>();
   
-  const apiKey = "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  ";
+  const apiKey = "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";
 const configuration = new Configuration({
   apiKey: apiKey
 });
-
 const openai = new OpenAIApi(configuration);
-
-
+ 
 async function save(){
+  onClose()
+  console.log(img)
 
-  await fetch(`https://63e20921ad0093bf29c66077.mockapi.io/Signup?username=${localStorage.getItem("userName")}`, {
+  await fetch(`https://63e208d4ad0093bf29c65b2d.mockapi.io/Users/${localStorage.getItem("id")}/Data`, {
     method: 'POST', 
     headers: {'content-type':'application/json'},
-    body: JSON.stringify({images: img, prompt: promptinput})
+    body: JSON.stringify({images: img})
   })
 
 
 }
 
 async function generate(){
-  setimg([null,null,null])
+  
+  onOpen()
+  setimg([null,null,null, null])
  
   
   console.log(promptinput);
   await openai.createImage({   
   prompt:promptinput,
   n: 3,
-  size: "512x512", }).then((response) => {
+  size: "1024x1024", }).then((response) => {
   console.log(response)
-  setimg([response.data.data[0].url, response.data.data[1].url,response.data.data[2].url])
+  setimg([response.data.data[0].url, response.data.data[1].url,response.data.data[2].url,promptinput])
   localStorage.setItem("images", JSON.stringify(img))
   localStorage.setItem("prompt", promptinput)
 
@@ -56,7 +63,7 @@ async function generate(){
 }
       
   return (
-    <> <Nav/>
+    <div style={{backgroundColor:"#2F4858", height: "100vh"}}> <Nav/>
         <SimpleGrid padding="50px"
   columns={{
     base: 1,
@@ -72,10 +79,13 @@ async function generate(){
     bottom: 0,
     right: 0,
     zIndex: -1,
-    content: '" "',
+    content: '" "', 
+
   }}
 >
   <Flex  backgroundColor={"#c4b04e"}
+  height="600px"
+  mb="50px"
     direction="column"
     alignItems="start"
     justifyContent="center"
@@ -147,7 +157,7 @@ async function generate(){
         <Input onChange={(e)=>{setprompt(e.target.value)}}
           size="lg"
           color="brand.900"
-          placeholder="Describe the house of your dreams"
+          placeholder="Create your dream home with words. What does it look like?"
           bg="white"
         />
         <InputRightElement w="auto">
@@ -158,7 +168,7 @@ async function generate(){
             size="lg"
             roundedLeft={0}
           >
-            Next
+            Generate
           </Button>
         </InputRightElement>
       </InputGroup>
@@ -177,34 +187,56 @@ async function generate(){
       letterSpacing="wider"
     >
       Be descriptive and creative with your prompt. They key to a good result is your prompt!
+      <p style= {{fontSize: "20px", color: "white" , marginTop: "25px"}}>Example key words: <p style= {{fontSize: "20px", color: "darkblue" }}>minimalist design happiness peace luxurious expensive saudi-style american modern design"</p></p>
+
     </chakra.p>
   </Flex>
   <Container>
 
-  {img[0] == null ?       
-      <CircularProgress isIndeterminate size="400px" color='#2F4858' />
+  {
+  img[0] == null ?       
+      <CircularProgress margin={"50px"} isIndeterminate size="400px" color='#2F4858' />
   :            
   
           <> 
  <Carousel  >
         <div>
-     
         <img src={img[0]} /> 
-            <p className="legend"></p>
         </div>
         <div>
-         <img src={img[0]} />
-            <p className="legend"></p>
+         <img src={img[1]?.toString()} />
         </div>
         <div>
-       <img src={img[0]} />
+       <img src={img[2]?.toString()} />
 
-            <p className="legend"></p>
         </div>
-    </Carousel><Button ml = "50%" color="white" bg ="red.700" onClick={save}>Save</Button></>  }
+    </Carousel>
+    { img[0]=="https://via.placeholder.com/1024" ? null : 
+
+  
+
+     isVisible  ? <Button ml = "50%" color="white" bg ="red.700" onClick={()=>{ onClose(); save();}}>Save</Button>:
+    <Alert status='success'>
+      <AlertIcon />
+      <Box>
+        <AlertTitle>Saved!</AlertTitle>
+        <AlertDescription>
+          Images saved to your prompts page!
+        </AlertDescription>
+      </Box>
+    
+    </Alert>
+   }
+
+
+
+    </> 
+    
+    
+    }
   </Container>
 </SimpleGrid>;
-    </>
+    </div>
   )
 }
 

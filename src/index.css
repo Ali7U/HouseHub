@@ -16,11 +16,11 @@
   background-position: center;
   overflow-x: hidden;
   /* animation: change 10s infinite ease-in-out; */
-  animation: change 5s infinite ease-in-out ;
+  animation: change 5s infinite ease-in-out;
 
   /* a */
 }
-
+/* 
 @keyframes change {
   0%{
     background-image: url(./assets/midj.jpg);    
@@ -42,9 +42,7 @@
     background-image: url(./assets/midj.jpg);    
 
    }
-}
-
-
+} */
 
 /* .home {
   background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
@@ -54,13 +52,13 @@
   max-height: 100vh;
   height: 100vh;
   /* display: block; */
-  /* margin-left: ; */
-  /* background-position: center; */
-  /* overflow-x: hidden; */
-  /* animation: change 10s infinite ease-in-out; */
-  /* animation: change 17s infinite ease-in-out ; */
+/* margin-left: ; */
+/* background-position: center; */
+/* overflow-x: hidden; */
+/* animation: change 10s infinite ease-in-out; */
+/* animation: change 17s infinite ease-in-out ; */
 
-  /* a */
+/* a */
 /* } */
 /* 
 @keyframes change {
@@ -108,4 +106,4 @@
     background-image: url(./assets/bag11.jpeg);    
     
    }
-} */ 
+} */

@@ -14,11 +14,13 @@ import {
   Collapse,
 } from "@chakra-ui/react";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Nav from "./Nav";
 
 console.log(null || "string");
 
 function Main() {
+  const navigate = useNavigate()
   const [filterRooms, setFilterRooms] = React.useState<any | null>(null);
   const [filterFloors, setFilterFloors] = React.useState<any | null>(null);
   const [filterArea, setFilterArea] = React.useState<any | null>(null);
@@ -284,7 +286,7 @@ function Main() {
                 </Box>
                     <Box>
                     <Stack direction="row" paddingTop={5} paddingLeft={120}>
-                      <Button backgroundColor={'#e6d894'} onClick={()=>{}}>Select</Button>
+                      <Button backgroundColor={'#85CDFD'} onClick={()=>{localStorage.setItem("DetailsImage", item.imageUrl);  navigate('/Details')}}>Select</Button>
                     </Stack></Box>
         </Collapse>
           </Container>

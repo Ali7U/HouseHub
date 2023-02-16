@@ -6,6 +6,7 @@ import {
   Text,
   useColorModeValue,
   VisuallyHidden,
+  BoxProps
 } from '@chakra-ui/react';
 // 
 import { ReactNode } from 'react';
@@ -47,7 +48,7 @@ export default function Footer() {
   const bg = useColorModeValue("white", "gray.800");
 
   return (
-    <Box position={"fixed"} bottom="0" zIndex={"1"} w="100%"
+    <Box position={"fixed"} mt={50} bottom="0" zIndex={"1"} w="100%"
         bg={bg}
         color={useColorModeValue('gray.900', 'gray.700')}>
       <Container
@@ -87,4 +88,3 @@ export default function Footer() {
     </Box>
   );
 }
-

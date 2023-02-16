@@ -1,41 +1,144 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect, useRef ,} from 'react';
 import Nav from './Nav';
+import {
+  Button,
+  Container,
+  Heading,
+  Modal,
+  ModalBody,
+  ModalCloseButton,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  ModalOverlay,
+  useDisclosure, Text, Image, Stack, Card, CardBody, CardFooter
+} from '@chakra-ui/react';
+import { Carousel } from 'react-responsive-carousel';
 
 function Profile() {
   const [username, setusername] = React.useState<any>();
   const [email, setEmail] = React.useState<any>();
-  const [images, setImages] = React.useState<string[]>([]);
+  const [Images, setImages] = React.useState<string[]>([]);
+  const imagesRef = useRef<string[]>([]);
+  const [size, setSize] = React.useState('md');
+  const [selectedGroup, setSelectedGroup] = useState<string[]>([]);
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
+  useEffect(() => {
+    
+    console.log(Images);
+  }, [Images]);
 
-
-  useEffect (  () => {
-     fetch(`https://63e20921ad0093bf29c66077.mockapi.io/Signup?username=${localStorage.getItem("userName")}`, {
+  useEffect(() => {
+    fetch(`https://63e208d4ad0093bf29c65b2d.mockapi.io/Users/${localStorage.getItem("id")}/Data`, {
       method: 'GET',
       headers: {'content-type':'application/json'},
     }).then(res => {
       if (res.ok) {
           return res.json();
       }
-     
     }).then(res => {
-      setEmail(res[0].email)
-      setusername(res[0].username);
-      setImages(res[res.length-1].images);
-        console.log(images)
-       console.log(res)
-   })
-  }, [])
-  
+      res.map((img: any) => {
+        imagesRef.current = [...imagesRef.current, ...img.images];
+        setImages(imagesRef.current);
+        console.log(Images);
+      });
+      setImages(imagesRef.current);
+      setusername(localStorage.getItem("userName"));
+    })
+  }, []);
 
+  const groupedImages = [];
+  for (let i = 0; i < Images.length; i += 4) {
+    groupedImages.push(Images.slice(i, i + 4));
+  }
+  console.log(groupedImages)
+
+  const handleButtonClick = (group: string[]) => {
+    setSelectedGroup(group);
+    onOpen();
+  }
 
   return (
-    <div><Nav/> <p>
-      
-      {username}
+    <div style={{height: "100vh"}}>
+      <Nav />
 
-      <img style={{height:"200px"}}src={images[0]}></img>
-      </p></div>
-  )
+
+      
+
+
+
+
+
+
+
+
+
+
+      <div style={{ height:"100%", backgroundColor: "#eee"}}>
+      <Container justifyContent={"center"} alignItems={"center"}     >
+        <Heading  size = "3xl" color="#c4b04e"  w={"50vw"} pt={"60px"}> Generated Prompts</Heading>
+        {groupedImages.map((group, index) => (
+          <React.Fragment  key={index}>
+            <Card mt = "50px"
+  direction={{ base: 'column', sm: 'row' }}
+  overflow='hidden'
+  variant='outline'
+  width={"37vw"}
+  maxW={"50vw"}
+  
+>
+  <Image
+    objectFit='cover'
+    maxW={{ base: '100%', sm: '200px' }}
+    src={group[0]}
+   
+  />
+
+
+  <Stack>
+    <CardBody>
+      <Heading size='md'>{group[3]}</Heading>
+
+      <Text py='2'>
+       
+      </Text>
+    </CardBody>
+
+    <CardFooter>
+    <Button
+              onClick={() => handleButtonClick(group)}
+              m={4} bg="#c4b04e"
+            >
+              Show Images
+            </Button>
+    </CardFooter>
+  </Stack>
+</Card>
+            <Modal onClose={onClose} size={size} isOpen={isOpen}>
+              <ModalOverlay />
+              <ModalContent>
+                <ModalHeader>{selectedGroup[3]}</ModalHeader>
+                <ModalCloseButton />
+                <ModalBody>
+                  <Carousel>
+                    {selectedGroup.slice(0, 3).map((image, index) => (
+                      <div key={index}>
+                        <img src={image} />
+                      </div>
+                    ))}
+                  </Carousel>
+                </ModalBody>
+                <ModalFooter>
+                  <Button onClick={onClose}>Close</Button>
+                </ModalFooter>
+              </ModalContent>
+            </Modal>
+          </React.Fragment>
+        ))}
+      </Container></div>
+    </div>
+  );
 }
 
-export default Profile
+export default Profile;

@@ -19,24 +19,24 @@ export default function Contact() {
         
             <div className="input-group">
             <input type="text" id="name" required />
-            <label htmlFor="name"><FaUserAlt/> Your name</label>
+            <label id='lb' htmlFor="name"><FaUserAlt/> Your name</label>
          </div>
          <div className="input-group">
             <input type="text" id="number" required />
-            <label htmlFor="number" ><BsTelephoneFill/> Phone number</label>
+            <label id='lb' htmlFor="number" ><BsTelephoneFill/> Phone number</label>
          </div>
         </div>
          <div className="input-group">
             <input type="email" id="email" required />
-            <label htmlFor="email"><MdEmail/> Your Email</label>
+            <label id='lb' htmlFor="email"><MdEmail/> Your Email</label>
          </div>
          <div className="input-group">
             <input type="text" id="subject" required />
-            <label htmlFor="subject"><MdSubtitles/> Subject</label>
+            <label id='lb' htmlFor="subject"><MdSubtitles/> Subject</label>
          </div>
          <div className="input-group">
             <textarea id="message" rows={8} required></textarea>
-            <label className='z8' htmlFor='message'><BsChatRightTextFill/> Your Message</label>
+            <label id='lb' className='z8' htmlFor='message'><BsChatRightTextFill/> Your Message</label>
          </div>
          <button type="submit" id="btn1"> SEND</button>
     </form>
