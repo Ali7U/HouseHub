@@ -84,6 +84,7 @@ function StatsCard(props: StatsCardProps) {
 
 
 function Details() {
+  const [image, setImage] = React.useState<any|null>( localStorage.getItem("DetailsImage") )
   return (
     <>
     <Box bgColor={"#eee"} h={"100vh"}>
@@ -173,7 +174,7 @@ function Details() {
     
     <Image id='1' src='https://tech-lagoon.com/imagechef/image-to-edge/ce27be26-4e6d-4b6a-be3f-790ff4b83fe1?1676456442549?n=3561' alt='Blue print' />
     <Image id='1' src='https://i.imgur.com/YMZEiR4.jpg' alt='Blue print' />
-    <Image id='2' src='https://o.remove.bg/downloads/3a01d1a6-7781-4bf1-aa7e-044d4ea0683e/4-Bedroom-3D-House-Plans-removebg-preview-removebg-preview.png' alt='3d' />
+    <Image id='2' src='https://o.remove.bg/downloads/c2afffa4-8732-436a-830f-2ed7eee0658c/4-Bedroom-3D-House-Plans-removebg-preview-removebg-preview.png' alt='3d' />
 </Grid>
 </Flex>
 <Flex bgColor={"#eee"} right={0} p={5} justifyContent={"center"} >

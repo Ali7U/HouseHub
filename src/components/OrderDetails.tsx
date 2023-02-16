@@ -48,5 +48,4 @@ const OrderConfirmation: React.FC<OrderConfirmationProps> = ({ email }) => {
     </Flex>
   );
 };
-
 export default OrderConfirmation;

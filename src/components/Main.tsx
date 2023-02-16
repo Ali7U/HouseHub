@@ -282,7 +282,7 @@ function Main() {
                 </Box>
                     <Box>
                     <Stack direction="row" paddingTop={5} paddingLeft={120}>
-                      <Button backgroundColor={'#e6d894'} onClick={()=>{localStorage.setItem("DetailsImage", item.imageUrl);  navigate('/Details')}}>Select</Button>
+                      <Button backgroundColor={'#85CDFD'} onClick={()=>{localStorage.setItem("DetailsImage", item.imageUrl);  navigate('/Details')}}>Select</Button>
                     </Stack></Box>
         </Collapse>
           </Container>

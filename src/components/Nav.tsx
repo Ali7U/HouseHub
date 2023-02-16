@@ -93,23 +93,23 @@ export default function App() {
               alignItems="center"
               
             >
-              <VisuallyHidden>Choc</VisuallyHidden>
+              <VisuallyHidden>HouseHub</VisuallyHidden>
             </chakra.a>
             <Link   to={"/"}>
             <Image src="src\logo.png" height = "40px"></Image>       </Link>   </Flex>
           <HStack display="flex" alignItems="center" spacing={1}>
             <HStack
-              spacing={1}
-              mr={1}
+              spacing={5}
+              mr={4}
               color="brand.500"
               display={{ base: "none", md: "inline-flex" }}
             >
-              <Button  _hover={{backgroundColor: "#2F4858", color:"white"}}  onClick={()=>navigate("/Home")}variant="ghost">Home</Button>
-              <Button  _hover={{backgroundColor: "#2F4858", color:"white"}} onClick={()=>navigate("/GenerateImage")} variant="ghost">Image Generator</Button>
-              <Button  _hover={{backgroundColor: "#2F4858", color:"white"}} onClick={()=>navigate("/main")} variant="ghost">Design</Button>
+              <Button  border={" #c4b04e solid  1px "} _hover={{backgroundColor: "#c4b04e", color:"white"}}  onClick={()=>navigate("/Home")}variant="ghost">Home</Button>
+              <Button  border={" #c4b04e solid  1px "} _hover={{backgroundColor: "#c4b04e", color:"white"}} onClick={()=>navigate("/GenerateImage")} variant="ghost">Image Generator</Button>
+              <Button   border={" #c4b04e solid  1px "} _hover={{backgroundColor: "#c4b04e", color:"white"}} onClick={()=>navigate("/main")} variant="ghost">Design</Button>
 
-              <Button   _hover={{backgroundColor: "#2F4858", color:"white"}} onClick={()=>navigate("/contact")} variant="ghost">Contact Us</Button>
-              <Button   _hover={{backgroundColor: "#c4b04e"}} onClick={()=>navigate("/profile")} variant="ghost">Account</Button>
+              <Button   border={" #c4b04e solid  1px "} _hover={{backgroundColor: "#c4b04e", color:"white"}} onClick={()=>navigate("/contact")} variant="ghost">Contact Us</Button>
+              <Button    border={" #c4b04e solid  1px "} _hover={{backgroundColor: "#c4b04e", color:"white"}} onClick={()=>navigate("/profile")} variant="ghost">Prompts</Button>
               {isloggedin ?
               
 
@@ -155,20 +155,20 @@ export default function App() {
                 />
                 <AiOutlineMenu />
                 <Button w="full" variant="ghost">
-                  Features
+                  Home
                 </Button>
                 <Button w="full" variant="ghost">
-                  Pricing
+                  Design
                 </Button>
                 <Button w="full" variant="ghost">
-                  Blog
+                  Generate Image
                 </Button>
                 <Button w="full" variant="ghost">
-                  Company
+                  Contact
                 </Button>
 
                 <Button w="full" variant="ghost">
-                  Log in
+                  Log out
                 </Button>
               </VStack>
             </Box>

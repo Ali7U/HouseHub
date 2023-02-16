@@ -1,18 +1,23 @@
-.contact{padding: 50px;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.contact {
+  padding: 50px;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 form {
   width: 150%;
   max-width: 600px;
 }
-#name,#number,#email,#subject,#message{
-    padding-left: 140px;
+#name,
+#number,
+#email,
+#subject,
+#message {
+  padding-left: 140px;
 }
 
 .input-group {
@@ -20,7 +25,11 @@ form {
   position: relative;
 }
 
-input,
+#name,
+#number,
+#email,
+#subject,
+#message,
 textarea {
   height: 50px;
   width: 100%;
@@ -37,26 +46,27 @@ textarea {
   height: 200px;
 }
 
-label{
-    
-    height: 100%;
-    position:absolute;
-    left: 0;
-    top: 0;
-    color: #7f7f7f;
-    cursor: text;
-    transition: 0.2s;
-    display: grid;
-    grid-template-columns: 20px 150px;
-    align-items: center; 
-    font-size: 14px;
-    margin-left: 10px;padding-left: 20px;
+#lb {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #7f7f7f;
+  cursor: text;
+  transition: 0.2s;
+  display: grid;
+  grid-template-columns: 20px 150px;
+  align-items: center;
+  font-size: 14px;
+  margin-left: 10px;
+  padding-left: 20px;
 }
 
-.input-group .z8 {    padding-left: 10px;
+.input-group .z8 {
+  padding-left: 10px;
 
-    height: 0;
-    padding-top: 10px;
+  height: 0;
+  padding-top: 10px;
 }
 
 #btn1 {
