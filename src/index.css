@@ -32,17 +32,6 @@
      50%{
     /* background-image: url(./assets/midj4.jpg);     */
     
-   }
-   
-     75%{
-    background-image: url(./assets/midj3.jpg);    
-    
-   }
-   100%{
-    background-image: url(./assets/midj.jpg);    
-
-   }
-} */
 
 /* .home {
   background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
