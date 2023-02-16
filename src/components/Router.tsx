@@ -38,8 +38,8 @@ function Router() {
 
 
 
-
       </Routes>
+        <Footer/>
     </div>
   );
 }

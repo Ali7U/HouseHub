@@ -21,7 +21,7 @@ function Apitest() {
 
   const [promptinput, setprompt] = React.useState<any>();
   
-  const apiKey = "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";
+  const apiKey = "";
 const configuration = new Configuration({
   apiKey: apiKey
 });
@@ -30,7 +30,6 @@ const openai = new OpenAIApi(configuration);
 async function save(){
   onClose()
   console.log(img)
-
   await fetch(`https://63e208d4ad0093bf29c65b2d.mockapi.io/Users/${localStorage.getItem("id")}/Data`, {
     method: 'POST', 
     headers: {'content-type':'application/json'},

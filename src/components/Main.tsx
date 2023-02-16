@@ -90,7 +90,7 @@ function Main() {
 // --------------------500---------------
 {
   imageUrl:
-  "https://i.top4top.io/p_26012fu111.jpg",
+  "https://cdn.discordapp.com/attachments/1074592773518405694/1075687407929794590/Abdullah_Alomari_modern_luxury_house_simple_Saudi_Arabia_d58e31c0-5007-43aa-b4da-aacecb1407d9.png",
   imageAlt: "Rear view of modern home with pool",
   Area: 400,
   Rooms: 1,
@@ -98,7 +98,7 @@ function Main() {
 },
 {
   imageUrl:
-  "https://cdn.discordapp.com/attachments/1074592773518405694/1075093777213046954/1.png",
+  "https://cdn.discordapp.com/attachments/1074592773518405694/1075687408252747866/Abdullah_Alomari_modern_luxury_house_simple_Saudi_Arabia_f7bb6e1f-33fb-46cd-9379-384d29e2c2a0.png",
   imageAlt: "Rear view of modern home with pool",
   Area: 400,
   Rooms: 1,
@@ -106,7 +106,7 @@ function Main() {
 },
 {
   imageUrl:
-  "https://media.discordapp.net/attachments/1074592773518405694/1075093776726491166/2nd_1.png?width=1020&height=1020",
+  "https://cdn.discordapp.com/attachments/1074592773518405694/1075687408575725639/Abdullah_Alomari_modern_luxury_house_simple_Saudi_Arabia_9d08c5ae-5750-4276-af63-f7c623456fa3.png",
 
   imageAlt: "Rear view of modern home with pool",
   Area: 400,
@@ -115,7 +115,7 @@ function Main() {
 },
 {
   imageUrl:
-  "https://media.discordapp.net/attachments/1074592773518405694/1075093776206405723/3rd_1.png?width=1020&height=1020",
+  "https://cdn.discordapp.com/attachments/1074592773518405694/1075687408932233246/Abdullah_Alomari_modern_luxury_house_simple_Saudi_Arabia_16055741-b763-406d-aba3-9488f70afa8c.png",
 
   imageAlt: "Rear view of modern home with pool",
   Area: 400,
@@ -125,7 +125,7 @@ function Main() {
 // -----------------400
 {
   imageUrl:
-  "https://media.discordapp.net/attachments/1074592773518405694/1075093776206405723/3rd_1.png?width=1020&height=1020",
+  "https://cdn.discordapp.com/attachments/1074592773518405694/1075687409439735890/Abdullah_Alomari_modern_luxury_house_simple_Saudi_Arabia_e346e342-7317-4418-98e2-3639f5becdc1.png",
 
   imageAlt: "Rear view of modern home with pool",
   Area: 300,
@@ -134,7 +134,7 @@ function Main() {
 },
 {
   imageUrl:
-  "https://media.discordapp.net/attachments/1074592773518405694/1075093776726491166/2nd_1.png?width=1020&height=1020",
+  "https://cdn.discordapp.com/attachments/1074592773518405694/1075687409901117461/Abdullah_Alomari_modern_luxury_house_simple_Saudi_Arabia_a03632c5-4b0c-4685-8f59-6600d052287f.png",
 
   imageAlt: "Rear view of modern home with pool",
   Area: 300,
@@ -143,7 +143,7 @@ function Main() {
 },
 {
   imageUrl:
-  "https://i.top4top.io/p_26012fu111.jpg",
+  "https://cdn.discordapp.com/attachments/1074592773518405694/1075687410291179520/Abdullah_Alomari_modern_luxury_house_simple_Saudi_Arabia_94f4f126-843a-4fa8-a79c-f0d99ad493e7.png",
 
 
   imageAlt: "Rear view of modern home with pool",

@@ -6,6 +6,7 @@ import { GoLocation } from 'react-icons/go';
 import { FaBed, FaLayerGroup } from "react-icons/fa";
 import { motion } from 'framer-motion';
 import { Link, useNavigate } from 'react-router-dom';
+import Nav from "./Nav";
 const images = [
   {
     id: 1,
@@ -35,7 +36,7 @@ const stats = [
   },
   {
     title: 'Location',
-    stat: 'Jeddah, SA',
+    stat: 'Riyadh, SA',
     icon: <GoLocation size={'3em'} />,
   },
 ];
@@ -138,12 +139,20 @@ function Details() {
 
 <Box py={12} px={6} maxW={"200vw"} w={"80vw"}>
           <UnorderedList listStyleType={"none"} > 
-            <ListItem fontSize={"32px"} >First Floor 
-              <UnorderedList pt={10} fontSize={"16px"} listStyleType={"-"} spacing={3}> 
-            <ListItem >Spacious living room with large windows</ListItem>
-            <ListItem>Dining room adjacent to living room and kitchen</ListItem>
-            <ListItem>Kitchen with modern amenities</ListItem>
-            <ListItem>Separate bathroom for second bedroom</ListItem>
+            <ListItem fontSize={"32px"} >Exterior 
+              <UnorderedList pt={5} fontSize={"16px"} listStyleType={"-"} spacing={3}> 
+            <ListItem listStyleType={"none"}>Traditional architectural style with brick and siding exterior</ListItem>
+            <ListItem listStyleType={"none"}>A large front porch with space for seating and outdoor entertaining</ListItem>
+            <ListItem listStyleType={"none"}>A well-manicured front lawn with a garden and landscaping</ListItem>
+            <ListItem listStyleType={"none"}>A backyard with a patio area, space for gardening, and a fenced-in yard for privacy and security</ListItem>
+            </UnorderedList>
+            </ListItem>
+            <ListItem fontSize={"32px"} pt={7}>Interior 
+              <UnorderedList pt={5} fontSize={"16px"} listStyleType={"-"} spacing={3}> 
+            <ListItem listStyleType={"none"}>A spacious living room with large windows that allow for plenty of natural light</ListItem>
+            <ListItem listStyleType={"none"}>A dining room adjacent to the living room and kitchen, perfect for entertaining guests</ListItem>
+            <ListItem listStyleType={"none"}>A modern kitchen with a large island, ample cabinet and countertop space, stainless steel appliances, and a walk-in pantry</ListItem>
+            <ListItem listStyleType={"none"}>A master bedroom with an en suite bathroom and a walk-in closet</ListItem>
             </UnorderedList>
             </ListItem>
           </UnorderedList>
@@ -179,7 +188,7 @@ function Details() {
 </Flex>
 <Flex bgColor={"#eee"} right={0} p={5} justifyContent={"center"} >
   <Link to={'/OrderDetails'}>
-  <Button colorScheme="teal" size="lg">
+  <Button mb={20} colorScheme="#6096B4" bgColor={'#6096B4'} size="lg" shadow={'xl'}>
     Place Order
   </Button>
   </Link>
