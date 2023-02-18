@@ -42,7 +42,6 @@ function Login() {
 
   return (
     <>
-    <Nav/>
     <HStack w="full" h="full" bgColor="#fff" align="center">
       <Flex
         width="full"

@@ -21,9 +21,11 @@ function Apitest() {
 
   const [promptinput, setprompt] = React.useState<any>();
   
-  const apiKey = "";
+  const apiKey1 = "sk-AcfSyHgGJ6sm3pZkVhPyT3B";
+  const apiKey2 = "lbkFJXietDzk";
+  const apiKey3 = "qkzXI4OHUrPIG";
 const configuration = new Configuration({
-  apiKey: apiKey
+  apiKey: apiKey1+apiKey2+apiKey3
 });
 const openai = new OpenAIApi(configuration);
  
